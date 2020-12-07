@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Аутоматско заливање биљке &#8212; Tekstualno programiranje u Pajtonu</title>
+    <title>Аутоматско заливање биљке &#8212; Програмирање микробит уређаја у Микропајтону – приручник за пројектну наставу за седми и осми разред</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
@@ -22,6 +22,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
     <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
@@ -52,7 +54,6 @@
     <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
     <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
     <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
     <script type="text/javascript" src="../_static/activecode.js"></script>
@@ -63,7 +64,6 @@
     <script type="text/javascript" src="../_static/timedmc.js"></script>
     <script type="text/javascript" src="../_static/timed.js"></script>
     <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/clickable.js"></script>
     <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
@@ -75,17 +75,14 @@
     <script type="text/javascript" src="../_static/dragndrop.js"></script>
     <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/fitb.js"></script>
     <script type="text/javascript" src="../_static/timedfitb.js"></script>
     <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/matrixeq.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
     <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/timedparsons.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
     <script type="text/javascript" src="../_static/reveal.js"></script>
@@ -94,6 +91,9 @@
     <script type="text/javascript" src="../_static/showEval.js"></script>
     <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
     <script type="text/javascript" src="../_static/karelCorner.js"></script>
     <script type="text/javascript" src="../_static/karelRobot.js"></script>
     <script type="text/javascript" src="../_static/karelWorld.js"></script>
@@ -101,7 +101,6 @@
     <script type="text/javascript" src="../_static/karelUI.js"></script>
     <script type="text/javascript" src="../_static/karel.js"></script>
     <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/notes.js"></script>
     <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
     <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
@@ -147,7 +146,7 @@
     <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Ултразвучни мерач растојања" href="UZ merac rastojanja.html" />
+    <link rel="next" title="Ултразвучен мерач на растојание" href="UZ merac rastojanja.html" />
     <link rel="prev" title="Семафор" href="Semafor.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -159,14 +158,14 @@
   eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
   eBookConfig.app = eBookConfig.host+'/runestone';
   eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
-  eBookConfig.course = 'MicrobitProjektna';
+  eBookConfig.course = 'microbit_micropython_vii_viii';
   eBookConfig.logLevel = 0;
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "";
   eBookConfig.isLoggedIn = false;
   eBookConfig.useRunestoneServices = false;
-  eBookConfig.python3 = yes;
-  eBookConfig.basecourse = 'MicrobitProjektna';
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'microbit_micropython_vii_viii';
   eBookConfig.runestone_version = '3.1.1';
   eBookConfig.imagesDir = '../_images/';
   eBookConfig.staticDir = '../_static/';
@@ -199,17 +198,16 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="../">Пројектна настава</a></li>
+        <li class="active"><a href="../">МycroPython за уредот Микро:бит</a></li>
       </ul>
     </div>
   </div>
 </nav>
-<br/>
 
 
 <div class="container col-md-12" id="continue-reading"></div>
 
-<div class="container col-md-8 col-md-offset-2" id="main-content">
+<div class="container col-md-8 col-md-offset-2" id="main-content" style="margin-top: 70px;">
   
   <div class="section" id="id1">
 <h1>Аутоматско заливање биљке<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
@@ -221,24 +219,24 @@
         <div class="course-content">
             <p>
 <ul class="simple">
-<li><p>Зашто се каже да је вода извор живота?</p></li>
-<li><p>Да ли сте чули за наводњавање и одводњавање?</p></li>
-<li><p>Зашто је биљкама потребна вода?</p></li>
-<li><p>Које биљке имате код куће и колико их често заливате?</p></li>
+<li><p>Зашто се вели дека водата е извор на животот?</p></li>
+<li><p>Дали сте слушнале за наводнување и одводнување?</p></li>
+<li><p>Зошто им е потребна вода на растенијата?</p></li>
+<li><p>Кои растенија ги имате дома и колку често ги полевате?</p></li>
 </ul>
 
     </p></div></div>
-<p>Биљкама је за живот неопходна вода. Због великог броја обавеза, често се деси да заборавимо да залијемо наше кућне биљке. С друге стране, биљке на великим плантажама често зависе од природних падавина.</p>
+<p>На растенијата им е неопходна водата за да постојат. Поради многубројните обврски, честопати ни се случува да заборавиме да ги полееме нашите куќни растенија. Од друга страна, растенијата на големите плантажи честопати зависат од врнежите дожд.</p>
 <p>Направићемо систем који ће омогућити да се биљка аутоматски залива када ниво влажности земљишта опадне испод жељеног. Овакав систем може бити применљив у кућним условима, а уједно представља и симулацију решавања реалног проблема наводњавања.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p><strong>Шта нам је потребно?</strong></p>
+<p><strong>Што ни е потребно?</strong></p>
 <ul class="simple">
-<li><p>два микробита</p></li>
-<li><p>мини пумпа за воду или серво мотор, додатно напајање,</p></li>
-<li><p>NPN транзистор и отпорник 470Ω, проводници</p></li>
-<li><p>два ексера, отпорник 10k, посуда са водом</p></li>
+<li><p>Два уреда Микро:бит;</p></li>
+<li><p>Mала пумпа за вода или сервомотор, дополнително напојување;</p></li>
+<li><p>NPN транзистор и отпорник 470Ω, спроводници;</p></li>
+<li><p>Два клинци, отпорник 10k, сад со вода.</p></li>
 </ul>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -255,8 +253,8 @@
       
 
         </div>
-    <div id="modal" class="ytvideoclose" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgba(128, 182, 128, 0.3); z-index: 10000;">
-        <div style="background-color: white; position: fixed; top: 4vh; left: 5vw; width:  90vw; height:  90vh; z-index: 100;" id="YTmodal">
+    <div id="modal-RrSISwO-ZNw" class="ytvideoclose" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgba(128, 182, 128, 0.3); z-index: 10000;">
+        <div style="background-color: white; position: fixed; top: 4vh; left: 5vw; width:  90vw; height:  90vh; z-index: 100;" id="YTmodal-RrSISwO-ZNw">
         </div>
     </div>
     
@@ -292,23 +290,17 @@ while True:
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>Време које смо оставили као паузу до следеће провере нивоа влажности пошто смо довољно залили биљку у програму је 10 секунди. Наравно, земљиште може остати довољно влажно и по неколико дана.
-У нашем случају, до следећег заливања је протекло чак пет дана. Дакле, бесмислено је проверавати стање сваких десет секунди, јер ће то свакако утицати на већу потрошњу батерије.
-Времена за рад пумпе, паузу, време између два очитавања подесите у складу са конкретним условима.</p>
-<p>Размислите о следећем проблему: задали сте да време функције <em>sleep</em> буде десет сати. Да ли ћете у току тог периода моћи да проверите ниво влажности?</p>
-<p>И за овај проблем, као и сличне проблеме, постоји решење. Примењују се такозване <em>interrupt</em> (прекидне) рутине, али њихова употреба захтева мало више програмерског искуства и није обрађена у овом материјалу.</p>
-<p>Oсмислите систем за заливање свих биљки у вашем стану. Можете употребити један микробит за управљање, а на остале повежите мини пумпе или серво
-моторе са сламчицама.</p>
-<p>Направите презентацију на тему „Вода је извор живота”.</p>
-<p>Размислите и о следећим питањима:</p>
+<p>Времето кое го испланиравме за пауза до следната проверка на степенот на влажност на почвата, откако го полеавме растението, е десет секунди. Секако, почвата може да остане влажна и по неколку дена. Во нашиов случај, до следното полевање поминаа дури пет дена. Значи, бесмислено е да се проверува состојбата на секои десет секунди, бидејќи тоа ќе доведе до брзо трошење на батеријата. Времето за работење на пумпата, паузата и времето помеѓу двете отчитувања прилагодете ги согласно условите.</p>
+<p>Размислете за следниот проблем: избравте времето за функцијата <em>sleep</em> да биде десет часа. Дали за време на тој период ќе може да го проверите степенот на влажност?</p>
+<p>Како и за други слични проблеми, така и за овој проблем постои решение. Се применуваат таканаречените рутини <em>interrupt</em> (за прекин), но за да се употребат потребно е малку поголемо искуство во програмирањето и тие не се опфатени во овој материјал.</p>
+<p>Осмислете систем за полевање на растенијата во вашиот стан. Може да управувате со еден уред <em>Микро:бит</em>, а на останатите уреди <em>Микро:бит</em> да поврзете мали пумпи или сервомотори со цевчиња.</p>
+<p>Направете презентација на темата <em>Водата е извор</em> на животот.</p>
+<p>Размислете и за следниве прашања:</p>
 <ul class="simple">
-<li><p>Колико је воде потребно да човек унесе у организам током једног дана?</p></li>
-<li><p>Уносите ли довољно течности?</p></li>
+<li><p>Колкаво количество вода е потребно да внесе човек во текот на еден ден?</p></li>
+<li><p>Дали внесувате доволно течности?</p></li>
 </ul>
-<p>Водите рачуна о здрављу! Напишите програм за микробит који ће сабирати количину течности коју сте унели током дана!</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+<p>Грижете се за вашето здравје! Напишете код за уредот Микро:бит кој ќе го собира количеството течности кои сте го внеле во текот на денот!</p>
 </div>
 
 
@@ -317,7 +309,7 @@ while True:
 <ul class="pager">
         <li id="relations-prev" title='Previous chapter - Семафор' data-toggle="tooltip"><a href="Semafor.html">Previous chapter</a></li>
     
-        <li id="relations-next" title='Next chapter - Ултразвучни мерач растојања' data-toggle="tooltip"><a href="UZ merac rastojanja.html">Next chapter</a></li>
+        <li id="relations-next" title='Next chapter - Ултразвучен мерач на растојание' data-toggle="tooltip"><a href="UZ merac rastojanja.html">Next chapter</a></li>
 </ul>
 
 <!-- <ul class="pager"> -->
@@ -325,7 +317,7 @@ while True:
         <!-- <li id="relations-prev" title='Претходно поглавље - Семафор' data-toggle="tooltip"><a href="Semafor.html">Претходно поглавље</a></li> -->
     <!--  -->
     <!-- -->
-        <!-- <li id="relations-next" title='Следеће поглавље - Ултразвучни мерач растојања' data-toggle="tooltip"><a href="UZ merac rastojanja.html">Следеће поглавље</a></li> -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Ултразвучен мерач на растојание' data-toggle="tooltip"><a href="UZ merac rastojanja.html">Следеће поглавље</a></li> -->
     <!-- -->
 <!-- </ul> -->
 
@@ -339,13 +331,11 @@ while True:
   
 </div>
 <footer class="footer col-md-12">
-    <div class="container text-center">
+    <div class="container">
         <div class="text-center">
             <hr>
             <p class="text-muted">
-                <span class="text-center">&copy; 2020 <a href="https://www.britishcouncil.rs/en">British Council</a> 
-                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
-                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+                <span class="pull-left">&copy; 2019 Petlja (Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
             </p>
         </div>
     </div>

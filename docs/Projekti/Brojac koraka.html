@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Бројач корака &#8212; Tekstualno programiranje u Pajtonu</title>
+    <title>Бројач на чекори &#8212; Програмирање микробит уређаја у Микропајтону – приручник за пројектну наставу за седми и осми разред</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
@@ -22,6 +22,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
     <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
@@ -52,7 +54,6 @@
     <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
     <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
     <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
     <script type="text/javascript" src="../_static/activecode.js"></script>
@@ -63,7 +64,6 @@
     <script type="text/javascript" src="../_static/timedmc.js"></script>
     <script type="text/javascript" src="../_static/timed.js"></script>
     <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/clickable.js"></script>
     <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
@@ -75,17 +75,14 @@
     <script type="text/javascript" src="../_static/dragndrop.js"></script>
     <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/fitb.js"></script>
     <script type="text/javascript" src="../_static/timedfitb.js"></script>
     <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/matrixeq.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
     <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/timedparsons.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
     <script type="text/javascript" src="../_static/reveal.js"></script>
@@ -94,6 +91,9 @@
     <script type="text/javascript" src="../_static/showEval.js"></script>
     <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
     <script type="text/javascript" src="../_static/karelCorner.js"></script>
     <script type="text/javascript" src="../_static/karelRobot.js"></script>
     <script type="text/javascript" src="../_static/karelWorld.js"></script>
@@ -101,7 +101,6 @@
     <script type="text/javascript" src="../_static/karelUI.js"></script>
     <script type="text/javascript" src="../_static/karel.js"></script>
     <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/notes.js"></script>
     <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
     <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
@@ -147,8 +146,8 @@
     <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Бицикл са сигнализацијом" href="Bicikl.html" />
-    <link rel="prev" title="Идеје за пројекте" href="toctree.html" />
+    <link rel="next" title="Велосипед со сигнализација" href="Bicikl.html" />
+    <link rel="prev" title="Идеи за проекти" href="toctree.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -159,14 +158,14 @@
   eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
   eBookConfig.app = eBookConfig.host+'/runestone';
   eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
-  eBookConfig.course = 'MicrobitProjektna';
+  eBookConfig.course = 'microbit_micropython_vii_viii';
   eBookConfig.logLevel = 0;
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "";
   eBookConfig.isLoggedIn = false;
   eBookConfig.useRunestoneServices = false;
-  eBookConfig.python3 = yes;
-  eBookConfig.basecourse = 'MicrobitProjektna';
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'microbit_micropython_vii_viii';
   eBookConfig.runestone_version = '3.1.1';
   eBookConfig.imagesDir = '../_images/';
   eBookConfig.staticDir = '../_static/';
@@ -199,20 +198,19 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="../">Пројектна настава</a></li>
+        <li class="active"><a href="../">МycroPython за уредот Микро:бит</a></li>
       </ul>
     </div>
   </div>
 </nav>
-<br/>
 
 
 <div class="container col-md-12" id="continue-reading"></div>
 
-<div class="container col-md-8 col-md-offset-2" id="main-content">
+<div class="container col-md-8 col-md-offset-2" id="main-content" style="margin-top: 70px;">
   
   <div class="section" id="id1">
-<h1>Бројач корака<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<h1>Бројач на чекори<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -221,25 +219,23 @@
         <div class="course-content">
             <p>
 <ul class="simple">
-<li><p>Да ли живимо здраво?</p></li>
-<li><p>Набројте неке „здраве навике” и објасните колико их се придржавате и на који начин?</p></li>
-<li><p>Да ли знате где се у вaшем месту налази игралиште, шеталиште, парк или шума и колико времена у току недеље проводите на свежем ваздуху?</p></li>
-<li><p>Да ли постоји препоручен број метара/километара које човек треба да пређе у току дана?</p></li>
-<li><p>Зашто је важно да будемо физички активни? Које су последице физичке неактивности?</p></li>
+<li><p>Дали живееме здрав живот?</p></li>
+<li><p>Набројте некои здрави навики и објаснете колку и како се придржувате до нив!</p></li>
+<li><p>Дали знаете во вашето место каде има игралиште, шеталиште, парк или шума и колку време во текот на неделата поминувате на свеж воздух?</p></li>
+<li><p>Дали постои одреден број метри/километри што треба човек да ги изоди во текот на денот?</p></li>
+<li><p>Зошто е важно да бидеме физички активни? Какви се последиците од физичката неактивност?</p></li>
 </ul>
 
     </p></div></div>
-<p>Савремени, убрзан начин живота доноси и неке лоше навике, којих често нисмо свесни.
-Иако има небројено предности, примена савремених технологија, у неким случајевима, има и својих мана. Једна од тих мана се огледа у чињеници да људи,
-нарочито омладина, пуно времена проводе испред рачунара и сличних уређаја. Заборављамо на физичке активности непходне за очување нашег здравља.</p>
-<p>Пројектом „Бројач корака” желимо да скренемо пажњу на здраве и нездраве навике, а све оне са нездравим навикама да подстакнемо на промену и бар мало интензивнију физичку активност.</p>
+<p>Современиот и брз начин на живеење носи и одредени лоши навики за кои честопати не сме ни свесни. Иако има бројни предности, примената на современата технологија во некои случаи има и свои недостатоци. Еден од тие недостатоци е фактот дека луѓето, особено младите, поголемиот дел од времето го поминуваат пред компјутер и други уреди. Ги занемаруваме физичките активности кои ни се неопходни за да го зачуваме нашето здравје.</p>
+<p>Со проектот <em>Бројач на чекори</em> сакаме да го насочиме вниманието кон здравите и нездравите навики, како и да ги поттикнеме луѓето кои имаат нездрави навики да се променат и да воведат барем малку поинтензивна физичка активност.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p><strong>Шта нам је потребно?</strong></p>
+<p><strong>Што ни е потребно?</strong></p>
 <ul class="simple">
-<li><p>један микробит</p></li>
-<li><p>материјал за футролу (бело платно, боје или платно различитих дезена, дугме или чичак трака, гумирана трака, како бисмо причврстили уређај за ножни чланак</p></li>
+<li><p>Еден уред <em>Микро:бит</em>;</p></li>
+<li><p>Материјал за футрола (бело платно, во боја или со различни шари, копче или чичак-трака и гумена трака за да го прицврстиме уредот за зглобот од ногата.</p></li>
 </ul>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -248,7 +244,7 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>Најједноставнији начин да направите бројач корака приказан је у следећем видео-запису:</p>
+<p>Наједноставниот начин да направите бројач на чекори е прикажан во следното видео:</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -260,8 +256,8 @@
       
 
         </div>
-    <div id="modal" class="ytvideoclose" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgba(128, 182, 128, 0.3); z-index: 10000;">
-        <div style="background-color: white; position: fixed; top: 4vh; left: 5vw; width:  90vw; height:  90vh; z-index: 100;" id="YTmodal">
+    <div id="modal-Vb6wSmUK3nQ" class="ytvideoclose" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgba(128, 182, 128, 0.3); z-index: 10000;">
+        <div style="background-color: white; position: fixed; top: 4vh; left: 5vw; width:  90vw; height:  90vh; z-index: 100;" id="YTmodal-Vb6wSmUK3nQ">
         </div>
     </div>
     
@@ -269,7 +265,7 @@
     <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>Једно од програмских решења може бити следеће:</p>
+<p>Едно од програмските решенија може да биде следново:</p>
 
 <div data-childcomponent="pedometar" class="course-box course-box-problem course-content">
 
@@ -279,14 +275,14 @@
              data-passivecode="true"  data-hidehistory=true
     data-includesrc="from microbit import *                                      
 
-broj_koraka = 0
+broj_na_cekori = 0
 cilj = 3000
 
 while True:
     if accelerometer.was_gesture(&apos;shake&apos;):
-        broj_koraka += 2
+        broj_na_cekori += 2
     if button_a.is_pressed():
-        if broj_koraka &lt; cilj:
+        if broj_na_cekori &lt; cilj:
             for x in range(3):
                 display.show(Image.NO)
                 sleep(200)
@@ -297,7 +293,7 @@ while True:
             sleep(200)
 
     if button_b.is_pressed():
-        display.scroll(str(broj_koraka))
+        display.scroll(str(broj_na_cekori))
         sleep(200)
 
 
@@ -308,17 +304,15 @@ while True:
 
 </textarea>
 </div>
-<p>Ми смо у овом пројекту само сабирали кораке. Допуните овај уређај могућношћу да израчуна и ваш укупни пређени пут у току дана.
-Како бисте то урадили? Како можете да израчунате просечну дужину свог корака?</p>
-<p>Направите презентацију на тему „У здравом телу здрав дух!” и продискутујте са другарима о добрим и лошим навикама
-младих људи данашњице и њиховом утицају на опште здравље и свакодневно функционисање, нарочито током више година. Осврните се и на исхрану - шта треба да једемо, а шта да избегавамо.</p>
-<p>Направите футролу за свој бројач корака, украсите је и исцртајте по жељи!</p>
-<p>Микробит можда неће успети да региструје баш сваки ваш корак, али ће додатне активности до остварења постављеног циља свакако допринети побољшању ваше физичке кондиције!</p>
+<p>Ние за овој проект собиравме чекори. Збогатете го уредот со можноста да се пресмета вкупниот пат којшто сте го изоделе во текот на денот. Како би го сториле тоа? Како може да ја пресметате просечната должина на вашиот чекор?</p>
+<p>Направете презентација на темата <em>Во здраво тело здрав дух!</em> и дискутирајте со  другарите за добрите и лошите навики на младите во денешно време, како и за влијанието на навиките на здравјето и секојдневното функционирање, особено за време на повеќегодишен период. Осврнете се и на исхраната, односно на тоа што треба да јадеме а што треба да избегнуваме.</p>
+<p>Направете футрола за вашиот бројач на чекори, украсете ја и нацртајте ја по желба!</p>
+<p>Уредот <em>Микро:бит</em> можеби нема да го регистрира секој чекор што ќе го направите, но дополнителните активности до остварувањето на зацртаната цел секако ќе придонесат да ја зголемите вашата физичка кондиција!</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>3D модел који смо користили како бисмо причврстили микробит за чланак пронашли смо на
-<a class="reference external" href="https://www.yeggi.com/q/microbit/">следећој адреси</a> . Ако сте у прилици, можете да одштампате на 3D штампачу неки од занимљивих модела са овог сајта и учините своје пројекте још интересантнијим.</p>
+<p>3D моделот којшто го употребивме за да го прицврстиме уредот <em>Микро:бит</em> на зглобот го најдовме на
+<a class="reference external" href="https://www.yeggi.com/q/microbit/">следнава адреса</a> . Доколку сте во можност, може да испечатите на 3D принтер некој од интересните модели кои се наоѓаат на оваа веб-страница и да го направите проектот уште поинтересен.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -328,17 +322,17 @@ while True:
   
       <div class="col-md-12">
 <ul class="pager">
-        <li id="relations-prev" title='Previous chapter - Идеје за пројекте' data-toggle="tooltip"><a href="toctree.html">Previous chapter</a></li>
+        <li id="relations-prev" title='Previous chapter - Идеи за проекти' data-toggle="tooltip"><a href="toctree.html">Previous chapter</a></li>
     
-        <li id="relations-next" title='Next chapter - Бицикл са сигнализацијом' data-toggle="tooltip"><a href="Bicikl.html">Next chapter</a></li>
+        <li id="relations-next" title='Next chapter - Велосипед со сигнализација' data-toggle="tooltip"><a href="Bicikl.html">Next chapter</a></li>
 </ul>
 
 <!-- <ul class="pager"> -->
     <!-- -->
-        <!-- <li id="relations-prev" title='Претходно поглавље - Идеје за пројекте' data-toggle="tooltip"><a href="toctree.html">Претходно поглавље</a></li> -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Идеи за проекти' data-toggle="tooltip"><a href="toctree.html">Претходно поглавље</a></li> -->
     <!--  -->
     <!-- -->
-        <!-- <li id="relations-next" title='Следеће поглавље - Бицикл са сигнализацијом' data-toggle="tooltip"><a href="Bicikl.html">Следеће поглавље</a></li> -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Велосипед со сигнализација' data-toggle="tooltip"><a href="Bicikl.html">Следеће поглавље</a></li> -->
     <!-- -->
 <!-- </ul> -->
 
@@ -352,13 +346,11 @@ while True:
   
 </div>
 <footer class="footer col-md-12">
-    <div class="container text-center">
+    <div class="container">
         <div class="text-center">
             <hr>
             <p class="text-muted">
-                <span class="text-center">&copy; 2020 <a href="https://www.britishcouncil.rs/en">British Council</a> 
-                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
-                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+                <span class="pull-left">&copy; 2019 Petlja (Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
             </p>
         </div>
     </div>

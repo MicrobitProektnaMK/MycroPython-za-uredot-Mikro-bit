@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Бицикл са сигнализацијом &#8212; Tekstualno programiranje u Pajtonu</title>
+    <title>Велосипед со сигнализација &#8212; Програмирање микробит уређаја у Микропајтону – приручник за пројектну наставу за седми и осми разред</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
@@ -22,6 +22,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
     <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
@@ -52,7 +54,6 @@
     <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
     <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
     <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
     <script type="text/javascript" src="../_static/activecode.js"></script>
@@ -63,7 +64,6 @@
     <script type="text/javascript" src="../_static/timedmc.js"></script>
     <script type="text/javascript" src="../_static/timed.js"></script>
     <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/clickable.js"></script>
     <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
@@ -75,17 +75,14 @@
     <script type="text/javascript" src="../_static/dragndrop.js"></script>
     <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/fitb.js"></script>
     <script type="text/javascript" src="../_static/timedfitb.js"></script>
     <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/matrixeq.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
     <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/timedparsons.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
     <script type="text/javascript" src="../_static/reveal.js"></script>
@@ -94,6 +91,9 @@
     <script type="text/javascript" src="../_static/showEval.js"></script>
     <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
     <script type="text/javascript" src="../_static/karelCorner.js"></script>
     <script type="text/javascript" src="../_static/karelRobot.js"></script>
     <script type="text/javascript" src="../_static/karelWorld.js"></script>
@@ -101,7 +101,6 @@
     <script type="text/javascript" src="../_static/karelUI.js"></script>
     <script type="text/javascript" src="../_static/karel.js"></script>
     <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/notes.js"></script>
     <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
     <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
@@ -148,7 +147,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Гаража" href="Garaza.html" />
-    <link rel="prev" title="Бројач корака" href="Brojac koraka.html" />
+    <link rel="prev" title="Бројач на чекори" href="Brojac koraka.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -159,14 +158,14 @@
   eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
   eBookConfig.app = eBookConfig.host+'/runestone';
   eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
-  eBookConfig.course = 'MicrobitProjektna';
+  eBookConfig.course = 'microbit_micropython_vii_viii';
   eBookConfig.logLevel = 0;
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "";
   eBookConfig.isLoggedIn = false;
   eBookConfig.useRunestoneServices = false;
-  eBookConfig.python3 = yes;
-  eBookConfig.basecourse = 'MicrobitProjektna';
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'microbit_micropython_vii_viii';
   eBookConfig.runestone_version = '3.1.1';
   eBookConfig.imagesDir = '../_images/';
   eBookConfig.staticDir = '../_static/';
@@ -199,20 +198,19 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="../">Пројектна настава</a></li>
+        <li class="active"><a href="../">МycroPython за уредот Микро:бит</a></li>
       </ul>
     </div>
   </div>
 </nav>
-<br/>
 
 
 <div class="container col-md-12" id="continue-reading"></div>
 
-<div class="container col-md-8 col-md-offset-2" id="main-content">
+<div class="container col-md-8 col-md-offset-2" id="main-content" style="margin-top: 70px;">
   
   <div class="section" id="id1">
-<h1>Бицикл са сигнализацијом<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<h1>Велосипед со сигнализација<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -221,22 +219,22 @@
         <div class="course-content">
             <p>
 <ul class="simple">
-<li><p>Са колико година дете сме самостално да вози бицикл?</p></li>
-<li><p>Шта је неопходно да сваки бицикл има од сигнализације?</p></li>
-<li><p>Којих правила треба да се придржавамо ако желимо да наше учешће у саобраћају буде безбедно?</p></li>
-<li><p>Могу ли савремене технологије учинити нашу вожњу безбеднијом?</p></li>
+<li><p>На која возраст може едно дете самостојно да вози велосипед?</p></li>
+<li><p>Каква сигнализација е неопходно да има секој велосипед?</p></li>
+<li><p>Кои правила треба да ги почитуваме ако сакаме безбедно да учествуваме во сообраќајот?</p></li>
+<li><p>Дали можат современите технологии да ни овозможат безбедно возење?</p></li>
 </ul>
 
     </p></div></div>
-<p>Ако сте пронашли одговоре на претходна питања и проучили <em>Закон о безбедности саобраћаја на путевима</em>, можемо да наставимо са радом! ☺️</p>
-<p>Употребићемо микробит уређаје како бисмо бицикл опремили додатним сигналним уређајима и на тај начин учинили вожњу безбеднијом.</p>
+<p>Доколку ги најдовте одговорите на горенаведените прашања и го прочитавте Законот за безбедност на сообраќајот на патиштата, може да продолжиме со работа! ☺️</p>
+<p>Со помош на уредот <em>Микро:бит</em> ќе го опремиме велосипедот со дополнителни сигнални уреди и со тоа ќе овозможиме побезбедно возење.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p><strong>Шта нам је потребно?</strong></p>
+<p><strong>Што ни е потребно?</strong></p>
 <ul class="simple">
-<li><p>три микробита</p></li>
-<li><p>траке или материјал за држач, како бисмо поставили уређаје на бицикл</p></li>
+<li><p>Три уреди <em>Микро:бит</em>;</p></li>
+<li><p>Ленти или материјал за држач, за да може да ги поставиме уредите на велосипед.</p></li>
 </ul>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -245,7 +243,7 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>У следећем бидео-запису објашњено је како микробитови могу међусобно да комуницирају и дати су предлози за постављање додатне сигнализације на бицикл:</p>
+<p>Следното видео содржи објаснување како уредите <em>Микро:бит</em> можат меѓусебно да комуницираат и дадени се предлози за поставување дополнителна сигнализација на велосипед:</p>
 
     <div  id="I8o5yGSLUKs" class="ytvideo"  style="text-align: center; margin: 15px; cursor:pointer;">
         <div style="background-image: url('https://img.youtube.com/vi/I8o5yGSLUKs/mqdefault.jpg'); background-repeat: no-repeat;background-position: center; height: 210px; width: 310px; margin: 0 auto; border: 1px solid #20c997">
@@ -254,8 +252,8 @@
       
 
         </div>
-    <div id="modal" class="ytvideoclose" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgba(128, 182, 128, 0.3); z-index: 10000;">
-        <div style="background-color: white; position: fixed; top: 4vh; left: 5vw; width:  90vw; height:  90vh; z-index: 100;" id="YTmodal">
+    <div id="modal-I8o5yGSLUKs" class="ytvideoclose" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgba(128, 182, 128, 0.3); z-index: 10000;">
+        <div style="background-color: white; position: fixed; top: 4vh; left: 5vw; width:  90vw; height:  90vh; z-index: 100;" id="YTmodal-I8o5yGSLUKs">
         </div>
     </div>
     
@@ -263,7 +261,7 @@
     <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>Програм за микробит који смо поставили на управљач:</p>
+<p>Кодот за уредот <em>Микро:бит</em> што го поставивме на воланот:</p>
 
 <div data-childcomponent="bicikl_slanje_volan" class="course-box course-box-problem course-content">
 
@@ -293,7 +291,7 @@ while True:
 
 </textarea>
 </div>
-<p>Програм за леви микробит (задњи леви мигавац):</p>
+<p>Код за лев уред Микро:бит (заден лев трепкач):</p>
 
 <div data-childcomponent="bicikl_prijem_L" class="course-box course-box-problem course-content">
 
@@ -307,9 +305,9 @@ import radio
 radio.on()
 
 while True:
-    skreni = radio.receive()
-    if skreni is not None:
-        if skreni == &quot;L&quot;:
+    svrti = radio.receive()
+    if svrti is not None:
+        if svrti == &quot;L&quot;:
             for i in range(4):
                 display.show(Image.ARROW_W)
                 sleep(1000)
@@ -319,7 +317,7 @@ while True:
 
 </textarea>
 </div>
-<p>Програм за десни микробит (задњи десни мигавац):</p>
+<p>Код за десен уред Микро:бит (заден десен трепкач):</p>
 
 <div data-childcomponent="bicikl_prijem_D" class="course-box course-box-problem course-content">
 
@@ -333,9 +331,9 @@ import radio
 radio.on()
 
 while True:
-    skreni = radio.receive()
-    if skreni is not None:
-        if skreni == &quot;D&quot;:
+    svrti = radio.receive()
+    if svrti is not None:
+        if svrti == &quot;D&quot;:
             for i in range(4):
                 display.show(Image.ARROW_E)
                 sleep(1000)
@@ -345,7 +343,7 @@ while True:
 
 </textarea>
 </div>
-<p>Ако сте се одлучили да микробит поставите на безбедносну кацигу:</p>
+<p>Доколку одлучивте уредот Микро:бит да го поставите на кацига:</p>
 
 <div data-childcomponent="bicikl_slanje_kaciga" class="course-box course-box-problem course-content">
 
@@ -359,15 +357,15 @@ import radio
 radio.on()
 
 while True:
-    bocni_pokret = accelerometer.get_x()
-    if bocni_pokret &gt; 300: # kada nagnemo glavu u levu stranu
+    stranicno__dvizenje = accelerometer.get_x()
+    if stranicno__dvizenje &gt; 300: # koga ja navednuvame glavata nalevo
         radio.send(&quot;L&quot;)
-        # gledano spreda, na levo pokazuje strelica ARROW_E
+        # gledano od prednata strana, nalevo pokazuva strelkata ARROW_E
         display.show(Image.ARROW_E)
         sleep(3000)
-    if bocni_pokret &lt; -300: # kada nagnemo glavu u desnu stranu
+    if stranicno__dvizenje &lt; -300: # koga ja navednuvame glavata nadesno
         radio.send(&quot;D&quot;)
-        # gledano spreda, na desno pokazuje strelica ARROW_W
+        # gledano od prednata strana, nadesno pokazuva strelkata ARROW_W
         display.show(Image.ARROW_W)
         sleep(3000)
     display.clear()"   >
@@ -375,29 +373,23 @@ while True:
 
 </textarea>
 </div>
-<p>Размислите како бисте могли да примените технологију да учините вожњу бициклом још безбеднијом.
-У примеру који смо приказали, микробит уређај поставили смо на кацигу и сигнализацију укључивали благим нагињањем главе у леву или десну страну.
-Развијте систем који ће омогућити да се сигнализација активира закретањем управљача бицикла.
-Додајте могућност да вас микробит упозори да укључите светла ако је смањена видљивост.</p>
-<p>Свакако, током вожње се, без обзира на додатне сигналне уређаје, морате обавезно придржавати правила прописаних законом!
-Уопште, приликом израде било којег техничког уређаја морате водити рачуна да његова примена буде у складу са прописима
-везаним за област у којој се примењује.</p>
-<p>Направите презентацију на тему „Безбедност у саобраћају” и представите резултате свог истраживања и проучавања
-Закона о безбедности саобраћаја на путевима. Посебну пажњу обратите на правила везана за учешће пешака и бициклиста у саобраћају!</p>
+<p>Размислете како би можеле да примените технологија за да го направите возењето велосипед уште побезбедно. Во посочениот пример, уредот <em>Микро:бит</em> го поставивме на кацига и сигнализацијата ја вклучувавме со благо наведнување на главата налево и надесно. Развијте систем кој ќе овозможи да се активира сигнализацијата со движење на воланот од велосипедот. Додадете опција уредот <em>Микро:бит</em> да ве предупреди да ги вклучите светлата при намалена видливост.</p>
+<p>Секако, додека возите, без оглед на дополнителните сигнални уреди, треба задолжително да се придржувате до законските правила и прописи! Општо, кога правите технички уред мора да водите сметка неговата примена да биде во согласност со прописите за областа во која ќе се применува.</p>
+<p>Направете презентација на темата <em>Безбедност во сообраќајот</em> и претставете ги резултатите од вашето истражување и проучувањето на Законот за безбедност на сообраќајот на патиштата. Особено обратете внимание на правилата за учество на пешаците и велосипедистите во сообраќајот!</p>
 </div>
 
 
   
       <div class="col-md-12">
 <ul class="pager">
-        <li id="relations-prev" title='Previous chapter - Бројач корака' data-toggle="tooltip"><a href="Brojac koraka.html">Previous chapter</a></li>
+        <li id="relations-prev" title='Previous chapter - Бројач на чекори' data-toggle="tooltip"><a href="Brojac koraka.html">Previous chapter</a></li>
     
         <li id="relations-next" title='Next chapter - Гаража' data-toggle="tooltip"><a href="Garaza.html">Next chapter</a></li>
 </ul>
 
 <!-- <ul class="pager"> -->
     <!-- -->
-        <!-- <li id="relations-prev" title='Претходно поглавље - Бројач корака' data-toggle="tooltip"><a href="Brojac koraka.html">Претходно поглавље</a></li> -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Бројач на чекори' data-toggle="tooltip"><a href="Brojac koraka.html">Претходно поглавље</a></li> -->
     <!--  -->
     <!-- -->
         <!-- <li id="relations-next" title='Следеће поглавље - Гаража' data-toggle="tooltip"><a href="Garaza.html">Следеће поглавље</a></li> -->
@@ -414,13 +406,11 @@ while True:
   
 </div>
 <footer class="footer col-md-12">
-    <div class="container text-center">
+    <div class="container">
         <div class="text-center">
             <hr>
             <p class="text-muted">
-                <span class="text-center">&copy; 2020 <a href="https://www.britishcouncil.rs/en">British Council</a> 
-                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
-                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+                <span class="pull-left">&copy; 2019 Petlja (Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
             </p>
         </div>
     </div>

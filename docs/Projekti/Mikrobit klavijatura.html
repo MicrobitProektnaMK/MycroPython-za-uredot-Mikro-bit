@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Микробит клавијатура &#8212; Tekstualno programiranje u Pajtonu</title>
+    <title>Клавијатура Микро:бит &#8212; Програмирање микробит уређаја у Микропајтону – приручник за пројектну наставу за седми и осми разред</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
@@ -22,6 +22,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
     <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
@@ -52,7 +54,6 @@
     <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
     <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
     <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
     <script type="text/javascript" src="../_static/activecode.js"></script>
@@ -63,7 +64,6 @@
     <script type="text/javascript" src="../_static/timedmc.js"></script>
     <script type="text/javascript" src="../_static/timed.js"></script>
     <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/clickable.js"></script>
     <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
@@ -75,17 +75,14 @@
     <script type="text/javascript" src="../_static/dragndrop.js"></script>
     <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/fitb.js"></script>
     <script type="text/javascript" src="../_static/timedfitb.js"></script>
     <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/matrixeq.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
     <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/timedparsons.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
     <script type="text/javascript" src="../_static/reveal.js"></script>
@@ -94,6 +91,9 @@
     <script type="text/javascript" src="../_static/showEval.js"></script>
     <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
     <script type="text/javascript" src="../_static/karelCorner.js"></script>
     <script type="text/javascript" src="../_static/karelRobot.js"></script>
     <script type="text/javascript" src="../_static/karelWorld.js"></script>
@@ -101,7 +101,6 @@
     <script type="text/javascript" src="../_static/karelUI.js"></script>
     <script type="text/javascript" src="../_static/karel.js"></script>
     <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/notes.js"></script>
     <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
     <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
@@ -159,14 +158,14 @@
   eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
   eBookConfig.app = eBookConfig.host+'/runestone';
   eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
-  eBookConfig.course = 'MicrobitProjektna';
+  eBookConfig.course = 'microbit_micropython_vii_viii';
   eBookConfig.logLevel = 0;
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "";
   eBookConfig.isLoggedIn = false;
   eBookConfig.useRunestoneServices = false;
-  eBookConfig.python3 = yes;
-  eBookConfig.basecourse = 'MicrobitProjektna';
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'microbit_micropython_vii_viii';
   eBookConfig.runestone_version = '3.1.1';
   eBookConfig.imagesDir = '../_images/';
   eBookConfig.staticDir = '../_static/';
@@ -199,49 +198,48 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="../">Пројектна настава</a></li>
+        <li class="active"><a href="../">МycroPython за уредот Микро:бит</a></li>
       </ul>
     </div>
   </div>
 </nav>
-<br/>
 
 
 <div class="container col-md-12" id="continue-reading"></div>
 
-<div class="container col-md-8 col-md-offset-2" id="main-content">
+<div class="container col-md-8 col-md-offset-2" id="main-content" style="margin-top: 70px;">
   
   <div class="section" id="id1">
-<h1>Микробит клавијатура<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<h1>Клавијатура <em>Микро:бит</em><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>Овог пута за вас имамо питања из различитих области:</p>
+<p>Овој пат имаме за вас прашања од различни области:</p>
 
     <div class="course-box course-box-info">
         <div class="course-content">
             <p>
 <ul class="simple">
-<li><p>Које врсте инструмената постоје?</p></li>
-<li><p>Шта је звук, шта је тон, а шта нота?</p></li>
-<li><p>Наведите називе тонова (солмизацијa и абецедa).</p></li>
-<li><p>Да ли знате шта су проводници, а шта изолатори (наведите примере)?</p></li>
-<li><p>Шта је рециклажа?</p></li>
+<li><p>Какви видови инструменти постојат?</p></li>
+<li><p>Што е звук, што е тон, а што нота?</p></li>
+<li><p>Наведете ги имињата на тоновите (солмизација и абецеда).</p></li>
+<li><p>Дали знаете што се спроводници, а што се изолатори (наведете примери)?</p></li>
+<li><p>Што е рециклирање?</p></li>
 </ul>
 
     </p></div></div>
-<p>Осмислили смо један инструмент! Оно што је интересантно код овог инструмента јесте да његове дирке могу бити направљене безмало од било чега! Која су ограничења за избор материјала за дирке?</p>
+<p>Осмисливме еден инструмент! Кај овој инструмент интересно е тоа што неговите клавиши може да се направат од што било! На што се сведува изборот на материјал за клавиши?</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p><strong>Шта нам је потребно?</strong></p>
+<p><strong>Што ни е потребно?</strong></p>
 <ul class="simple">
-<li><p>четири микробита</p></li>
-<li><p>осам (искоришћених) лименки или неких других проводних тела</p></li>
-<li><p>проводници (са крокодилкама или без)</p></li>
-<li><p>звучник</p></li>
-<li><p>картонска кутија (може од тастатуре)</p></li>
-<li><p>колаж-папир или боје за украшавање инструмента (по жељи)</p></li>
+<li><p>Четири уреди Микро:бит;</p></li>
+<li><p>Осум (употребени) лименки или некои други спроводни материјали;</p></li>
+<li><p>Спроводници (со или без крокодил-штипки);</p></li>
+<li><p>Звучник;</p></li>
+<li><p>Картонска кутија (може и од тастатурата);</p></li>
+<li><p>Колаж-хартија или бои за украсување на инструментот (по желба).</p></li>
 </ul>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -250,7 +248,7 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>Погледајте следећи видео-запис и потом покушајте да направите своју микробит клавијатуру!</p>
+<p>Погледнете го следното видео и потоа обидете се да направите клавијатура <em>Микро:бит</em>!</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -262,8 +260,8 @@
       
 
         </div>
-    <div id="modal" class="ytvideoclose" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgba(128, 182, 128, 0.3); z-index: 10000;">
-        <div style="background-color: white; position: fixed; top: 4vh; left: 5vw; width:  90vw; height:  90vh; z-index: 100;" id="YTmodal">
+    <div id="modal-OvjfijyMHwQ" class="ytvideoclose" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgba(128, 182, 128, 0.3); z-index: 10000;">
+        <div style="background-color: white; position: fixed; top: 4vh; left: 5vw; width:  90vw; height:  90vh; z-index: 100;" id="YTmodal-OvjfijyMHwQ">
         </div>
     </div>
     
@@ -271,8 +269,8 @@
     <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>Програми које смо написали су следећи:</p>
-<p>Програм за први микробит (прослеђивање нота C, D, E):</p>
+<p>Ги напишавме следните кодови:</p>
+<p>Код за првиот уред <em>Микро:бит</em> (проследување на нотите C, D, E):</p>
 
 <div data-childcomponent="instrument_note_cde" class="course-box course-box-problem course-content">
 
@@ -299,7 +297,7 @@ while True:
 
 </textarea>
 </div>
-<p>Програм за други микробит (прослеђивање нота F, G, A):</p>
+<p>Код за вториот уред Микро:бит (проследување на нотите F, G, A):</p>
 
 <div data-childcomponent="instrument_note_fga" class="course-box course-box-problem course-content">
 
@@ -326,7 +324,7 @@ while True:
 
 </textarea>
 </div>
-<p>Програм за трећи микробит (прослеђивање нота H, C):</p>
+<p>Код за третиот уред Микро:бит (проследување на нотите H, C):</p>
 
 <div data-childcomponent="instrument_note_hc" class="course-box course-box-problem course-content">
 
@@ -353,7 +351,7 @@ while True:
 
 </textarea>
 </div>
-<p>Програм за четврти микробит (пријем нота):</p>
+<p>Код за четвртиот уред Микро:бит (прием на нотите):</p>
 
 <div data-childcomponent="instrument_prijem" class="course-box course-box-problem course-content">
 
@@ -380,14 +378,11 @@ while True:
 
 </textarea>
 </div>
-<p>Као за сваки проблем, и за овај постоји више решења.
-Понекад је потребно мало и уштедети. Замислите, на пример, да на располагању имате само три микробит уређаја. Како бисте онда решили проблем?</p>
-<p>Већ смо поменули да дирке клавијатуре могу бити направљене од различитих проводних тела/материјала. Можда ћете желети да направите воћни клавир, клавир од кромпира,
-алуминијумске фолије.</p>
-<p>Савремене клавијатуре имају у својој меморији и целе композиције. Допуните програм тако да се притиском на тастере А, Б или оба истовремено чују ваше омиљене мелодије!</p>
-<p>Наша клавијатура је направљена од рециклираних материјала - старе картонске кутије од тастатуре и празних лименки. Намера нам је била и да укажемо на
-једну врло важну тему - рециклажу.</p>
-<p>Направите презентацију на тему рециклаже и размислите како свако од нас, као појединац, може да утиче на очување животне средине. Поделите своја размишљања!</p>
+<p>Како и за секој друг проблем, така и за овој постојат повеќе решенија. Понекогаш потребно е малку да штедиме. На пример, замислете дека имате на располагање три уреди <em>Микро:бит</em>. Како би го решиле проблемот со нив?</p>
+<p>Веќе напоменавме дека клавишите од клавијатурата може да се направат од различни спроводни материјали. Можеби ќе сакате да направите овошен клавир, клавир од компир или алуминиумска фолија.</p>
+<p>Современите клавијатури во својата меморија содржат и цели композиции. Надополнете го кодот така што со притискање на копчето А, B или двете наеднаш ќе може да ја слушнете вашата омилена мелодија!</p>
+<p>Нашата клавијатура е направена од рециклирани материјали – стара картонска кутија од тастатура и празни лименки. Намерата ни беше да укажеме на една исклучително важна тема – рециклирањето.</p>
+<p>Направете презентација на тема рециклирање и размислете како секој од нас, како поединец, може да придонесе кон зачувување на животната средина. Споделете ги вашите ставови!</p>
 </div>
 
 
@@ -418,13 +413,11 @@ while True:
   
 </div>
 <footer class="footer col-md-12">
-    <div class="container text-center">
+    <div class="container">
         <div class="text-center">
             <hr>
             <p class="text-muted">
-                <span class="text-center">&copy; 2020 <a href="https://www.britishcouncil.rs/en">British Council</a> 
-                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
-                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+                <span class="pull-left">&copy; 2019 Petlja (Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
             </p>
         </div>
     </div>

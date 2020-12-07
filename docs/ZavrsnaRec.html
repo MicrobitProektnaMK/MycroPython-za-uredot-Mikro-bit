@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Завршна реч &#8212; Tekstualno programiranje u Pajtonu</title>
+    <title>Завршни зборови &#8212; Програмирање микробит уређаја у Микропајтону – приручник за пројектну наставу за седми и осми разред</title>
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/activecode.css" />
@@ -22,6 +22,8 @@
     <link rel="stylesheet" type="text/css" href="_static/tabbedstuff.css" />
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="_static/webglinteractive.css" />
     <link rel="stylesheet" type="text/css" href="_static/karel.css" />
     <link rel="stylesheet" type="text/css" href="_static/notes.css" />
     <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
@@ -52,7 +54,6 @@
     <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.js"></script>
     <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
     <script type="text/javascript" src="_static/activecode-i18n.en.js"></script>
-    <script type="text/javascript" src="_static/activecode-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="_static/skulpt.min.js"></script>
     <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
     <script type="text/javascript" src="_static/activecode.js"></script>
@@ -63,7 +64,6 @@
     <script type="text/javascript" src="_static/timedmc.js"></script>
     <script type="text/javascript" src="_static/timed.js"></script>
     <script type="text/javascript" src="_static/mchoice-i18n.en.js"></script>
-    <script type="text/javascript" src="_static/mchoice-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="_static/clickable.js"></script>
     <script type="text/javascript" src="_static/timedclickable.js"></script>
     <script type="text/javascript" src="_static/d3.v2.min.js"></script>
@@ -75,17 +75,14 @@
     <script type="text/javascript" src="_static/dragndrop.js"></script>
     <script type="text/javascript" src="_static/timeddnd.js"></script>
     <script type="text/javascript" src="_static/dragndrop-i18n.en.js"></script>
-    <script type="text/javascript" src="_static/dragndrop-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="_static/fitb.js"></script>
     <script type="text/javascript" src="_static/timedfitb.js"></script>
     <script type="text/javascript" src="_static/fitb-i18n.en.js"></script>
-    <script type="text/javascript" src="_static/fitb-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="_static/matrixeq.js"></script>
     <script type="text/javascript" src="_static/lib/prettify.js"></script>
     <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
     <script type="text/javascript" src="_static/parsons.js"></script>
     <script type="text/javascript" src="_static/parsons-i18n.en.js"></script>
-    <script type="text/javascript" src="_static/parsons-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="_static/timedparsons.js"></script>
     <script type="text/javascript" src="_static/poll.js"></script>
     <script type="text/javascript" src="_static/reveal.js"></script>
@@ -94,6 +91,9 @@
     <script type="text/javascript" src="_static/showEval.js"></script>
     <script type="text/javascript" src="_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="_static/Blob.js"></script>
     <script type="text/javascript" src="_static/karelCorner.js"></script>
     <script type="text/javascript" src="_static/karelRobot.js"></script>
     <script type="text/javascript" src="_static/karelWorld.js"></script>
@@ -101,7 +101,6 @@
     <script type="text/javascript" src="_static/karelUI.js"></script>
     <script type="text/javascript" src="_static/karel.js"></script>
     <script type="text/javascript" src="_static/karel-i18n.en.js"></script>
-    <script type="text/javascript" src="_static/karel-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="_static/notes.js"></script>
     <script type="text/javascript" src="_static/pygamelib-init.js"></script>
     <script type="text/javascript" src="_static/blockly/blockly_compressed.js"></script>
@@ -147,8 +146,8 @@
     <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Додатак - REPL прозор у програмима" href="REPL_u_programima.html" />
-    <link rel="prev" title="Безбедносни систем" href="Projekti/Bezbednosni sistem.html" />
+    <link rel="next" title="Додаток – Прозорец REPL во програмите" href="REPL_u_programima.html" />
+    <link rel="prev" title="Безбедносен систем" href="Projekti/Bezbednosni sistem.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -159,14 +158,14 @@
   eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
   eBookConfig.app = eBookConfig.host+'/runestone';
   eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
-  eBookConfig.course = 'MicrobitProjektna';
+  eBookConfig.course = 'microbit_micropython_vii_viii';
   eBookConfig.logLevel = 0;
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "";
   eBookConfig.isLoggedIn = false;
   eBookConfig.useRunestoneServices = false;
-  eBookConfig.python3 = yes;
-  eBookConfig.basecourse = 'MicrobitProjektna';
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'microbit_micropython_vii_viii';
   eBookConfig.runestone_version = '3.1.1';
   eBookConfig.imagesDir = '_images/';
   eBookConfig.staticDir = '_static/';
@@ -199,33 +198,29 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="./">Пројектна настава</a></li>
+        <li class="active"><a href="./">МycroPython за уредот Микро:бит</a></li>
       </ul>
     </div>
   </div>
 </nav>
-<br/>
 
 
 <div class="container col-md-12" id="continue-reading"></div>
 
-<div class="container col-md-8 col-md-offset-2" id="main-content">
+<div class="container col-md-8 col-md-offset-2" id="main-content" style="margin-top: 70px;">
   
   <div class="section" id="id1">
-<h1>Завршна реч<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
-<p>Сада имате већ довољно искуства да самостално програмирате микробит уређај за различите намене.</p>
-<p>Објаснили смо како микробитови могу међусобно да комуницирају, како на њих можете да
-повежете различите извршне уређаје, како да очитавате податке са различитих типова сензора.
-Можете да наставите сами.</p>
-<p>Маштајте, истражујте, размишљајте, проучавајте, програмирајте, поредите, допуњавајте.</p>
-<p>Десиће се да пронађете на интернету информације које нису исправне. Сигурно ћете доћи у ситуацију да уређај који сте замислили не ради како би требало, бар не из првог покушаја.
-Све се то уклапа у нормалан развојни процес.</p>
-<p>Не одустајте.</p>
-<p>Пронађите начин да примените савремене технологије на исправан начин и учините свет који нас окружује лакшим, безбеднијим и племенитијим местом за живот…</p>
+<h1>Завршни зборови<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>Сега сте веќе доволно искусни за да пишувате самостојно кодови со различна намена на уредот <em>Микро:бит</em>.</p>
+<p>Објаснивме како можат меѓусебно да комуницираат уреди <em>Микро:бит</em>, како може да ги поврземе со разни извршни уреди и како да отчитувате податоци од разни видови сензори. Понатаму може да продолжите сами.</p>
+<p>Фантазирајте, истражувајте, размислувајте, проучувајте, кодирајте, подредувајте и дополнувајте!</p>
+<p>На интернет ќе наидувате и на информации коишто не се точни. Сигурно ќе се најдете и во ситуација во која уредот што сте го замислиле нема да функционира како што треба, барем не од прва. Сето тоа е дел од нормалниот процес на развој.</p>
+<p>Не откажувајте се!</p>
+<p>Најдете начин соодветно да ја применувате современата технологија и со тоа да го направите светот околу вас полесно, побезбедно и поблагородно место за живеење!</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p><strong>Желимо вам успешан, забаван и поучан рад са микробитом!</strong></p>
+<p><strong>Ви посакуваме успешна, забавна и поучна работа со уредот Микро:бит!</strong></p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -235,17 +230,17 @@
   
       <div class="col-md-12">
 <ul class="pager">
-        <li id="relations-prev" title='Previous chapter - Безбедносни систем' data-toggle="tooltip"><a href="Projekti/Bezbednosni sistem.html">Previous chapter</a></li>
+        <li id="relations-prev" title='Previous chapter - Безбедносен систем' data-toggle="tooltip"><a href="Projekti/Bezbednosni sistem.html">Previous chapter</a></li>
     
-        <li id="relations-next" title='Next chapter - Додатак - REPL прозор у програмима' data-toggle="tooltip"><a href="REPL_u_programima.html">Next chapter</a></li>
+        <li id="relations-next" title='Next chapter - Додаток – Прозорец REPL во програмите' data-toggle="tooltip"><a href="REPL_u_programima.html">Next chapter</a></li>
 </ul>
 
 <!-- <ul class="pager"> -->
     <!-- -->
-        <!-- <li id="relations-prev" title='Претходно поглавље - Безбедносни систем' data-toggle="tooltip"><a href="Projekti/Bezbednosni sistem.html">Претходно поглавље</a></li> -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Безбедносен систем' data-toggle="tooltip"><a href="Projekti/Bezbednosni sistem.html">Претходно поглавље</a></li> -->
     <!--  -->
     <!-- -->
-        <!-- <li id="relations-next" title='Следеће поглавље - Додатак - REPL прозор у програмима' data-toggle="tooltip"><a href="REPL_u_programima.html">Следеће поглавље</a></li> -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Додаток – Прозорец REPL во програмите' data-toggle="tooltip"><a href="REPL_u_programima.html">Следеће поглавље</a></li> -->
     <!-- -->
 <!-- </ul> -->
 
@@ -259,13 +254,11 @@
   
 </div>
 <footer class="footer col-md-12">
-    <div class="container text-center">
+    <div class="container">
         <div class="text-center">
             <hr>
             <p class="text-muted">
-                <span class="text-center">&copy; 2020 <a href="https://www.britishcouncil.rs/en">British Council</a> 
-                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
-                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+                <span class="pull-left">&copy; 2019 Petlja (Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
             </p>
         </div>
     </div>

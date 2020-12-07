@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Семафор &#8212; Tekstualno programiranje u Pajtonu</title>
+    <title>Семафор &#8212; Програмирање микробит уређаја у Микропајтону – приручник за пројектну наставу за седми и осми разред</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
@@ -22,6 +22,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
     <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
@@ -52,7 +54,6 @@
     <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
     <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
     <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
     <script type="text/javascript" src="../_static/activecode.js"></script>
@@ -63,7 +64,6 @@
     <script type="text/javascript" src="../_static/timedmc.js"></script>
     <script type="text/javascript" src="../_static/timed.js"></script>
     <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/clickable.js"></script>
     <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
@@ -75,17 +75,14 @@
     <script type="text/javascript" src="../_static/dragndrop.js"></script>
     <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/fitb.js"></script>
     <script type="text/javascript" src="../_static/timedfitb.js"></script>
     <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/matrixeq.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
     <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/timedparsons.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
     <script type="text/javascript" src="../_static/reveal.js"></script>
@@ -94,6 +91,9 @@
     <script type="text/javascript" src="../_static/showEval.js"></script>
     <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
     <script type="text/javascript" src="../_static/karelCorner.js"></script>
     <script type="text/javascript" src="../_static/karelRobot.js"></script>
     <script type="text/javascript" src="../_static/karelWorld.js"></script>
@@ -101,7 +101,6 @@
     <script type="text/javascript" src="../_static/karelUI.js"></script>
     <script type="text/javascript" src="../_static/karel.js"></script>
     <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/notes.js"></script>
     <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
     <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
@@ -148,7 +147,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Аутоматско заливање биљке" href="Zalivanje biljke.html" />
-    <link rel="prev" title="Микробит клавијатура" href="Mikrobit klavijatura.html" />
+    <link rel="prev" title="Клавијатура Микро:бит" href="Mikrobit klavijatura.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -159,14 +158,14 @@
   eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
   eBookConfig.app = eBookConfig.host+'/runestone';
   eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
-  eBookConfig.course = 'MicrobitProjektna';
+  eBookConfig.course = 'microbit_micropython_vii_viii';
   eBookConfig.logLevel = 0;
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "";
   eBookConfig.isLoggedIn = false;
   eBookConfig.useRunestoneServices = false;
-  eBookConfig.python3 = yes;
-  eBookConfig.basecourse = 'MicrobitProjektna';
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'microbit_micropython_vii_viii';
   eBookConfig.runestone_version = '3.1.1';
   eBookConfig.imagesDir = '../_images/';
   eBookConfig.staticDir = '../_static/';
@@ -199,17 +198,16 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="../">Пројектна настава</a></li>
+        <li class="active"><a href="../">МycroPython за уредот Микро:бит</a></li>
       </ul>
     </div>
   </div>
 </nav>
-<br/>
 
 
 <div class="container col-md-12" id="continue-reading"></div>
 
-<div class="container col-md-8 col-md-offset-2" id="main-content">
+<div class="container col-md-8 col-md-offset-2" id="main-content" style="margin-top: 70px;">
   
   <div class="section" id="id1">
 <h1>Семафор<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
@@ -221,31 +219,28 @@
         <div class="course-content">
             <p>
 <ul class="simple">
-<li><p>Шта је семафор?</p></li>
-<li><p>Да ли знате када је постављен први семафор?</p></li>
-<li><p>Када и где је постављен први семафор у Србији?</p></li>
-<li><p>Да ли сте приметили да су неки семафори опремљени и допунским уређајима? Које могућности постоје?</p></li>
+<li><p>Што e семафор?</p></li>
+<li><p>Дали знаете кога е поставен првиот семафор во светот?</p></li>
+<li><p>Кога и каде е поставен првиот семафор во Македонија?</p></li>
+<li><p>Дали сте забележале дека некои семафори се опремени со дополнителни уреди? Какви можности постојат?</p></li>
 </ul>
 
     </p></div></div>
-<p>Овај пројекат треба да укаже на чињеницу да, иако постоје већ стандардизована решења за одређене проблеме, технологија може постојећа решења учинити још
-ефикаснијим и практичнијим. Направићемо мали семафор и размотрити које све могућности савремени семафор може да пружи у циљу бољег обезбеђења учесника у саобраћају.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+<p>Овој проект треба да укаже на фактот дека иако постојат веќе стандардизирани решенија за одредени проблеми, тие со помош на технологијата може да станат уште поефикасни и попрактични. Ќе направиме мал семафор и ќе размислиме какви можности може да понуди еден модерен семафор во прилог на безбедноста на учесниците во сообраќајот.
+|</p>
 <p><strong>Шта нам је потребно?</strong></p>
 <ul class="simple">
-<li><p>микробит</p></li>
-<li><p>три светлеће диоде</p></li>
-<li><p>три отпорника од 100Ω</p></li>
-<li><p>проводници</p></li>
-<li><p>картон или неки други материјал за израду макете (по жељи)</p></li>
-<li><p>звучник, додатни микробитови (по жељи)</p></li>
+<li><p>Уред Микро:бит;</p></li>
+<li><p>Три светлечки диоди;</p></li>
+<li><p>Три отпорници од 100Ω;</p></li>
+<li><p>Спроводници;</p></li>
+<li><p>Картон или некој друг материјал за изработка на макета (по желба);</p></li>
+<li><p>Звучник, дополнителни уреди Микро:бит (по желба).</p></li>
 </ul>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>У следећем видео-запису детаљно је приказан начин повезивања светлећих диода и објашњен програм који ће омогућити симулацију рада семафора.</p>
+<p>Во следното видео детално е прикажан начинот на поврзување на светлечките диоди и објаснет е кодот којшто ќе овозможи симулација на работење на семафор.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -257,8 +252,8 @@
       
 
         </div>
-    <div id="modal" class="ytvideoclose" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgba(128, 182, 128, 0.3); z-index: 10000;">
-        <div style="background-color: white; position: fixed; top: 4vh; left: 5vw; width:  90vw; height:  90vh; z-index: 100;" id="YTmodal">
+    <div id="modal-kT85LuXgOVE" class="ytvideoclose" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgba(128, 182, 128, 0.3); z-index: 10000;">
+        <div style="background-color: white; position: fixed; top: 4vh; left: 5vw; width:  90vw; height:  90vh; z-index: 100;" id="YTmodal-kT85LuXgOVE">
         </div>
     </div>
     
@@ -266,7 +261,7 @@
     <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>Дакле, светлеће диоде смо повезали пратећи следећу шему:</p>
+<p>Во следното видео детално е прикажан начинот на поврзување на светлечките диоди и објаснет е кодот којшто ќе овозможи симулација на работење на семафор.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -274,7 +269,7 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>Основни програм може изгледати овако:</p>
+<p>Основниот код може да изгледа вака:</p>
 
 <div data-childcomponent="semafor" class="course-box course-box-problem course-content">
 
@@ -290,7 +285,7 @@ while True:
     pin1.write_digital(0)
     sleep(7000)
 
-    # crveno+zuto
+    # crveno+zolto
     pin1.write_digital(1)
     sleep(3000)
 
@@ -300,7 +295,7 @@ while True:
     pin2.write_digital(1)
     sleep(7000)
 
-    # zuto
+    # zolto
     pin1.write_digital(1)
     pin2.write_digital(0)
     sleep(3000)"   >
@@ -308,25 +303,23 @@ while True:
 
 </textarea>
 </div>
-<p>Приметили сте да се дизајн семафора мења током времена  и да су семафори све чешће опремљени додатним уређајима који чине безбеднијим учешће како возача, тако и пешака
-и бициклиста у саобраћају. Пошто сте повезали и написали програм за основну верзију семафора, покушајте да направите и макету (од картона, шперплоче), али и да унапредите његове могућности.
-Дајемо вам неколико предлога:</p>
+<p>Како што забележавте, дизајнот на семафорите се менува со текот на времето и сѐ почесто тие се опремени со дополнителни уреди кои придонесуваат кон безбедноста на возачите, но и на пешаците и велосипедистите во сообраќајот. Бидејќи поврзавте и напишавте код за основен модел на семафор, обидете се да направите и макета (од картон или шперплоча), која ќе ја надградите со повеќе опции. Ви ги предлагаме следниве идеи:</p>
 <ul class="simple">
-<li><p>убаците трепћуће зелено светло за возила</p></li>
-<li><p>када се притисне тастер А, семафор улази у режим трећућег жутог светла, а враћа се у нормалан режим притиском на тастер Б</p></li>
-<li><p>на екрану микробита може да буде приказана сигнализација за пешаке - да ли је дозвољен или забрањен прелаз (✔️ или ❌)</p></li>
-<li><p>додајте још један микробит и на њега повежите црвену и зелену светлећу диоду (сигнализација за пешаке) које ће преко радија примати поруку када треба да се укључе/искључе</p></li>
-<li><p>додајте одбројавање на екрану микробита како би пешаци знали за колико ће секунди бити слободан прелаз преко улице</p></li>
-<li><p>повежите звучник на други микробит и када је слободан прелаз преко улице генеришите звучни сигнал</p></li>
-<li><p>повежите звучник на други микробит и напишите програм који ће да изговара да ли је прелаз за пешаке слободан</p></li>
-<li><p>притиском на тастер А треба убрзано да се омогући слободан прелаз за пешаке (на прометним путевима)</p></li>
-<li><p>направите паметну раскрсницу или синхронизујте рад више семафора (зелени талас)</p></li>
+<li><p>Додадете светло кое трепка зелено за возилата;</p></li>
+<li><p>Кога ќе се притисне копчето А семафорот почнува да трепка жолто, а со притискање на копчето В семафорот се враќа во нормална состојба;</p></li>
+<li><p>На екранот од уредот Микро:бит може да се прикажува сигнализација за пешаците – дали е дозволено да се помине или не (✔️ или ❌);</p></li>
+<li><p>Додадете уште еден уред Микро:бит и поврзете го со црвена и зелена светлечка диода (сигнализација за пешаци) што преку радио ќе прима порака кога треба да се вклучат и исклучат;</p></li>
+<li><p>Додадете одбројување на екранот на уредот Микро:бит, за да знаат пешаците за колку секунди ќе може да ја поминат улицата;</p></li>
+<li><p>Поврзете звучник на вториот уред Микро:бит и кога ќе може слободно да се помине улицата тој ќе генерира звучен сигнал;</p></li>
+<li><p>Поврзете звучник на вториот уред Микро:бит и напишете код којшто ќе изговара дали е слободен пешачкиот премин;</p></li>
+<li><p>Со притискање на копчето А треба за брзо време да се овозможи слободно минување за пешаци (на прометна улица);</p></li>
+<li><p>Направете паметна раскрсница или синхронизирајте го работењето на повеќе семафори (зелен бран).</p></li>
 </ul>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>Да ли имате још неки предлог за додатни сензор или уређај који би раскрснице учинио још безбеднијим?</p>
-<p>Можда ће вам за реализацију неких од ових предлога више одговарати да почнете од другачијег програмског решења за основни пројекат. За које допуне пројекта би вам следећи облик програма био погоднији?</p>
+<p>Дали имате уште некој предлог за дополнителен сензор или уред со кој би се зголемила безбедноста на раскрсниците?</p>
+<p>За да реализирате некој од овие проекти, можеби повеќе ќе ви одговара да почнете со поинакво програмско решение за основен проект. За какво надополнување на проектот би ви бил најпогоден следниот код?</p>
 
 <div data-childcomponent="semafor_alt" class="course-box course-box-problem course-content">
 
@@ -336,21 +329,22 @@ while True:
              data-passivecode="true"  data-hidehistory=true
     data-includesrc="from microbit import *                                      
 
-# Svaka pod-torka u torki &apos;boje&apos; pretstavlja opis jedne faze
-# rada semafora, i to: prva tri broja redom govore da li su
-# crvena, zuta i zelena ukljucene u toj fazi,
-# a cetvrti broj je trajanje faze u milisekundama
+3
+# Sekoja podterka vo terka &apos;podobro&apos; pretstavuva opis na edna faza
+# rabotenje_na semaforot, i toa: prvite tri broja po red kazuvaat dali
+# crvena, zolto i zeleno se vkluceni vo taa faza,
+# a cetvrtiot broj e traenje na fazata vo milisekundi
 boje = (
     (1, 0, 0, 7000),  # crveno
-    (1, 1, 0, 3000),  # crveno i zuto
+    (1, 1, 0, 3000),  # crveno i zolto
     (0, 0, 1, 7000),  # zeleno
-    (0, 1, 0, 3000)  # samo zuto
+    (0, 1, 0, 3000)  # samo zolto
 )
 while True:
-    for signal_za_crvenu, signal_za_zutu, signal_za_zelenu, t in boje:
-        pin0.write_digital(signal_za_crvenu)
-        pin1.write_digital(signal_za_zutu)
-        pin2.write_digital(signal_za_zelenu)
+    for signal_za_crveno, signal_za_zolto, signal_za_zeleno, t in boje:
+        pin0.write_digital(signal_za_crveno)
+        pin1.write_digital(signal_za_zolto)
+        pin2.write_digital(signal_za_zeleno)
         sleep(t)"   >
 
 
@@ -365,14 +359,14 @@ while True:
   
       <div class="col-md-12">
 <ul class="pager">
-        <li id="relations-prev" title='Previous chapter - Микробит клавијатура' data-toggle="tooltip"><a href="Mikrobit klavijatura.html">Previous chapter</a></li>
+        <li id="relations-prev" title='Previous chapter - Клавијатура <em>Микро:бит</em>' data-toggle="tooltip"><a href="Mikrobit klavijatura.html">Previous chapter</a></li>
     
         <li id="relations-next" title='Next chapter - Аутоматско заливање биљке' data-toggle="tooltip"><a href="Zalivanje biljke.html">Next chapter</a></li>
 </ul>
 
 <!-- <ul class="pager"> -->
     <!-- -->
-        <!-- <li id="relations-prev" title='Претходно поглавље - Микробит клавијатура' data-toggle="tooltip"><a href="Mikrobit klavijatura.html">Претходно поглавље</a></li> -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Клавијатура <em>Микро:бит</em>' data-toggle="tooltip"><a href="Mikrobit klavijatura.html">Претходно поглавље</a></li> -->
     <!--  -->
     <!-- -->
         <!-- <li id="relations-next" title='Следеће поглавље - Аутоматско заливање биљке' data-toggle="tooltip"><a href="Zalivanje biljke.html">Следеће поглавље</a></li> -->
@@ -389,13 +383,11 @@ while True:
   
 </div>
 <footer class="footer col-md-12">
-    <div class="container text-center">
+    <div class="container">
         <div class="text-center">
             <hr>
             <p class="text-muted">
-                <span class="text-center">&copy; 2020 <a href="https://www.britishcouncil.rs/en">British Council</a> 
-                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
-                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+                <span class="pull-left">&copy; 2019 Petlja (Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
             </p>
         </div>
     </div>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Гаража &#8212; Tekstualno programiranje u Pajtonu</title>
+    <title>Гаража &#8212; Програмирање микробит уређаја у Микропајтону – приручник за пројектну наставу за седми и осми разред</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
@@ -22,6 +22,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
     <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
@@ -52,7 +54,6 @@
     <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
     <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
     <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
     <script type="text/javascript" src="../_static/activecode.js"></script>
@@ -63,7 +64,6 @@
     <script type="text/javascript" src="../_static/timedmc.js"></script>
     <script type="text/javascript" src="../_static/timed.js"></script>
     <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/clickable.js"></script>
     <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
@@ -75,17 +75,14 @@
     <script type="text/javascript" src="../_static/dragndrop.js"></script>
     <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/fitb.js"></script>
     <script type="text/javascript" src="../_static/timedfitb.js"></script>
     <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/matrixeq.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
     <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/timedparsons.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
     <script type="text/javascript" src="../_static/reveal.js"></script>
@@ -94,6 +91,9 @@
     <script type="text/javascript" src="../_static/showEval.js"></script>
     <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
     <script type="text/javascript" src="../_static/karelCorner.js"></script>
     <script type="text/javascript" src="../_static/karelRobot.js"></script>
     <script type="text/javascript" src="../_static/karelWorld.js"></script>
@@ -101,7 +101,6 @@
     <script type="text/javascript" src="../_static/karelUI.js"></script>
     <script type="text/javascript" src="../_static/karel.js"></script>
     <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/notes.js"></script>
     <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
     <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
@@ -148,7 +147,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Коцкице за јамб" href="Kockice za jamb.html" />
-    <link rel="prev" title="Бицикл са сигнализацијом" href="Bicikl.html" />
+    <link rel="prev" title="Велосипед со сигнализација" href="Bicikl.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -159,14 +158,14 @@
   eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
   eBookConfig.app = eBookConfig.host+'/runestone';
   eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
-  eBookConfig.course = 'MicrobitProjektna';
+  eBookConfig.course = 'microbit_micropython_vii_viii';
   eBookConfig.logLevel = 0;
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "";
   eBookConfig.isLoggedIn = false;
   eBookConfig.useRunestoneServices = false;
-  eBookConfig.python3 = yes;
-  eBookConfig.basecourse = 'MicrobitProjektna';
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'microbit_micropython_vii_viii';
   eBookConfig.runestone_version = '3.1.1';
   eBookConfig.imagesDir = '../_images/';
   eBookConfig.staticDir = '../_static/';
@@ -199,49 +198,46 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="../">Пројектна настава</a></li>
+        <li class="active"><a href="../">МycroPython за уредот Микро:бит</a></li>
       </ul>
     </div>
   </div>
 </nav>
-<br/>
 
 
 <div class="container col-md-12" id="continue-reading"></div>
 
-<div class="container col-md-8 col-md-offset-2" id="main-content">
+<div class="container col-md-8 col-md-offset-2" id="main-content" style="margin-top: 70px;">
   
   <div class="section" id="id1">
 <h1>Гаража<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>Истражите и одговорите на следећа питања:</p>
+<p>Истражете и одговорете ги следниве прашања:</p>
 
     <div class="course-box course-box-info">
         <div class="course-content">
             <p>
 <ul class="simple">
-<li><p>Колико времена возач просечно потроши током десет дана на паркирање возила?</p></li>
-<li><p>Да ли у вашој околини има довољно паркинг места?</p></li>
-<li><p>Које врсте гаража постоје?</p></li>
-<li><p>Шта подразумева појам „паметни градови”?</p></li>
-<li><p>Како изгледају савремене гараже у светским метрополама?</p></li>
+<li><p>Колку време просечно троши еден возач за паркирање на своето возило во период од десет дена?</p></li>
+<li><p>Дали има доволно паркинг места во вашата околина?</p></li>
+<li><p>Какви видови гаражи постојат?</p></li>
+<li><p>Што се подразбира под поимот паметни градови?</p></li>
+<li><p>Како изгледаат современите гаражи во светските метрополи?</p></li>
 </ul>
 
     </p></div></div>
-<p>Живимо у доба IV индустријске револуције, време у коме вештачка интелигенција полако залази у сваку пору свакодневице и
-олакшава људима проблеме са којима се сусрећу.</p>
-<p>Један мали сегмент у коме нам примена савремених технологија може пружити помоћ и уштедети време може бити и
-гаража са јасно истакнутим бројем слободних места за паркирање.</p>
+<p>Живееме во време на четвртата индустриска револуција, во време во кое вештачката интелигенција полека навлегува во секоја пора од секојдневието и им го поедноставува на луѓето решавањето на проблемите со кои се соочуваат.</p>
+<p>Еден мал сегмент во кој може примената на современата технологија да ни помогне и да ни заштеди време е и гаражата со јасно истакнати слободни паркинг места.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p><strong>Шта нам је потребно?</strong></p>
+<p><strong>Што ни е потребно?</strong></p>
 <ul class="simple">
-<li><p>три микробита</p></li>
-<li><p>картон или шперплоча за израду макете</p></li>
-<li><p>серво мотор, додатно напајање и проводници (рампа - опционо)</p></li>
+<li><p>Три уреди Микро:бит;</p></li>
+<li><p>Картон или шперплоча за изработка на макета;</p></li>
+<li><p>Сервомотор, дополнително напојување и спроводници (рампа - опционално).</p></li>
 </ul>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -250,7 +246,7 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>У следећем видео-запису приказана је једна од могућности за израду макете паметне гараже:</p>
+<p>Во следното видео е прикажана една од опциите за изработка на макета за паметна гаража:</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -262,8 +258,8 @@
       
 
         </div>
-    <div id="modal" class="ytvideoclose" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgba(128, 182, 128, 0.3); z-index: 10000;">
-        <div style="background-color: white; position: fixed; top: 4vh; left: 5vw; width:  90vw; height:  90vh; z-index: 100;" id="YTmodal">
+    <div id="modal-tbhaFnqw-IE" class="ytvideoclose" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgba(128, 182, 128, 0.3); z-index: 10000;">
+        <div style="background-color: white; position: fixed; top: 4vh; left: 5vw; width:  90vw; height:  90vh; z-index: 100;" id="YTmodal-tbhaFnqw-IE">
         </div>
     </div>
     
@@ -271,8 +267,8 @@
     <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>Погледајте још једном програме:</p>
-<p>Програм за микробит на улазу гараже:</p>
+<p>Погледнете ги уште еднаш кодовите:</p>
+<p>Код за уредот Микро:бит на влезот од гаражата:</p>
 
 <div data-childcomponent="garaza_ulaz" class="course-box course-box-problem course-content">
 
@@ -287,15 +283,15 @@ radio.on()
 
 while True:
     if button_a.was_pressed():
-        display.scroll(&quot;Dobro dosli!&quot;)
-        radio.send(&quot;ulaz&quot;)
+        display.scroll(&quot;Dobredojdovte&quot;)
+        radio.send(&quot;vlez&quot;)
     sleep(1000)
 "   >
 
 
 </textarea>
 </div>
-<p>Програм за микробит на излазу гараже:</p>
+<p>Код за уредот Микро:бит на излезот од гаражата:</p>
 
 <div data-childcomponent="garaza_izlaz" class="course-box course-box-problem course-content">
 
@@ -310,15 +306,15 @@ radio.on()
 
 while True:
     if button_a.was_pressed():
-        radio.send(&quot;izlaz&quot;)
-        display.scroll(&quot;Srecan put!&quot;)
+        radio.send(&quot;izlez&quot;)
+        display.scroll(&quot;Srekjen pat!&quot;)
     sleep(1000)
 "   >
 
 
 </textarea>
 </div>
-<p>Микробит који прикупља податке и приказује број возила:</p>
+<p>Уред Микро:бит којшто собира податоци и го прикажува бројот на возила:</p>
 
 <div data-childcomponent="garaza_glavni" class="course-box course-box-problem course-content">
 
@@ -331,50 +327,47 @@ import radio
 
 radio.on()
 
-KAPACITET_GARAZE = 6
-br_mesta = KAPACITET_GARAZE
+KAPACITET_NA_GARAZATA = 6
+br_na_mesta = KAPACITET_NA_GARAZATA
 pin0.set_analog_period(20)  # za upravljanje pinom 0 - rampa
 
 while True:
-    if br_mesta &gt; 0:
-        display.show(str(br_mesta))
+    if br_na_mesta &gt; 0:
+        display.show(str(br_na_mesta))
     else:
-        display.scroll(&quot;Puna garaza!&quot;)
+        display.scroll(&quot;Polna garaza!&quot;)
 
     poruka = radio.receive()
-    if poruka == &quot;ulaz&quot;:
-        if br_mesta &gt; 0:
-            pin0.write_analog(160)  # podigni rampu
+    if poruka == &quot;vlez&quot;:
+        if br_na_mesta &gt; 0:
+            pin0.write_analog(160)  # kreni ja rampata
             sleep(5000)
-            pin0.write_analog(90)  # spusti rampu
-            br_mesta -= 1
-    elif poruka == &quot;izlaz&quot;:
-        if br_mesta &lt; KAPACITET_GARAZE:
-            br_mesta += 1
+            pin0.write_analog(90)  # spusti ja rampata
+            br_na_mesta -= 1
+    elif poruka == &quot;izlez&quot;:
+        if br_na_mesta &lt; KAPACITET_NA_GARAZATA:
+            br_na_mesta += 1
     sleep(500)"   >
 
 
 </textarea>
 </div>
-<p>Размислите шта је то што можете да урадите да учините своју гаражу још паметнијом. Можда да се аутоматски укључује расвета када је
-смањена видљивост, да додате рампу и на излазу, да се, уместо притискањем тастера, улазак и излазак возила региструје применом неког сензора?
-Сигурни смо да већ имате идеју за даље унапређење пројекта! ☺</p>
-<p>Имате ли визију шта ће све бити могуће у паметним градовима сутрашњице? Обновите знање о историјским догађајима који су обележили претходне индустријске револуције!
-Прошетајте кроз прошлост, завирите у будућност и направите презентације о својим запажањима и сазнањима!</p>
+<p>Размислете како може да ја направите вашата гаража уште попаметна - можеби би можело автоматски да се пали светло штом се намали видливоста, да додадете рампа на влезот и излезот, наместо со притискање копчиња влезот и излезот на возилата да се регистрира со сензор. Сигурно веќе имате идеја како да го надградите проектот! ☺</p>
+<p>Дали имате визија што сѐ ќе биде возможно во паметните градови во иднина? Повторете си за историските збиднувања кои ја одбележаа претходната индустриска револуција! Прошетајте низ минатото, ѕирнете во иднината и направете презентација за вашите заклучоци и сознанија!</p>
 </div>
 
 
   
       <div class="col-md-12">
 <ul class="pager">
-        <li id="relations-prev" title='Previous chapter - Бицикл са сигнализацијом' data-toggle="tooltip"><a href="Bicikl.html">Previous chapter</a></li>
+        <li id="relations-prev" title='Previous chapter - Велосипед со сигнализација' data-toggle="tooltip"><a href="Bicikl.html">Previous chapter</a></li>
     
         <li id="relations-next" title='Next chapter - Коцкице за јамб' data-toggle="tooltip"><a href="Kockice za jamb.html">Next chapter</a></li>
 </ul>
 
 <!-- <ul class="pager"> -->
     <!-- -->
-        <!-- <li id="relations-prev" title='Претходно поглавље - Бицикл са сигнализацијом' data-toggle="tooltip"><a href="Bicikl.html">Претходно поглавље</a></li> -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Велосипед со сигнализација' data-toggle="tooltip"><a href="Bicikl.html">Претходно поглавље</a></li> -->
     <!--  -->
     <!-- -->
         <!-- <li id="relations-next" title='Следеће поглавље - Коцкице за јамб' data-toggle="tooltip"><a href="Kockice za jamb.html">Следеће поглавље</a></li> -->
@@ -391,13 +384,11 @@ while True:
   
 </div>
 <footer class="footer col-md-12">
-    <div class="container text-center">
+    <div class="container">
         <div class="text-center">
             <hr>
             <p class="text-muted">
-                <span class="text-center">&copy; 2020 <a href="https://www.britishcouncil.rs/en">British Council</a> 
-                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
-                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+                <span class="pull-left">&copy; 2019 Petlja (Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
             </p>
         </div>
     </div>

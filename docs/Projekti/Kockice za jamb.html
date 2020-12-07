@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Коцкице за јамб &#8212; Tekstualno programiranje u Pajtonu</title>
+    <title>Коцкице за јамб &#8212; Програмирање микробит уређаја у Микропајтону – приручник за пројектну наставу за седми и осми разред</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
@@ -22,6 +22,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
     <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
@@ -52,7 +54,6 @@
     <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
     <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
     <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
     <script type="text/javascript" src="../_static/activecode.js"></script>
@@ -63,7 +64,6 @@
     <script type="text/javascript" src="../_static/timedmc.js"></script>
     <script type="text/javascript" src="../_static/timed.js"></script>
     <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/clickable.js"></script>
     <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
@@ -75,17 +75,14 @@
     <script type="text/javascript" src="../_static/dragndrop.js"></script>
     <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/fitb.js"></script>
     <script type="text/javascript" src="../_static/timedfitb.js"></script>
     <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/matrixeq.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
     <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/timedparsons.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
     <script type="text/javascript" src="../_static/reveal.js"></script>
@@ -94,6 +91,9 @@
     <script type="text/javascript" src="../_static/showEval.js"></script>
     <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
     <script type="text/javascript" src="../_static/karelCorner.js"></script>
     <script type="text/javascript" src="../_static/karelRobot.js"></script>
     <script type="text/javascript" src="../_static/karelWorld.js"></script>
@@ -101,7 +101,6 @@
     <script type="text/javascript" src="../_static/karelUI.js"></script>
     <script type="text/javascript" src="../_static/karel.js"></script>
     <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/notes.js"></script>
     <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
     <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
@@ -147,7 +146,7 @@
     <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Микробит клавијатура" href="Mikrobit klavijatura.html" />
+    <link rel="next" title="Клавијатура Микро:бит" href="Mikrobit klavijatura.html" />
     <link rel="prev" title="Гаража" href="Garaza.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -159,14 +158,14 @@
   eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
   eBookConfig.app = eBookConfig.host+'/runestone';
   eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
-  eBookConfig.course = 'MicrobitProjektna';
+  eBookConfig.course = 'microbit_micropython_vii_viii';
   eBookConfig.logLevel = 0;
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "";
   eBookConfig.isLoggedIn = false;
   eBookConfig.useRunestoneServices = false;
-  eBookConfig.python3 = yes;
-  eBookConfig.basecourse = 'MicrobitProjektna';
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'microbit_micropython_vii_viii';
   eBookConfig.runestone_version = '3.1.1';
   eBookConfig.imagesDir = '../_images/';
   eBookConfig.staticDir = '../_static/';
@@ -199,17 +198,16 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="../">Пројектна настава</a></li>
+        <li class="active"><a href="../">МycroPython за уредот Микро:бит</a></li>
       </ul>
     </div>
   </div>
 </nav>
-<br/>
 
 
 <div class="container col-md-12" id="continue-reading"></div>
 
-<div class="container col-md-8 col-md-offset-2" id="main-content">
+<div class="container col-md-8 col-md-offset-2" id="main-content" style="margin-top: 70px;">
   
   <div class="section" id="id1">
 <h1>Коцкице за јамб<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
@@ -221,22 +219,21 @@
         <div class="course-content">
             <p>
 <ul class="simple">
-<li><p>Наведите називе бар пет друштвених игара.</p></li>
-<li><p>Детаљно опишите правила једне друштвене игре.</p></li>
-<li><p>Због чега су друштвене игре добре?</p></li>
-<li><p>Да ли би вам неке старе, сада већ скоро заборављене друштвене игре биле интересантније уз употребу савремених технологија?</p></li>
+<li><p>Наведете имиња на барем пет друштвени игри!</p></li>
+<li><p>Опишете ги детално правилата на една друштвена игра!</p></li>
+<li><p>Зошто се добри друштвените игри?</p></li>
+<li><p>Дали некои стари игри, кои паднале во заборав, би ви станале интересни доколку ги играте со примена на современата технологија?</p></li>
 </ul>
 
     </p></div></div>
-<p>Када се помену савремене технологије у контексту забаве, прва асоцијација већини људи буду видео-игрице. Велики број друштвених игара које су играли наши родитељи полако пада у заборав.
-Идеја нам је да применом микробита учинимо савременијим, а самим тим и интересантнијим неке од њих. Направићемо сет електронских коцкица за друштвену игру Јамб.</p>
+<p>Кога и да се спомне современата технологија во контекст на забава, повеќето луѓе најпрво помислуваат на видеоигри. Голем број од друштвените игри што ги играле нашите родители полека паѓаат во заборав. Имаме замисла, со примена на уредот Микро:бит да ги осовремениме, а со тоа некои од нив да станат и поинтересни. Ќе направиме сет дигитални коцки за друштвената игра Јамб.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p><strong>Шта нам је потребно?</strong></p>
+<p><strong>Што ни е потребно?</strong></p>
 <ul class="simple">
-<li><p>шест микробитова</p></li>
-<li><p>картонска кутија (по жељи)</p></li>
+<li><p>Шест уредот Микро:бит;</p></li>
+<li><p>Картонска кутија (по желба).</p></li>
 </ul>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -253,8 +250,8 @@
       
 
         </div>
-    <div id="modal" class="ytvideoclose" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgba(128, 182, 128, 0.3); z-index: 10000;">
-        <div style="background-color: white; position: fixed; top: 4vh; left: 5vw; width:  90vw; height:  90vh; z-index: 100;" id="YTmodal">
+    <div id="modal-JJZ_BL4DTYI" class="ytvideoclose" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgba(128, 182, 128, 0.3); z-index: 10000;">
+        <div style="background-color: white; position: fixed; top: 4vh; left: 5vw; width:  90vw; height:  90vh; z-index: 100;" id="YTmodal-JJZ_BL4DTYI">
         </div>
     </div>
     
@@ -262,8 +259,8 @@
     <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>Програми са омогућеним задржавањем вредности коцкица су следећи:</p>
-<p>Програм за коцкицу коју „бацамо”:</p>
+<p>Кодови со кои се овозможува задржување на вредноста на коцката се следниве:</p>
+<p>Код за коцка која ја <em>фрламе</em>:</p>
 
 <div data-childcomponent="jamb_bacanje" class="course-box course-box-problem course-content">
 
@@ -279,14 +276,14 @@ radio.on()
 while True:
     gesture = accelerometer.current_gesture()
     if gesture == &quot;shake&quot;:
-        radio.send(&quot;bacanje&quot;)
+        radio.send(&quot;frlanje&quot;)
     if button_a.was_pressed():
-        radio.send(&quot;sledeci igrac&quot;)"   >
+        radio.send(&quot;sleden igrac&quot;)"   >
 
 
 </textarea>
 </div>
-<p>Програм за преостале коцкице:</p>
+<p>Код за сите останати коцки:</p>
 
 <div data-childcomponent="jamb_ostale_kockice" class="course-box course-box-problem course-content">
 
@@ -299,18 +296,18 @@ import random
 import radio
 
 radio.on()
-prethodni_broj_se_cuva = False
+prethodniot_broj_se_zacuvuva  = False
 
 while True:
     if button_a.was_pressed():
-        prethodni_broj_se_cuva = True
+        prethodniot_broj_se_zacuvuva  = True
 
-    primljena_poruka = radio.receive()
-    if primljena_poruka is not None:
-        if primljena_poruka == &quot;sledeci igrac&quot;:
-            prethodni_broj_se_cuva = False
-        elif primljena_poruka == &quot;bacanje&quot;:
-            if not prethodni_broj_se_cuva:
+    primena_poraka = radio.receive()
+    if primena_poraka is not None:
+        if primena_poraka == &quot;sleden igrac&quot;:
+            prethodniot_broj_se_zacuvuva  = False
+        elif primena_poraka == &quot;frlanje&quot;:
+            if not prethodniot_broj_se_zacuvuva :
                 broj = random.randint(1, 6)
                 display.show(str(broj))"   >
 
@@ -318,12 +315,12 @@ while True:
 </textarea>
 </div>
 <ul class="simple">
-<li><p>Измените програме тако да уместо цифара приказују тачкице попут оних на оригиналним коцкицама.</p></li>
-<li><p>Направите презентацију са детаљним упутством за друштвену игру „Јамб”.</p></li>
-<li><p>Покушајте сами да нацртате на рачунару и по могућности одштампате таблице за ову игру.</p></li>
-<li><p>Направите презентацију на тему „Моја омиљена друштвена игра” и упознајте другаре са њеним основним правилима и начином игре.</p></li>
-<li><p>Уколико је могуће, употребите микробит како бисте направили мини-уређај који игру може учинити интересантнијом (генерисање насумичног имена када се врши избор играча, микробит прислоњен уз карту која кад се окрене треба да прикаже неку случајну вредност и сл.)</p></li>
-<li><p>Дружите се и забављајте!</p></li>
+<li><p>Изменете го кодот наместо цифри да покажува точки како на оригиналните коцки.</p></li>
+<li><p>Направете презентација со детално упатство за друштвената игра <em>Јамб</em>.</p></li>
+<li><p>Обидете се сами да ја нацртате табелата за оваа игра на компјутерот и, доколку сте во можност, потоа испечатете ја.</p></li>
+<li><p>Направете презентација на темата <em>Мојата омилена друштвена игра</em> и запознајте ги другарите со основните правила и начинот на којшто се игра играта.</p></li>
+<li><p>Доколку е можно, употребете го уредот <em>Микро:бит</em> за да направите мини-уред со кој ќе ја направите играта уште поинтересна (генерирање случајни имиња кога се бираат играчи, уредот <em>Микро:бит</em> залепен за карта која кога ќе се сврти треба да покаже случајна вредност и сл.).</p></li>
+<li><p>Дружете се и забавувајте се!</p></li>
 </ul>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -336,7 +333,7 @@ while True:
 <ul class="pager">
         <li id="relations-prev" title='Previous chapter - Гаража' data-toggle="tooltip"><a href="Garaza.html">Previous chapter</a></li>
     
-        <li id="relations-next" title='Next chapter - Микробит клавијатура' data-toggle="tooltip"><a href="Mikrobit klavijatura.html">Next chapter</a></li>
+        <li id="relations-next" title='Next chapter - Клавијатура <em>Микро:бит</em>' data-toggle="tooltip"><a href="Mikrobit klavijatura.html">Next chapter</a></li>
 </ul>
 
 <!-- <ul class="pager"> -->
@@ -344,7 +341,7 @@ while True:
         <!-- <li id="relations-prev" title='Претходно поглавље - Гаража' data-toggle="tooltip"><a href="Garaza.html">Претходно поглавље</a></li> -->
     <!--  -->
     <!-- -->
-        <!-- <li id="relations-next" title='Следеће поглавље - Микробит клавијатура' data-toggle="tooltip"><a href="Mikrobit klavijatura.html">Следеће поглавље</a></li> -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Клавијатура <em>Микро:бит</em>' data-toggle="tooltip"><a href="Mikrobit klavijatura.html">Следеће поглавље</a></li> -->
     <!-- -->
 <!-- </ul> -->
 
@@ -358,13 +355,11 @@ while True:
   
 </div>
 <footer class="footer col-md-12">
-    <div class="container text-center">
+    <div class="container">
         <div class="text-center">
             <hr>
             <p class="text-muted">
-                <span class="text-center">&copy; 2020 <a href="https://www.britishcouncil.rs/en">British Council</a> 
-                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
-                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+                <span class="pull-left">&copy; 2019 Petlja (Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
             </p>
         </div>
     </div>

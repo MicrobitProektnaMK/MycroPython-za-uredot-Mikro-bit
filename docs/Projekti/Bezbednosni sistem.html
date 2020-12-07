@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Безбедносни систем &#8212; Tekstualno programiranje u Pajtonu</title>
+    <title>Безбедносен систем &#8212; Програмирање микробит уређаја у Микропајтону – приручник за пројектну наставу за седми и осми разред</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
@@ -22,6 +22,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
     <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
@@ -52,7 +54,6 @@
     <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
     <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
     <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
     <script type="text/javascript" src="../_static/activecode.js"></script>
@@ -63,7 +64,6 @@
     <script type="text/javascript" src="../_static/timedmc.js"></script>
     <script type="text/javascript" src="../_static/timed.js"></script>
     <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/clickable.js"></script>
     <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
@@ -75,17 +75,14 @@
     <script type="text/javascript" src="../_static/dragndrop.js"></script>
     <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/fitb.js"></script>
     <script type="text/javascript" src="../_static/timedfitb.js"></script>
     <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/matrixeq.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
     <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/timedparsons.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
     <script type="text/javascript" src="../_static/reveal.js"></script>
@@ -94,6 +91,9 @@
     <script type="text/javascript" src="../_static/showEval.js"></script>
     <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
     <script type="text/javascript" src="../_static/karelCorner.js"></script>
     <script type="text/javascript" src="../_static/karelRobot.js"></script>
     <script type="text/javascript" src="../_static/karelWorld.js"></script>
@@ -101,7 +101,6 @@
     <script type="text/javascript" src="../_static/karelUI.js"></script>
     <script type="text/javascript" src="../_static/karel.js"></script>
     <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/notes.js"></script>
     <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
     <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
@@ -147,8 +146,8 @@
     <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Завршна реч" href="../ZavrsnaRec.html" />
-    <link rel="prev" title="Ултразвучни мерач растојања" href="UZ merac rastojanja.html" />
+    <link rel="next" title="Завршни зборови" href="../ZavrsnaRec.html" />
+    <link rel="prev" title="Ултразвучен мерач на растојание" href="UZ merac rastojanja.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -159,14 +158,14 @@
   eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
   eBookConfig.app = eBookConfig.host+'/runestone';
   eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
-  eBookConfig.course = 'MicrobitProjektna';
+  eBookConfig.course = 'microbit_micropython_vii_viii';
   eBookConfig.logLevel = 0;
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "";
   eBookConfig.isLoggedIn = false;
   eBookConfig.useRunestoneServices = false;
-  eBookConfig.python3 = yes;
-  eBookConfig.basecourse = 'MicrobitProjektna';
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'microbit_micropython_vii_viii';
   eBookConfig.runestone_version = '3.1.1';
   eBookConfig.imagesDir = '../_images/';
   eBookConfig.staticDir = '../_static/';
@@ -199,20 +198,19 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="../">Пројектна настава</a></li>
+        <li class="active"><a href="../">МycroPython за уредот Микро:бит</a></li>
       </ul>
     </div>
   </div>
 </nav>
-<br/>
 
 
 <div class="container col-md-12" id="continue-reading"></div>
 
-<div class="container col-md-8 col-md-offset-2" id="main-content">
+<div class="container col-md-8 col-md-offset-2" id="main-content" style="margin-top: 70px;">
   
   <div class="section" id="id1">
-<h1>Безбедносни систем<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<h1>Безбедносен систем<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -221,32 +219,31 @@
         <div class="course-content">
             <p>
 <ul class="simple">
-<li><p>Да ли вам се десило да изгубите/нестане неки предмет?</p></li>
-<li><p>На који начин можете да заштитите свој стамбени простор од нежељених посетилаца?</p></li>
-<li><p>Да ли у вашој школи постоји нека врста безбедносног система?</p></li>
-<li><p>Како треба реаговати у случају пожара?</p></li>
-<li><p>Како можемо да се заштитимо од поплава?</p></li>
+<li><p>Дали некогаш ви се случило да изгубите или да ви исчезне некој предмет?</p></li>
+<li><p>Како може да го заштитите вашиот станбен простор од непосакувани посетители?</p></li>
+<li><p>Дали во вашето училиште постои каков било безбедносен систем?</p></li>
+<li><p>Како треба да се реагира во случај на пожар?</p></li>
+<li><p>Како може да се заштитиме од поплава?</p></li>
 </ul>
 
     </p></div></div>
-<p>Овим пројектом желели смо да укажемо на велику улогу савремених технологија у повећању наше личне безбедности, али и да размотримо принцип рада одређених сензора.
-Направићемо јединствен систем сензора који можете поставити у вашу учионицу, стан или где год сматрате да би био користан.</p>
+<p>Со овој проект сакавме да ја истакнеме огромната улога на современата технологија во зголемувањето на нашата лична безбедност, како и да го разгледаме принципот на којшто работат одредени сензори. Ќе направиме единствен систем на сензори којшто ќе може да го поставите во вашата училница, стан или онаму каде што сметате дека ќе биде корисен.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 <p><strong>Шта нам је потребно?</strong></p>
 <ul class="simple">
-<li><p>шест микробит уређаја</p></li>
-<li><p>сензор за покрет (PIR)</p></li>
-<li><p>фото-отпорник, отпорник од 10кΩ, мали ласер</p></li>
-<li><p>сензор за дим</p></li>
-<li><p>сензор за воду</p></li>
-<li><p>звучник</p></li>
+<li><p>Шест уреди Микро:бит;</p></li>
+<li><p>Сензор за движење (PIR);</p></li>
+<li><p>Фотоотпорник, отпорник од 10кΩ, мал ласер;</p></li>
+<li><p>Сензор за чад;</p></li>
+<li><p>Сензор за вода;</p></li>
+<li><p>Звучник.</p></li>
 </ul>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>Принцип рада и начин програмирања микробит уређаја за примену наведених сензора можете погледати у следећем видео-запису:</p>
+<p>Со принципот и начинот на кодирање со уредот Микро:бит за да се применат наведените сензори може да се запознаете преку следново видео:</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -258,8 +255,8 @@
       
 
         </div>
-    <div id="modal" class="ytvideoclose" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgba(128, 182, 128, 0.3); z-index: 10000;">
-        <div style="background-color: white; position: fixed; top: 4vh; left: 5vw; width:  90vw; height:  90vh; z-index: 100;" id="YTmodal">
+    <div id="modal-_UqvnCCN2D0" class="ytvideoclose" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgba(128, 182, 128, 0.3); z-index: 10000;">
+        <div style="background-color: white; position: fixed; top: 4vh; left: 5vw; width:  90vw; height:  90vh; z-index: 100;" id="YTmodal-_UqvnCCN2D0">
         </div>
     </div>
     
@@ -267,8 +264,8 @@
     <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>Погледајте још једном програме које смо саставили:</p>
-<p>Систем са фото-отпорником и ласером:</p>
+<p>Погледнете го уште еднаш кодот што го составивме:</p>
+<p>Систем со фотоотпорник и ласер:</p>
 
 <div data-childcomponent="bezbednost_vrata" class="course-box course-box-problem course-content">
 
@@ -290,7 +287,7 @@ while True:
 
 </textarea>
 </div>
-<p>Примена сензора за покрет:</p>
+<p>Примена на сензорот за движење:</p>
 
 <div data-childcomponent="bezbednost_pokret" class="course-box course-box-problem course-content">
 
@@ -304,9 +301,9 @@ import radio
 radio.on()
 
 while True:
-    pokret = pin0.read_digital()
-    if pokret == 1:
-        radio.send(&quot;pokret&quot;)
+    dvizenje = pin0.read_digital()
+    if dvizenje == 1:
+        radio.send(&quot;dvizenje&quot;)
     sleep(1000)
 
 
@@ -315,7 +312,7 @@ while True:
 
 </textarea>
 </div>
-<p>Детекција гасова:</p>
+<p>Детекција на гасови:</p>
 
 <div data-childcomponent="bezbednost_plin" class="course-box course-box-problem course-content">
 
@@ -343,7 +340,7 @@ while True:
 
 </textarea>
 </div>
-<p>Сензор за детекцију воде:</p>
+<p>Сензор за детекција на вода:</p>
 
 <div data-childcomponent="bezbednost_voda" class="course-box course-box-problem course-content">
 
@@ -365,7 +362,7 @@ while True:
 
 </textarea>
 </div>
-<p>Програм за микробит који прима информације:</p>
+<p>Код за уред <em>Микро:бит</em> којшто прима информации:</p>
 
 <div data-childcomponent="bezbednost_prijem" class="course-box course-box-problem course-content">
 
@@ -376,49 +373,52 @@ while True:
     data-includesrc="from microbit import *                                      
 import radio
 
-ukljucen = False
+vklucen = False
 
 while True:
     if button_a.is_pressed():
-        ukljucen = True
+        vklucen = True
         radio.on()
 
     if button_b.was_pressed():
-        ukljucen = False
+        vklucen = False
         radio.off()
 
-    if ukljucen:
-        poruka = radio.receive()
-        if poruka is not None:
+    if vklucen:
+        poraka = radio.receive()
+        if poraka is not None:
             for i in range(10):
                 music.pitch(1000, 100)
                 music.pitch(500, 100)
-            display.scroll(str(poruka))"   >
+            display.scroll(str(poraka))"   >
 
 
 </textarea>
 </div>
-<p>У реалном систему, сирена не мора бити постављена на истом месту као и уређај који приказује до ког је проблема дошло. Додајте још један микробит на који ћете повезати само звучник и у складу са тим измените програм.</p>
-<p>Пре него што се упустите у израду сличног пројекта, добро проучите начин везивања и принципе рада компоненти које користите.</p>
-<p><strong>Можда нисте у прилици да набавите додатне сензоре. Имајте у виду бројне могућности самог микробит уређаја - потрес, температура, додир, нагиб… можете ли без сензора
-детектовати појаву воде? Направите безбедносни систем без примене додатних сензора, користећи само микробитове уграђене функције!</strong></p>
+<p>Во еден вистински систем, сирената не мора да биде поставена на исто место со уредот којшто прикажува каков проблем се јавил. Додадете уште еден уред <em>Микро:бит</em> на којшто ќе поврзете звучник и според тоа изменете го кодот.</p>
+<p>Пред да започнете да работите на сличен проект, проучете ги добро начините на врзување и принципите на коишто работат компонентите кои ќе ги користите.</p>
+<p><a href="#id2"><span class="problematic" id="id3">**</span></a>Можеби не бевте во можност да набавите дополнителни сензори. Имајте ги предвид многуте можности што ги нуди самиот уред Микро:бит – протресување, температура, допир, наклон… Дали може да се детектира појава на вода без сензор? Направете безбедносен систем без примена на дополнителни сензори, користејќи само вградените функции на уредот Микро:бит! **</p>
+<div class="system-message" id="id2">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">F:\petlja\bc\makedonci prirucnik\Microbit_projektna_MK\_sources\Projekti\Bezbednosni sistem.rst</span>, line 87); <em><a href="#id3">backlink</a></em></p>
+<p>Inline strong start-string without end-string.</p>
+</div>
 </div>
 
 
   
       <div class="col-md-12">
 <ul class="pager">
-        <li id="relations-prev" title='Previous chapter - Ултразвучни мерач растојања' data-toggle="tooltip"><a href="UZ merac rastojanja.html">Previous chapter</a></li>
+        <li id="relations-prev" title='Previous chapter - Ултразвучен мерач на растојание' data-toggle="tooltip"><a href="UZ merac rastojanja.html">Previous chapter</a></li>
     
-        <li id="relations-next" title='Next chapter - Завршна реч' data-toggle="tooltip"><a href="../ZavrsnaRec.html">Next chapter</a></li>
+        <li id="relations-next" title='Next chapter - Завршни зборови' data-toggle="tooltip"><a href="../ZavrsnaRec.html">Next chapter</a></li>
 </ul>
 
 <!-- <ul class="pager"> -->
     <!-- -->
-        <!-- <li id="relations-prev" title='Претходно поглавље - Ултразвучни мерач растојања' data-toggle="tooltip"><a href="UZ merac rastojanja.html">Претходно поглавље</a></li> -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Ултразвучен мерач на растојание' data-toggle="tooltip"><a href="UZ merac rastojanja.html">Претходно поглавље</a></li> -->
     <!--  -->
     <!-- -->
-        <!-- <li id="relations-next" title='Следеће поглавље - Завршна реч' data-toggle="tooltip"><a href="../ZavrsnaRec.html">Следеће поглавље</a></li> -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Завршни зборови' data-toggle="tooltip"><a href="../ZavrsnaRec.html">Следеће поглавље</a></li> -->
     <!-- -->
 <!-- </ul> -->
 
@@ -432,13 +432,11 @@ while True:
   
 </div>
 <footer class="footer col-md-12">
-    <div class="container text-center">
+    <div class="container">
         <div class="text-center">
             <hr>
             <p class="text-muted">
-                <span class="text-center">&copy; 2020 <a href="https://www.britishcouncil.rs/en">British Council</a> 
-                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
-                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+                <span class="pull-left">&copy; 2019 Petlja (Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
             </p>
         </div>
     </div>

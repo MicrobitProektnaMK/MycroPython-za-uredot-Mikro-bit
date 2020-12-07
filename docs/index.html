@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Микропајтон - пројектна настава &#8212; Tekstualno programiranje u Pajtonu</title>
+    <title>МycroPython за уредот Микро:бит &#8212; Програмирање микробит уређаја у Микропајтону – приручник за пројектну наставу за седми и осми разред</title>
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/activecode.css" />
@@ -22,6 +22,8 @@
     <link rel="stylesheet" type="text/css" href="_static/tabbedstuff.css" />
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="_static/webglinteractive.css" />
     <link rel="stylesheet" type="text/css" href="_static/karel.css" />
     <link rel="stylesheet" type="text/css" href="_static/notes.css" />
     <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
@@ -52,7 +54,6 @@
     <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.js"></script>
     <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
     <script type="text/javascript" src="_static/activecode-i18n.en.js"></script>
-    <script type="text/javascript" src="_static/activecode-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="_static/skulpt.min.js"></script>
     <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
     <script type="text/javascript" src="_static/activecode.js"></script>
@@ -63,7 +64,6 @@
     <script type="text/javascript" src="_static/timedmc.js"></script>
     <script type="text/javascript" src="_static/timed.js"></script>
     <script type="text/javascript" src="_static/mchoice-i18n.en.js"></script>
-    <script type="text/javascript" src="_static/mchoice-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="_static/clickable.js"></script>
     <script type="text/javascript" src="_static/timedclickable.js"></script>
     <script type="text/javascript" src="_static/d3.v2.min.js"></script>
@@ -75,17 +75,14 @@
     <script type="text/javascript" src="_static/dragndrop.js"></script>
     <script type="text/javascript" src="_static/timeddnd.js"></script>
     <script type="text/javascript" src="_static/dragndrop-i18n.en.js"></script>
-    <script type="text/javascript" src="_static/dragndrop-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="_static/fitb.js"></script>
     <script type="text/javascript" src="_static/timedfitb.js"></script>
     <script type="text/javascript" src="_static/fitb-i18n.en.js"></script>
-    <script type="text/javascript" src="_static/fitb-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="_static/matrixeq.js"></script>
     <script type="text/javascript" src="_static/lib/prettify.js"></script>
     <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
     <script type="text/javascript" src="_static/parsons.js"></script>
     <script type="text/javascript" src="_static/parsons-i18n.en.js"></script>
-    <script type="text/javascript" src="_static/parsons-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="_static/timedparsons.js"></script>
     <script type="text/javascript" src="_static/poll.js"></script>
     <script type="text/javascript" src="_static/reveal.js"></script>
@@ -94,6 +91,9 @@
     <script type="text/javascript" src="_static/showEval.js"></script>
     <script type="text/javascript" src="_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="_static/Blob.js"></script>
     <script type="text/javascript" src="_static/karelCorner.js"></script>
     <script type="text/javascript" src="_static/karelRobot.js"></script>
     <script type="text/javascript" src="_static/karelWorld.js"></script>
@@ -101,7 +101,6 @@
     <script type="text/javascript" src="_static/karelUI.js"></script>
     <script type="text/javascript" src="_static/karel.js"></script>
     <script type="text/javascript" src="_static/karel-i18n.en.js"></script>
-    <script type="text/javascript" src="_static/karel-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="_static/notes.js"></script>
     <script type="text/javascript" src="_static/pygamelib-init.js"></script>
     <script type="text/javascript" src="_static/blockly/blockly_compressed.js"></script>
@@ -147,7 +146,7 @@
     <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Увод" href="Uvod.html" />
+    <link rel="next" title="Вовед" href="Uvod.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -158,14 +157,14 @@
   eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
   eBookConfig.app = eBookConfig.host+'/runestone';
   eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
-  eBookConfig.course = 'MicrobitProjektna';
+  eBookConfig.course = 'microbit_micropython_vii_viii';
   eBookConfig.logLevel = 0;
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "";
   eBookConfig.isLoggedIn = false;
   eBookConfig.useRunestoneServices = false;
-  eBookConfig.python3 = yes;
-  eBookConfig.basecourse = 'MicrobitProjektna';
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'microbit_micropython_vii_viii';
   eBookConfig.runestone_version = '3.1.1';
   eBookConfig.imagesDir = '_images/';
   eBookConfig.staticDir = '_static/';
@@ -198,117 +197,103 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="./">Пројектна настава</a></li>
+        <li class="active"><a href="./">МycroPython за уредот Микро:бит</a></li>
       </ul>
     </div>
   </div>
 </nav>
-<br/>
 
 
 <div class="container col-md-12" id="continue-reading"></div>
 
-<div class="container col-md-8 col-md-offset-2" id="main-content">
+<div class="container col-md-8 col-md-offset-2" id="main-content" style="margin-top: 70px;">
   
-  <div class="section" id="id1">
-<h1>Микропајтон - пројектна настава<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="ycropython">
+<h1><em>МycroPython</em> за уредот <em>Микро:бит</em><a class="headerlink" href="#ycropython" title="Permalink to this headline">¶</a></h1>
 <br/>
 <p><img alt="British Council"
 src="https://petljamediastorage.blob.core.windows.net/root/Media/Default/images/bctest.png" />
     <img alt="UK Government" style="margin-left: 10px"
 src="https://petljamediastorage.blob.core.windows.net/root/Media/Default/images/uk_logo.png" /><br/>
-Израду овог приручника подржала је влада Велике Британије путем пројекта "Школе за 21. век" који спроводи British Council.</p>
+Овој прирачник е изработен со поддршка од Владата на Велика Британија, во рамките на проектот „Училишта на 21-от век“ којшто го спроведува Британски совет.</p>
 
 <br/>
 <p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
 <img alt="Creative Commons License" style="border-width:0"
 src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br/>
-<span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">Приручник Микропајтон - пројектна настава</span>
-издао је <a xmlns:cc="http://creativecommons.org/ns#" href="https://www.britishcouncil.rs/en" property="cc:attributionName" rel="cc:attributionURL">British Council</a>
-под лиценцом
+<span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">Прирачникот <i>„MycroPython – проектна настава“</i></span>
+е издаден од страна на <a xmlns:cc="http://creativecommons.org/ns#" href="https://www.britishcouncil.rs/en" property="cc:attributionName" rel="cc:attributionURL">Британски совет</a>
+под лиценцата
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
-<br/><div class="section" id="id2">
-<h2>Микропајтон за микробит<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<br/><div class="section" id="id1">
+<h2><em>МycroPython</em> за уредот <em>Микро:бит</em><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 <a class="reference internal image-reference" href="_images/trep_srce.gif"><img alt="mikrobit" class="align-left" src="_images/trep_srce.gif" style="width: 240.0px; height: 200.4px;" /></a>
-<p>Овај приручник намењен је ученицима седмог разреда основне школе и замишљен је као помоћ у реализацији
-часова на којима је планирана израда пројеката са применом Микропајтона за управљање микробит уређајем.</p>
-<p>У приручнику је дато мноштво примера у којима се помоћу Пајтон програма управља уређајем. Све идеје су
-детаљно објашњене, али се приручник самим програмима не бави детаљно - очекује се да ученици имају
-одређено предзнање у програмирању на програмском језику Пајтон.</p>
-<p>Сви примери су тестирани у <em>Mu</em> (Мју) едитору, који је дизајниран тако да и почетницима у програмирању буде
-једноставан за инсталацију и примену.</p>
-<p>Након једноставних почетних примера у којима је објашњена примена основних функција из библиотеке за
-рад са микробитом, у приручнику се налазе и примери мини пројеката које је могуће урадити на за то
-предвиђеним часовима.</p>
-<p>За рад са микробитом и израду пројеката су наставним програмом предвиђена свега четири школска часа, па је
-основна идеја да пројекти који се налазе у приручнику првенствено укажу на разноврсне могућности микробита и
-његову применљивост у решавању проблема из свакодневног живота.</p>
-<p>Уз пројекте су дати, без детаљног упутства, и предлози неких могућих проширења и надоградње, да би се заинтересованим ученицима
-пружила могућност да делове пројекта осмисле и остваре самостално. Ова проширења
-су дата и са намером да инспиришу ученике и на оригиналне идеје и истраживачки рад, како би заједно са својим
-наставницима осмислили нова, креативна пројектна решења.</p>
-<p>За ученике посебно заинтересоване за програмирање, у додатку су описане неке од могућности интерактивног
-рада са микробитом повезаним на персонални рачунар, а које могу бити врло корисне током израде програмерски
-захтевнијих пројеката.</p>
+<p>Овој прирачник е наменет за седмоодделенците од основните училишта и замислено е да придонесе да се реализираат часовите на кои е планирано да се изготвуваат проекти во <em>MicroPython</em> со уредот <em>Микро:бит</em>.</p>
+<p>УВо прирачникот се посочени голем број примери во кои со помош на <em>Python</em> се управува со уредот. Сите идеи се детално објаснети, но самите кодови не се разгледуваат детално, туку се очекува учениците да имаат одредено предзнаење за програмирање со програмскиот јазик <em>Python</em>.</p>
+<p>Сите примери се тестирани во уредувачот <em>Mu (Мју)</em>, којшто е дизајниран на начин и почетниците во програмирањето да можат лесно да го инсталираат и користат.</p>
+<p>По едноставните примери на почетокот, во кои е објаснета примената на основните функции од библиотеката за работење со уредот <em>Микро:бит</em>, во прирачникот следуваат и примери за помали проекти кои може да се направат за време на часовите предвидени за проекти.</p>
+<p>За работење со уредот <em>Микро:бит</em> и реализација на проектите предвидени се вкупно четири училишни часови, па оттаму идејата дека проектите кои ги содржи прирачникот првенствено укажуваат на разните можности кои ги нуди уредот <em>Микро:бит</em> и на неговата примена за решавање проблеми од секојдневниот живот.</p>
+<p>Покрај проектите, без детално упатство, дадени се и предлози за можни проширувања и надградувања, со цел да им се овозможи на заинтересираните ученици самостојно да обмислат и реализираат делови од проектите. Овие предлози се дадени и со цел да ги поттикнат учениците на креативно размислување и истражувачка работа, за да можат заедно со своите наставници да смислат нови креативни решенија.</p>
+<p>За учениците кои покажуваат особен интерес за програмирање, во додатокот се опишани некои можности за интерактивна работа со уредот <em>Микро:бит</em> поврзан со компјутер, кои можат да бидат навистина корисни при реализација на комплексни проекти.</p>
 </div>
-<div class="section" id="id3">
-<h2>Садржај<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h2>Содржина<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="Uvod.html">Увод</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Uvod.html#id2">Микробит - да се подсетимо</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Uvod.html#id3">Инсталација Мју окружења за развој</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Uvod.html#id4">Мју окружење</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Uvod.html">Вовед</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Uvod.html#id2">Уредот <em>Микро:бит</em> – да се потсетиме</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Uvod.html#u">Инсталирање на околината за развој <em>Мu</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Uvod.html#id3">Околината <em>Мu</em></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="OsnovneFunkcije.html">Основне функције</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="OsnovneFunkcije.html#id2">Укључивање библиотеке</a></li>
+<li class="toctree-l1"><a class="reference internal" href="OsnovneFunkcije.html">Основни функции</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="OsnovneFunkcije.html#id2">Вклучување на библиотеката</a></li>
 <li class="toctree-l2"><a class="reference internal" href="OsnovneFunkcije.html#id3">Управљање екраном</a></li>
-<li class="toctree-l2"><a class="reference internal" href="OsnovneFunkcije.html#id4">Тастери</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OsnovneFunkcije.html#id4">Копчиња</a></li>
 <li class="toctree-l2"><a class="reference internal" href="OsnovneFunkcije.html#id5">Звук</a></li>
-<li class="toctree-l2"><a class="reference internal" href="OsnovneFunkcije.html#id7">Генерисање насумичних бројева</a></li>
-<li class="toctree-l2"><a class="reference internal" href="OsnovneFunkcije.html#bluetooth">Bluetooth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OsnovneFunkcije.html#id7">Генерирање случајни броеви</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OsnovneFunkcije.html#bluetooth"><em>Bluetooth</em></a></li>
 <li class="toctree-l2"><a class="reference internal" href="OsnovneFunkcije.html#id8">Радио</a></li>
-<li class="toctree-l2"><a class="reference internal" href="OsnovneFunkcije.html#id9">Покрет</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OsnovneFunkcije.html#id9">Движење</a></li>
 <li class="toctree-l2"><a class="reference internal" href="OsnovneFunkcije.html#id10">Компас</a></li>
-<li class="toctree-l2"><a class="reference internal" href="OsnovneFunkcije.html#id11">Управљање пиновима</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OsnovneFunkcije.html#id11">Управување со пиновите</a></li>
 <li class="toctree-l2"><a class="reference internal" href="OsnovneFunkcije.html#id14">Температура</a></li>
-<li class="toctree-l2"><a class="reference internal" href="OsnovneFunkcije.html#id15">Инерактиван рад</a></li>
-<li class="toctree-l2"><a class="reference internal" href="OsnovneFunkcije.html#id16">Приказ података у реалном времену</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OsnovneFunkcije.html#id15">Интерактивна работа</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OsnovneFunkcije.html#id16">Прикажување податоци во реално време</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="DodatneKomponente.html">Повезивање додатних компоненти</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="DodatneKomponente.html#id2">Светлеће диоде</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DodatneKomponente.html">Поврзување дополнителни компоненти</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DodatneKomponente.html#id2">Светлечки диоди</a></li>
 <li class="toctree-l2"><a class="reference internal" href="DodatneKomponente.html#id3">Потенциометар</a></li>
-<li class="toctree-l2"><a class="reference internal" href="DodatneKomponente.html#id4">Фото-отпорник</a></li>
-<li class="toctree-l2"><a class="reference internal" href="DodatneKomponente.html#id5">Једносмерни мотори</a></li>
-<li class="toctree-l2"><a class="reference internal" href="DodatneKomponente.html#id6">Серво мотор</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DodatneKomponente.html#id4">Фотоотпорник</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DodatneKomponente.html#id5">Еднонасочни мотори</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DodatneKomponente.html#id6">Сервомотор</a></li>
 <li class="toctree-l2"><a class="reference internal" href="DodatneKomponente.html#id7">Звучници и слушалице</a></li>
 <li class="toctree-l2"><a class="reference internal" href="DodatneKomponente.html#id8">Реле</a></li>
-<li class="toctree-l2"><a class="reference internal" href="DodatneKomponente.html#id9">Сензор за дим</a></li>
-<li class="toctree-l2"><a class="reference internal" href="DodatneKomponente.html#id10">Сензор за покрет</a></li>
-<li class="toctree-l2"><a class="reference internal" href="DodatneKomponente.html#id11">Ултразвучни сензор</a></li>
-<li class="toctree-l2"><a class="reference internal" href="DodatneKomponente.html#id12">Сензор за детекцију воде / кишних капи</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DodatneKomponente.html#id9">Сензор за чад</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DodatneKomponente.html#id10">Сензор за движење</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DodatneKomponente.html#id11">Ултразвучен сензор</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DodatneKomponente.html#id12">Сензор за детекција на вода/капки дожд</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="RazniZadaci.html">Разни задаци</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Projekti/toctree.html">Идеје за пројекте</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Projekti/Brojac koraka.html">Бројач корака</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Projekti/Bicikl.html">Бицикл са сигнализацијом</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RazniZadaci.html">Разни задачи</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Projekti/toctree.html">Идеи за проекти</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Projekti/Brojac koraka.html">Бројач на чекори</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Projekti/Bicikl.html">Велосипед со сигнализација</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Projekti/Garaza.html">Гаража</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Projekti/Kockice za jamb.html">Коцкице за јамб</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Projekti/Mikrobit klavijatura.html">Микробит клавијатура</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Projekti/Mikrobit klavijatura.html">Клавијатура <em>Микро:бит</em></a></li>
 <li class="toctree-l2"><a class="reference internal" href="Projekti/Semafor.html">Семафор</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Projekti/Zalivanje biljke.html">Аутоматско заливање биљке</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Projekti/UZ merac rastojanja.html">Ултразвучни мерач растојања</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Projekti/Bezbednosni sistem.html">Безбедносни систем</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Projekti/UZ merac rastojanja.html">Ултразвучен мерач на растојание</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Projekti/Bezbednosni sistem.html">Безбедносен систем</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="ZavrsnaRec.html">Завршна реч</a></li>
-<li class="toctree-l1"><a class="reference internal" href="REPL_u_programima.html">Додатак - REPL прозор у програмима</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ZavrsnaRec.html">Завршни зборови</a></li>
+<li class="toctree-l1"><a class="reference internal" href="REPL_u_programima.html">Додаток – Прозорец REPL во програмите</a></li>
 </ul>
 </div>
 </div>
@@ -318,13 +303,13 @@ src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br/>
   
       <div class="col-md-12">
 <ul class="pager">
-        <li id="relations-next" title='Next chapter - Увод' data-toggle="tooltip"><a href="Uvod.html">Next chapter</a></li>
+        <li id="relations-next" title='Next chapter - Вовед' data-toggle="tooltip"><a href="Uvod.html">Next chapter</a></li>
 </ul>
 
 <!-- <ul class="pager"> -->
     <!-- -->
     <!-- -->
-        <!-- <li id="relations-next" title='Следеће поглавље - Увод' data-toggle="tooltip"><a href="Uvod.html">Следеће поглавље</a></li> -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Вовед' data-toggle="tooltip"><a href="Uvod.html">Следеће поглавље</a></li> -->
     <!-- -->
 <!-- </ul> -->
 
@@ -338,13 +323,11 @@ src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br/>
   
 </div>
 <footer class="footer col-md-12">
-    <div class="container text-center">
+    <div class="container">
         <div class="text-center">
             <hr>
             <p class="text-muted">
-                <span class="text-center">&copy; 2020 <a href="https://www.britishcouncil.rs/en">British Council</a> 
-                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
-                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+                <span class="pull-left">&copy; 2019 Petlja (Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
             </p>
         </div>
     </div>

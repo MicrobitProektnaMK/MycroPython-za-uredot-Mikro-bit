@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Идеје за пројекте &#8212; Tekstualno programiranje u Pajtonu</title>
+    <title>Идеи за проекти &#8212; Програмирање микробит уређаја у Микропајтону – приручник за пројектну наставу за седми и осми разред</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
@@ -22,6 +22,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
     <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
@@ -52,7 +54,6 @@
     <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
     <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
     <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
     <script type="text/javascript" src="../_static/activecode.js"></script>
@@ -63,7 +64,6 @@
     <script type="text/javascript" src="../_static/timedmc.js"></script>
     <script type="text/javascript" src="../_static/timed.js"></script>
     <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/clickable.js"></script>
     <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
@@ -75,17 +75,14 @@
     <script type="text/javascript" src="../_static/dragndrop.js"></script>
     <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/fitb.js"></script>
     <script type="text/javascript" src="../_static/timedfitb.js"></script>
     <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/matrixeq.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
     <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/timedparsons.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
     <script type="text/javascript" src="../_static/reveal.js"></script>
@@ -94,6 +91,9 @@
     <script type="text/javascript" src="../_static/showEval.js"></script>
     <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
     <script type="text/javascript" src="../_static/karelCorner.js"></script>
     <script type="text/javascript" src="../_static/karelRobot.js"></script>
     <script type="text/javascript" src="../_static/karelWorld.js"></script>
@@ -101,7 +101,6 @@
     <script type="text/javascript" src="../_static/karelUI.js"></script>
     <script type="text/javascript" src="../_static/karel.js"></script>
     <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/notes.js"></script>
     <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
     <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
@@ -147,8 +146,8 @@
     <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Бројач корака" href="Brojac koraka.html" />
-    <link rel="prev" title="Разни задаци" href="../RazniZadaci.html" />
+    <link rel="next" title="Бројач на чекори" href="Brojac koraka.html" />
+    <link rel="prev" title="Разни задачи" href="../RazniZadaci.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -159,14 +158,14 @@
   eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
   eBookConfig.app = eBookConfig.host+'/runestone';
   eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
-  eBookConfig.course = 'MicrobitProjektna';
+  eBookConfig.course = 'microbit_micropython_vii_viii';
   eBookConfig.logLevel = 0;
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "";
   eBookConfig.isLoggedIn = false;
   eBookConfig.useRunestoneServices = false;
-  eBookConfig.python3 = yes;
-  eBookConfig.basecourse = 'MicrobitProjektna';
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'microbit_micropython_vii_viii';
   eBookConfig.runestone_version = '3.1.1';
   eBookConfig.imagesDir = '../_images/';
   eBookConfig.staticDir = '../_static/';
@@ -199,49 +198,46 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="../">Пројектна настава</a></li>
+        <li class="active"><a href="../">МycroPython за уредот Микро:бит</a></li>
       </ul>
     </div>
   </div>
 </nav>
-<br/>
 
 
 <div class="container col-md-12" id="continue-reading"></div>
 
-<div class="container col-md-8 col-md-offset-2" id="main-content">
+<div class="container col-md-8 col-md-offset-2" id="main-content" style="margin-top: 70px;">
   
   <div class="section" id="id1">
-<h1>Идеје за пројекте<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<h1>Идеи за проекти<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>У наредним поглављима представљене су неке од идеја за пројекте које можете реализовати током часова пројектне наставе предвиђених за ученике седмог и осмог разреда
-из предмета Рачунарство и информатика, у оквиру рада школских клубова за програмирање (секција) или на часовима Технике и технологије за које су планиране сличне активности.</p>
-<p>За неке од пројеката, осим микробит уређаја, није потребна никаква додатна опрема, док је за неке примере потребно набавити проводнике, додатне сензоре, чија је цена врло приступачна, а могу се лако набавити преко интернета или у продавницама електронске опреме. Неке од потребних компоненти (мотори, отпорници, диоде) ученици осмих разреда већ користе у оквиру наставе предмета <em>Техника и технологија</em>.</p>
-<p>Сваки пројектни задатак састоји се из истраживачког дела, решавања проблема применом микробит уређаја (израда конкретног уређаја или макете
-која омогућава симулацију начина решавања проблема применом савремених технологија) и презентовања рада и резултата истраживања.</p>
-<p>Саветујемо вам да, пре него што изаберете пројектни задатак, детаљно прочитате све предлоге пројеката и приложена упутства и идеје.</p>
+<p>Во наредните поглавја претставени се некои идеи за проекти кои може да ги реализирате за време на часовите по проектна настава што се предвидени за учениците од седмо и осмо одделение, по предметите Компјутерска наука и информатика, во рамките на училишните клубови за кодирање (секција) или на часовите по предметот Техника и технологија, за кои се планирани слични активности.</p>
+<p>За некои од проектите, освен уредот <em>Микро:бит</em>, не е потребна дополнителна опрема, додека за некои е потребно да се набават спроводници и дополнителни сензори, чија цена е мошне пристапна, а можат лесно да се набават преку интернет или во продавниците за електронска опрема. Некои од потребните елементи (мотори, отпорници, диоди) осмооделенците веќе ги користат во рамките на наставата по предметот Техника и технологија.</p>
+<p>Секоја проектна задача се состои од истражување, решавање на проблемот со користење на уредот <em>Микро:бит</em> (изработка на конкретен уред или макета која овозможува симулација на начинот на решавање на проблемот со примена на современите технологии) и презентирање на сработеното и резултатите од истражувањето.</p>
+<p>Ве советуваме пред да изберете проектна задача внимателно да ги прочитате сите предложени проекти, како и приложените упатства и идеи.</p>
 
     <div class="course-box course-box-info">
         <div class="course-content">
             <p>
-<p><strong>Када се одлучите за пројекат који желите да реализујете, обавезно проучите програмска решења сличних проблема из претходних поглавља, као и начине повезивања компоненти које планирате да користите.</strong></p>
+<p><strong>Кога ќе изберете проект што сакате да го реализирате, задолжително проучете ги проектните решенија за слични проблеми од претходните поглавја, како и начините за поврзување на компонентите кои сакате да ги користите.</strong></p>
 
     </p></div></div>
-<p>Дате идеје за пројекте не треба схватити као обавезу да се истоветни пројекти реализују на часовима, већ као подстицај да, у складу са могућностима и жељама, спроведете сличне активности.</p>
+<p>Не е задолжително да изберете една од дадените идеи, туку тие треба да ви послужат како поттик согласно можностите и желбите да спроведете слични активности.</p>
 <blockquote>
 <div><div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="Brojac koraka.html">Бројач корака</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Bicikl.html">Бицикл са сигнализацијом</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Brojac koraka.html">Бројач на чекори</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Bicikl.html">Велосипед со сигнализација</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Garaza.html">Гаража</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Kockice za jamb.html">Коцкице за јамб</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Mikrobit klavijatura.html">Микробит клавијатура</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mikrobit klavijatura.html">Клавијатура <em>Микро:бит</em></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Semafor.html">Семафор</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Zalivanje biljke.html">Аутоматско заливање биљке</a></li>
-<li class="toctree-l1"><a class="reference internal" href="UZ merac rastojanja.html">Ултразвучни мерач растојања</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Bezbednosni sistem.html">Безбедносни систем</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UZ merac rastojanja.html">Ултразвучен мерач на растојание</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Bezbednosni sistem.html">Безбедносен систем</a></li>
 </ul>
 </div>
 </div></blockquote>
@@ -251,17 +247,17 @@
   
       <div class="col-md-12">
 <ul class="pager">
-        <li id="relations-prev" title='Previous chapter - Разни задаци' data-toggle="tooltip"><a href="../RazniZadaci.html">Previous chapter</a></li>
+        <li id="relations-prev" title='Previous chapter - Разни задачи' data-toggle="tooltip"><a href="../RazniZadaci.html">Previous chapter</a></li>
     
-        <li id="relations-next" title='Next chapter - Бројач корака' data-toggle="tooltip"><a href="Brojac koraka.html">Next chapter</a></li>
+        <li id="relations-next" title='Next chapter - Бројач на чекори' data-toggle="tooltip"><a href="Brojac koraka.html">Next chapter</a></li>
 </ul>
 
 <!-- <ul class="pager"> -->
     <!-- -->
-        <!-- <li id="relations-prev" title='Претходно поглавље - Разни задаци' data-toggle="tooltip"><a href="../RazniZadaci.html">Претходно поглавље</a></li> -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Разни задачи' data-toggle="tooltip"><a href="../RazniZadaci.html">Претходно поглавље</a></li> -->
     <!--  -->
     <!-- -->
-        <!-- <li id="relations-next" title='Следеће поглавље - Бројач корака' data-toggle="tooltip"><a href="Brojac koraka.html">Следеће поглавље</a></li> -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Бројач на чекори' data-toggle="tooltip"><a href="Brojac koraka.html">Следеће поглавље</a></li> -->
     <!-- -->
 <!-- </ul> -->
 
@@ -275,13 +271,11 @@
   
 </div>
 <footer class="footer col-md-12">
-    <div class="container text-center">
+    <div class="container">
         <div class="text-center">
             <hr>
             <p class="text-muted">
-                <span class="text-center">&copy; 2020 <a href="https://www.britishcouncil.rs/en">British Council</a> 
-                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
-                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+                <span class="pull-left">&copy; 2019 Petlja (Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
             </p>
         </div>
     </div>
