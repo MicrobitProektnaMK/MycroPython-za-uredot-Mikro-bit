@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+  <head>
+    <meta charset="utf-8" />
+    <title>Повезивање додатних компоненти &#8212; Tekstualno programiranje u Pajtonu</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="_static/notes.css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="_static/matrixeq.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/showEval.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="_static/karelCorner.js"></script>
+    <script type="text/javascript" src="_static/karelRobot.js"></script>
+    <script type="text/javascript" src="_static/karelWorld.js"></script>
+    <script type="text/javascript" src="_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="_static/karelUI.js"></script>
+    <script type="text/javascript" src="_static/karel.js"></script>
+    <script type="text/javascript" src="_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/karel-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="_static/notes.js"></script>
+    <script type="text/javascript" src="_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="_static/blockpy-modal.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Разни задаци" href="RazniZadaci.html" />
+    <link rel="prev" title="Основне функције" href="OsnovneFunkcije.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'MicrobitProjektna';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = yes;
+  eBookConfig.basecourse = 'MicrobitProjektna';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '_images/';
+  eBookConfig.staticDir = '_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./">Пројектна настава</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="id1">
+<h1>Повезивање додатних компоненти<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Велики број пројеката са применом микробита могуће је урадити без додатне опреме. Ипак, много је интересантније када
+видимо да се нешто помера, засветли, када чујемо различите звуке.</p>
+<p>На микробиту се, осим пет основних пинова, дуж ивице налази још двадесет мањих пинова, којима можемо приступити преко додатног конектора
+(ивични, <em>edge connector</em>). Преко њих такође можемо управљати различитим уређајима, очитавати податке са бројних сензора. Могуће је,
+уз додатне компоненте и напајања, управљати и уређајима који захтевају много већу снагу него што је сам микробит може пружити.</p>
+<p>Примери које разматрамо углавном не захтевају додатну опрему. Ипак, представићемо неколико компоненти које нису скупе и лако се могу набавити
+(у продавници електронске опреме, преко интернета, од пријатеља). Употреба ових компоненти може да  учини пројекте још интересантнијим и да још
+јасније покаже колико је моћна, а у исто време једноставна примена програмирања и савремених технологија у решавању проблема из различитих области.
+Замислите шта се све може урадити са још разноврснијом и бољом опремом!</p>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><strong>На самом почетку израде било којег примера или пројекта са додатним компонентама, направите довољно места на радном столу и припремите сав потребан материјал, нацрте и шеме.</strong></p>
+<p><strong>Пре него што прикључите батерије, добро проверите да приликом везивања нисте негде направили нежељене контакте!</strong></p>
+<p><strong>Немојте одустати ако уређај који сте замислили не проради из првог покушаја. Будите стрпљиви, усредсређени и систематични!</strong></p>
+
+    </p></div></div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id2">
+<h2>Светлеће диоде<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Светлећа диода (<em>LED - Light Emitting Diode</em>) има две ножице (електроде) - дужу, позитивну (аноду) и краћу, негативну (катоду). Ако желите да укључујете и искључујете светлећу диоду преко микробита, потребно је да је повежете тако да краћа ножица буде спојена на GND пин (уземљење, маса),
+а да дужа ножица добија позитиван напон са неког од пинова микробита. Ако диоду повезујете преко протоборда и не можете да уочите дужину ножица, свакако можете да приметите
+мали зарез (засечени део) на самој глави диоде, који се налази на страни краће ножице.</p>
+<p>Радни напони црвене, жуте и зелене диоде се крећу између 1.8V и 2.2V (за белу и плаву су нешто већи).
+На пиновима микробита добијамо напон 3.3V, па је неопходно да на ред са диодом повежемо (свеједно са које стране - према GND или према пину преко којег желимо да управљамо) и један отпорник (од 100Ω),
+како бисмо ограничили струју која кроз њу протиче и спречили да прегори. О електричним колима учи се у осмом разреду.
+За сада је довољно да запамтите да је неопходно да додамо и отпорник приликом везивања диоде, као што је приказано на слици испод.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="led" class="align-center" src="_images/led.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>За нешто сложеније пројекте биће нам потребно много проводника, обичних и са крокодил-штипаљкама. Ако желимо да смањимо број ових проводника,
+можемо да употребимо <em>протоборд</em>. То је плочица са рупицама које су у унутрашњости међусобно спојене металним везама и омогућавају нам да
+једноставно повежемо и тестирамо наше електрично коло (уређај). Правци међусобно повезаних рупица означени су жутом
+линијом на слици. Водите рачуна да се не деси да кратко спојите неку компоненту, односно да је повежете дуж неког од тих праваца.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>Потенциометар<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/potenciometar.png"><img alt="potenciometar" class="align-right" src="_images/potenciometar.png" style="width: 173.20000000000002px; height: 419.20000000000005px;" /></a>
+<p>Потенциометар је променљиви отпорник који функционише као разделник напона, то јест омогућава нам да добијемо напон нижи од датог. Потенциометар може да се повеже на микробит уређај тако што се средњи контакт (ножица) веже на један од пинова 0, 1 или 2 по избору, а спољашње ножице на GND пин и 3V, као што је приказано на шеми.</p>
+<p>Променом положаја клизача потенциометра, између његовог средњег контакта и масе добијају се различити напони од 0 до 3.3V, који се са пина на који је повезан средњи контакт очитавају у виду целобројних вредности од 0 до 1023. Програм може зависно од очитане вредности да задаје различите акције.</p>
+<p>Потенциометар може бити веома користан у пројектима где је потребно смањивати или повећавати интензитет расвете, подешавати брзину обртања мотора, тестирати понашање програма за различите очитане вредности (ако у време тестирања немате сензор који касније желите да употребите) и многим другим.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>Фото-отпорник<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>(<em>Photo Resistor</em>)</p>
+<a class="reference internal image-reference" href="_images/fotootpornik.png"><img alt="fotootpornik" class="align-left" src="_images/fotootpornik.png" style="width: 346.40000000000003px; height: 249.60000000000002px;" /></a>
+<p>Фото-отпорник може да послужи као додатни, прецизнији од оног којим располаже микробит, сензор за одређивање осветљености просторије.
+Када није осветљен, његова отпорност је јако велика. Са повећањем осветљености његова отпорност нагло опада.</p>
+<p>На слици је приказано како можете повезати фото-отпорник са микробитом: један крај везујемо на неки од аналогних пинова микробита (у нашем случају пин 1), a други крај
+на пин 3V. Потребно је још да између истог пина (пин 1) и масе (GND) ставимо и један отпорник (ми смо ставили отпорник вредности 10k) како бисмо
+добили напонски разделник.</p>
+<p>Микробит не очитава промену отпорности фото-отпорника, већ промену напона на његовим крајевима. У програму се те вредности напона очитавају применом функције <em>read_analog(</em>), која враћа целобројне вредности од 0 до 1023.</p>
+<p>Фото-отпорник је одличан за пројекте који се односе на уштеду електричне енергије, безбедносне системе са применом ласера и сличне.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>Једносмерни мотори<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>(<em>DC motor</em>)</p>
+<p>Када су у питању једносмерни мотори, наша је препорука да, уколико желите да њима управљате преко микробита, обавезно користите додатно напајање. За већину мотора снага коју добијамо на излазима микробита није довољна за покретање.
+Зато препоручујемо да моторима управљате тако што ћете их повезати по следећој шеми:</p>
+<a class="reference internal image-reference" href="_images/motor.png"><img alt="motor" class="align-center" src="_images/motor.png" style="width: 692.8000000000001px; height: 378.40000000000003px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Један од начина да мотором управљамо преко микробита јесте да употребимо <strong>транзистор</strong> и додатно напајање (батеријe).</p>
+<a class="reference internal image-reference" href="_images/npn.png"><img alt="motor" class="align-right" src="_images/npn.png" style="width: 177.60000000000002px; height: 200.8px;" /></a>
+<p>У зависности од типова полупроводника који сачињавају његову структуру, разликујемо два типа транзистора - NPN и PNP транзистор.</p>
+<p>Ми смо употребили биполарни транзистор NPN типа (<em>BC546, BC547, BC337</em>) који се у коло прикључује преко три ножице (електроде): емитера (E), базе (B) и колектора (C).</p>
+<p>Основни принцип рада биполарног транзистора је да се напоном између две електроде - базе и емитера контролише струја која протиче кроз трећу електроду (колектор).</p>
+<p>Када на базу овако повезаног транзистора доведемо позитиван напон са излаза микробита, кроз мотор (пумпу) ће преко колектора потећи струја.</p>
+<p>Постоји још начина да управљате мотором преко микробита. Можете то учинити и преко релеја (водите рачуна да је предвиђен за рад на 3.3V). У сваком случају, а посебно ако желите да ваш мотор ради у два смера, препоручујемо вам, као најпоузданију опцију,
+да набавите баш за ту намену предвиђену додатну  микробит плочу за управљање моторима.</p>
+<a class="reference internal image-reference" href="_images/pumpa.png"><img alt="pumpa" class="align-center" src="_images/pumpa.png" style="width: 692.8000000000001px; height: 420.0px;" /></a>
+<p>Мини пумпу за воду (<em>Mini Submersible Water Pump</em>) повезујемо као и сваки други једносмерни мотор. Ова пумпица је веома применљива у пројектима повезаним са заштитом животне средине,
+узгајањем биљака, израдом чесми, украсних фонтана и сл.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>Серво мотор<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p>(<em>Micro Servo Motor SG90</em>)</p>
+<p>Серво мотори су мотори код којих је могуће контролисати угаони положај. Углавном имају распон од 0 до 180 степени,
+али има и оних који могу да се позиционирају и у распону од 360 степени.</p>
+<a class="reference internal image-reference" href="_images/servo1.png"><img alt="servo1" class="align-right" src="_images/servo1.png" style="width: 346.40000000000003px; height: 287.2px;" /></a>
+<p>Серво моторе повезујемо помоћу три контакта (жице): црвене, браон и жуте. Ако желимо да управљамо овим мотором преко микробита, потребно је да
+црвену жицу повежемо на позитиван напон (пин 3V), браон на GND, а жуту (сигналну) повежемо на један од пинова 0, 1, или 2.
+На жалост, микробит без додатне опреме и напајања има снаге да покрене евентуално један
+серво мотор, али је и то довољно да разумемо начин на који ради.</p>
+<p>Треба имати у виду да је напон напајања већине серво мотора који се налазе на тржишту 4.8 - 6V. Иако ћете вероватно моћи да управљате серво мотором ако га повежете на малопре поменут начин,
+наш савет је да га ипак не напајате директно преко микробита. Ако сте у могућности, повежите га на неко додатно напајање (слика испод). Сигналну (жуту) жицу, као и у претходном случају,
+повезујемо на неки од пинова микробита.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><strong>Сваки пут када повезујете неку компоненту на додатно напајање, било да је у питању сензор или неки извршни уређај (мотор, сијалица…),
+обавезно је да повежeте GND пин микробита са масом (црном жицом, знак минус на батерији) додатног напајања!!!</strong></p>
+
+    </p></div></div>
+<a class="reference internal image-reference" href="_images/servo2.png"><img alt="servo1" class="align-center" src="_images/servo2.png" style="width: 692.8000000000001px; height: 360.8px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>Звучници и слушалице<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<p>Микробит нема уграђене звучнике, али можемо врло једноставно да додамо екстерни звучник. Ако немате при руци звучник из неког старог уређаја
+или системски звучник неког рачунара, одлично ће послужити и слушалице за мобилни телефон.</p>
+<p>Начин везивања звучника и слушалица на микробит приказан је на слици.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="_images/zvucnici.png"><img alt="zvucnici" class="align-center" src="_images/zvucnici.png" style="width: 606.1999999999999px; height: 408.09999999999997px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Црна жица звучника повезује се на GND пин микробита, а црвена на пин 0, преко којег ћемо слати сигнал за генерисање звукова различитих фреквенција.</p>
+<p>Када су слушалице у питању, доњи део прикључка (најближи пластици) везујемо на GND пин, а врх прикључка на поменути пин.
+Поступак програмирања мелодије је исти, без обзира преко чега планирамо да је слушамо.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>Реле<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<p>(<em>3.3V 1 Channel 3V Relay Module</em>)</p>
+<p>Струја и напон које добијамо на пиновима микробита често нису довољни за управљање уређајима који захтевају веће снаге. Један од начина да управљамо снажнијим уређајима јесте да употребимо додатно напајање,
+а отварање/затварање струјног кола препустимо микробит уређају, на који ћемо жељени уређај повезати преко <strong>релеја</strong>.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="_images/rele.png"><img alt="rele" class="align-center" src="_images/rele.png" style="width: 359.79999999999995px; height: 157.5px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Реле се на микробит повезује на следећи начин:</p>
+<p>Са десне стране налазе се три ножице: Vcc повезујемо на 3V микробита, GND na GND микробита, а In ножица представља контакт за сигнал који ће
+укључивати/искључивати излаз зависно од вредности која се очита са пина микробита на који је повезана. Дакле, њу повезујемо на један од пинова 0, 1, или 2.</p>
+<p>На леву страну извршни уређај (мотор, сијалицу…) са додатним напајањем. Средњи пин (common) је заједнички, а да ли ћемо други крај потрошача (и редно везаног додатног напајања!) повезати на горњи или доњи пин, зависи од логике управљања коју желимо да применимо.</p>
+<p>NO (normally opened – нормално отворен контакт, радни контакт) користимо када управљамо нормалном логиком (када је улазни сигнал 1 – уређај је укључен)</p>
+<p>NC (normally closed – нормално затворен контакт, мирни контакт) служи за управљање инверзном, обрнутом логиком (када је на улазу 1 – треба искључити уређај, све док је на улазу 0 – уређај ради). Чест пример за примену мирног контакта јесте хаваријски стоп тастер (печурка) на индустријским машинама, који у случају притискања прекида струјно коло и зауставља рад машине.</p>
+<p>У продаји се могу наћи и модули са 2, 4, 8 релеја, предвиђени за рад на различитим напонима.
+Приликом набавке, обратите пажњу да је реле који користите предвиђен за рад на 3V.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id9">
+<h2>Сензор за дим<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<p>(<em>MQ-2 Flammable Gas &amp; Smoke Sensor</em>)</p>
+<p>За рад овог сензора није довољан напон од 3.3V, па смо га зато повезали на додатно напајање. Осим ножица за напајање, на сензору се
+налазе још две ножице означене са D0 i A0. Коју ћемо од њих повезати на микробит, зависи од самог проблема који разматрамо.
+На полеђини сензора налази се потенциометар помоћу којег можемо подесити
+праг вредности, односно границу на коју ће сензор да реагује. Дакле, ако користимо ножицу D0 (D - дигитална вредност), микробит ће очитавати дигиталне
+вредности 0 (ако је очитао вредност мању од оне коју смо подесили потенциометром) или 1 (ако је та вредност већа).
+Ножицу А0 (А - аналогна вредност) повезаћемо ако нам је за апликацију потребно да пратимо промене вредности очитаних са сензора, које могу да буду у распону од 0 до 1023.</p>
+<a class="reference internal image-reference" href="_images/dim.png"><img alt="senzor za dim" class="align-center" src="_images/dim.png" style="width: 913.4999999999999px; height: 464.09999999999997px;" /></a>
+<p>Осим за детектовање дима у просторији, овај сензор реагује и на алкохол, бутан, пропан, водоник, што вам сигурно може дати идеје за различите пројекте.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id10">
+<h2>Сензор за покрет<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<p>(<em>HC-SR501 Infrared PIR</em>)</p>
+<a class="reference internal image-reference" href="_images/pir.png"><img alt="pir senzor" class="align-center" src="_images/pir.png" style="width: 606.1999999999999px; height: 338.09999999999997px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Као и сензор за дим који је претходно описан, сензор за покрет (PIR (<em>Passive Infrared</em>) сензор) такође захтева већи напон напајања (5V). Овај сензор има три ножице. GND и Vcc повезујемо на батерију
+(ако користите додатни ивични конектор за микробит повежите их на GND i пин 5V), а средњу ножицу везујемо на неки од аналогних пинова микробита 0, 1, или 2.</p>
+<p>Како ради овај сензор? Он се састоји од два дела који региструју јачину инфрацрвеног зрачења. Наиме, сви предмети и бића емитују
+инфрацрвено зрачење одређене јачине. Топлији предмети јаче, хладнији слабије. Сензор, поредећи очитавања своја два дела уствари детектује разлику зрачења. Када се тело покрене у близини сензора, ова два очитавања ће се неједнако променити.
+Када један део региструје више или мање зрачења од другог, активира се излаз.</p>
+<p>На полеђини овог сензора налазе се два потенциометра помоћу којих можемо да подесимо осетљивост сензора (<em>Sensitivity</em>, до које ће удаљености да реагује) и колико ће дуго сензор да задржи излаз на високом нивоу када детектује покрет (<em>Delay time</em>).
+У неким случајевима могуће је детектовати покрет на удаљености и до седам метара.</p>
+<p><strong>Напомене:</strong></p>
+<ul class="simple">
+<li><p>Када се тек укључи сензор, потребно је оставити га неко време (најмање 30 секунди) да измери референтну вредност инфрацрвеног зрачења у просторији. Након овог периода биће спреман за употребу.</p></li>
+<li><p>Постоји могућност да се сензор напаја и директно са 3.3V, али поступак захтева лемљење, па смо зато предложили додатно напајање као једноставније решење.</p></li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id11">
+<h2>Ултразвучни сензор<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
+<p>(<em>HC-SR04</em>)</p>
+<p>Појаснимо најпре укратко шта је звук, а шта ултразвук. Таласи се кроз ваздух простиру осциловањем честица ваздуха. Те осцилације се преносе и на мембрану у нашем уху. Када је фреквенција овог осциловања у одређеном опсегу (до 20 KHz), онда то осциловање доживљавамо као звук, то јест чујемо га. Ултразвуком називамо таласе, односно осцилације чија је фреквенција сувише висока да бисмо били у стању да их чујемо. Дакле, звучни и ултразвучни таласи су по својој природи исти, а разликују се једино по људском доживљају тих таласа (једне чујемо а друге не).</p>
+<p>Ултразвучни сензор емитује таласе високе фреквенције (ултразвучне таласе), који се, у случају да се испред сензора налази препрека одбијају и враћају ка њему. Време потребно да се региструје повратни сигнал пропорционално је растојању од сензора до препреке.</p>
+<p>Овај сензор ради на 5V. Ако користите ивични конектор за микробит, на њему ћете пронаћи пин који обезбеђује овај напон. Ако нисте у прилици, послужиће и паковање од три батерије од по 1.5V.</p>
+<p>На ултразвучном сензору постоје четири ножице: Vcc, Trig, Echo и GND. Пинови Vcc и GND се повезују тако да сензор добије потребан напон (при томе GND пин треба повезати и са GND контактом на микробиту, као на слици). Trig i Echo пин можете повезати на пинове микробита по жељи (0, 1 или 2), с тим да исте пинове употребите и у програму. Иако је на интернету у бројним примерима Echo пин директно повезан на микробит, препоручујемо вам да, применом два отпорника, смањите напон тог повратног сигнала, као што је приказано на шеми (отпорници не морају имати исте вредности као наши, али међусобни однос њихових вредности треба да буде приближно исти као на слици).</p>
+<a class="reference internal image-reference" href="_images/uz.png"><img alt="uz senzor" class="align-center" src="_images/uz.png" style="width: 692.8000000000001px; height: 420.8px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id12">
+<h2>Сензор за детекцију воде / кишних капи<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<p>(<em>Raindrop Detection Sensor</em>)</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="_images/senzor_kisa.png"><img alt="senzor kisa" class="align-left" src="_images/senzor_kisa.png" style="width: 519.6px; height: 420.59999999999997px;" /></a>
+<p>Овај сензор предвиђен је за рад на напонима од 3.3V до 5V, тако да за његов рад у примерима нисмо користили додатну батерију. Очитавање података са овог сензора је врло једноставно.
+Користи се у пару са контролном плочицом која вам омогућава да пратите како аналогне, тако и дигиталне вредности, зависно од начина примене.</p>
+<p>На контролној плочици налазе се две светлеће диоде - једна сигнализира да је сензор под напоном, а друга се укључује када сензор детектује воду, односно кишне капи.
+За коју ће се вредност укључити ова светлећа диода, односно, на коју ће вредност одреаговати излаз сензора, зависи од постављене вредности коју подешавамо окретањем потенциометра
+који се, такође, налази на овој плочици.</p>
+<p>Логика овог сензора је обрнута, тако да, када детектује присуство воде на излазу даје логичку нулу, а у супротном даје вредност један.</p>
+<p>Сензор се једноставно повезује на микробит. Vcc ножицу повезујемо на 3V микробита, GND спајамо са GND микробита, а у зависности од тога да ли желимо да пратимо ниво/количину течности (аналогне вредности)
+или детектујемо да ли има/нема воде (дигиталне вредности), на неки од пинова 0, 1 или 2 повезаћемо А0 (аналогну) или D0 (дигиталну) ножицу сензора.</p>
+<p>Примена је разноврсна - од праћења временских прилика, одржавања нивоа течности, до различитих безбедносних система (цурење воде из цеви и слично)</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id13">
+<h3>Проверите знање<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Питање 1: Мали зарез (одсечени део) на глави диоде налази се на страни:</strong></p>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="q3_1">
+            
+            <li data-component="answer" data-correct id="q3_1_opt_a">краће ножице која се везује на GND микробита</li><li data-component="feedback" id="q3_1_opt_a">Тако је, зарез се налази изнад краће ножице, која представља негативан крај диоде и везује се на GND пин микробита.</li>
+            
+            <li data-component="answer"  id="q3_1_opt_b">не значи ништа, то је фабричка грешка</li><li data-component="feedback" id="q3_1_opt_b">Одговор није тачан, покушајте поново!</li>
+            
+            <li data-component="answer"  id="q3_1_opt_c">дуже ножице која се везује на GND микробита</li><li data-component="feedback" id="q3_1_opt_c">Одговор није тачан, покушајте поново!</li>
+            
+            <li data-component="answer"  id="q3_1_opt_d">дуже ножице која се везује на 3V микробита</li><li data-component="feedback" id="q3_1_opt_d">Одговор није тачан, покушајте поново!</li>
+            
+
+            </ul>
+            </div>
+            <div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Питање 2: Ако уз диоду не повежемо редно и одговарајући отпорник, …</strong></p>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="q3_2">
+            
+            <li data-component="answer"  id="q3_2_opt_a">... диода неће светлети</li><li data-component="feedback" id="q3_2_opt_a">Одговор није тачан, покушајте поново!</li>
+            
+            <li data-component="answer" data-correct id="q3_2_opt_b">... диода може да прегори</li><li data-component="feedback" id="q3_2_opt_b">Тако је, редно везани отпорник смањиће јачину струје кроз светлећу диоду.</li>
+            
+            <li data-component="answer"  id="q3_2_opt_c">... диоду треба повезати обрнуто</li><li data-component="feedback" id="q3_2_opt_c">Одговор није тачан, покушајте поново!</li>
+            
+            <li data-component="answer"  id="q3_2_opt_d">... диода ће слабије светлети</li><li data-component="feedback" id="q3_2_opt_d">Одговор није тачан, покушајте поново!</li>
+            
+
+            </ul>
+            </div>
+            <div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Питање 3: За управљање серво мотором, потребно је повезати:</strong></p>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="q3_3">
+            
+            <li data-component="answer"  id="q3_3_opt_a">4 жице (проводника)</li><li data-component="feedback" id="q3_3_opt_a">Одговор није тачан, покушајте поново!</li>
+            
+            <li data-component="answer" data-correct id="q3_3_opt_b">3 жице (проводника)</li><li data-component="feedback" id="q3_3_opt_b">Серво мотор на себи има три жице - браон, црвену и жуту које повезујемо на напајање и неки од пинова како бисмо њиме управљали.</li>
+            
+            <li data-component="answer"  id="q3_3_opt_c">2 жице (проводника)</li><li data-component="feedback" id="q3_3_opt_c">Одговор није тачан, покушајте поново!</li>
+            
+            <li data-component="answer"  id="q3_3_opt_d">1 жицу (проводник)</li><li data-component="feedback" id="q3_3_opt_d">Одговор није тачан, покушајте поново!</li>
+            
+
+            </ul>
+            </div>
+            <div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Питање 4: Када повезујемо серво мотор са микробитом, жуту жицу серво мотора везујемо:</strong></p>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="q3_4">
+            
+            <li data-component="answer" data-correct id="q3_4_opt_a">на неки од пинова 0, 1, 2</li><li data-component="feedback" id="q3_4_opt_a">Ово је тачан одговор, жута жица је сигнална и везује се на пин 0, 1 или 2 (уколико немамо додатни конектор да приступимо осталим пиновима)</li>
+            
+            <li data-component="answer"  id="q3_4_opt_b">на 3V</li><li data-component="feedback" id="q3_4_opt_b">Одговор није тачан, покушајте поново!</li>
+            
+            <li data-component="answer"  id="q3_4_opt_c">на GND</li><li data-component="feedback" id="q3_4_opt_c">Одговор није тачан, покушајте поново!</li>
+            
+            <li data-component="answer"  id="q3_4_opt_d">искључиво преко додатног конектора на неки од мањих пинова</li><li data-component="feedback" id="q3_4_opt_d">Одговор није тачан, покушајте поново!</li>
+            
+
+            </ul>
+            </div>
+            <div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Питање 5: Да ли је могуће да микробит истовремено управља са три серво мотора?</strong></p>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="q3_5">
+            
+            <li data-component="answer"  id="q3_5_opt_a">Могуће је без икаквих проблема!</li><li data-component="feedback" id="q3_5_opt_a">Одговор није тачан, покушајте поново!</li>
+            
+            <li data-component="answer"  id="q3_5_opt_b">Немогуће је повезати толико мотора на микробит.</li><li data-component="feedback" id="q3_5_opt_b">Одговор није тачан, покушајте поново!</li>
+            
+            <li data-component="answer" data-correct id="q3_5_opt_c">Могуће је, али не без додатног напајања или компоненти, јер микробит нема довољно снаге.</li><li data-component="feedback" id="q3_5_opt_c">Тако је, постоји више начина да се ово изведе, али не без неких додатних компоненти и додатног напајања</li>
+            
+            <li data-component="answer"  id="q3_5_opt_d">Могуће је физички, али не постоји програмско решење.</li><li data-component="feedback" id="q3_5_opt_d">Одговор није тачан, покушајте поново!</li>
+            
+
+            </ul>
+            </div>
+            <div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Питање 6: Ако желимо да чујемо мелодију са микробита, део конектора од слушалица или неког звучника који је најближи пластици повезујемо на:</strong></p>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="q3_6">
+            
+            <li data-component="answer" data-correct id="q3_6_opt_a">GND пин на микробиту.</li><li data-component="feedback" id="q3_6_opt_a">Ово је тачан одговор!</li>
+            
+            <li data-component="answer"  id="q3_6_opt_b">на било који од пинова</li><li data-component="feedback" id="q3_6_opt_b">Одговор није тачан, покушајте поново!</li>
+            
+            <li data-component="answer"  id="q3_6_opt_c">на 3V</li><li data-component="feedback" id="q3_6_opt_c">Одговор није тачан, покушајте поново!</li>
+            
+            <li data-component="answer"  id="q3_6_opt_d">Није могуће чути звук са микробита.</li><li data-component="feedback" id="q3_6_opt_d">Одговор није тачан, покушајте поново!</li>
+            
+
+            </ul>
+            </div>
+            </div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Основне функције' data-toggle="tooltip"><a href="OsnovneFunkcije.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - Разни задаци' data-toggle="tooltip"><a href="RazniZadaci.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Основне функције' data-toggle="tooltip"><a href="OsnovneFunkcije.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Разни задаци' data-toggle="tooltip"><a href="RazniZadaci.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container text-center">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="text-center">&copy; 2020 <a href="https://www.britishcouncil.rs/en">British Council</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

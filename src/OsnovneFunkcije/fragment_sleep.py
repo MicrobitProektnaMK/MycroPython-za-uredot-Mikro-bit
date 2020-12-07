@@ -1,0 +1,1 @@
+sleep(broj_milisekundi)                                     

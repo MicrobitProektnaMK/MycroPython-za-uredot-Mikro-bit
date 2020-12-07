@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+  <head>
+    <meta charset="utf-8" />
+    <title>Увод &#8212; Tekstualno programiranje u Pajtonu</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="_static/notes.css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="_static/matrixeq.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/showEval.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="_static/karelCorner.js"></script>
+    <script type="text/javascript" src="_static/karelRobot.js"></script>
+    <script type="text/javascript" src="_static/karelWorld.js"></script>
+    <script type="text/javascript" src="_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="_static/karelUI.js"></script>
+    <script type="text/javascript" src="_static/karel.js"></script>
+    <script type="text/javascript" src="_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/karel-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="_static/notes.js"></script>
+    <script type="text/javascript" src="_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="_static/blockpy-modal.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Основне функције" href="OsnovneFunkcije.html" />
+    <link rel="prev" title="Микропајтон - пројектна настава" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'MicrobitProjektna';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = yes;
+  eBookConfig.basecourse = 'MicrobitProjektna';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '_images/';
+  eBookConfig.staticDir = '_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./">Пројектна настава</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="id1">
+<h1>Увод<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id2">
+<h2>Микробит - да се подсетимо<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<img alt="mu12" class="align-center" src="_images/prednjazadnja.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Микробит је ручни, програмабилни микро-рачунар који је развијен првенствено како би заинтересовао децу за програмирање.</p>
+<p>„Мозак” микробита је <em>ARM</em> процесор, а основну комуникацију са корисником омогућавају тастери и светлеће диоде који се налазе на уређају. Осим тога, микробит је опремљен и бројним сензорима који ће нам омогућити разне занимљиве примене овог микро-рачунара.</p>
+<p><strong>Екран</strong></p>
+<p>На предњој страни микробита налази се 25 лампица које су поређане у пет врста и пет колона. Ове лампице израђене су у
+такозваној LED технологији.
+LED je скраћеница од <em>Light Emitting Diode</em>, што у преводу значи диода која емитује светлост, светлећа диода.
+Расвета направљена овом технологијом, захваљујући дуготрајности и енергетској ефикасности, све више замењује халогену и флуоросцентну
+расвету у домаћинствима.</p>
+<p><strong>Тастери</strong></p>
+<p>Са леве и десне стране екрана налази се по један тастер. Тастери су означени словима <strong>A</strong> и <strong>B</strong> и користе се као улази.
+Микробит може да региструје који тастер је притиснут и да реагује на притисак неког од њих тако што ће извршити неку радњу или
+послати информацију неком другом уређају, зависно од тога како га програмирамо.</p>
+<p>На полеђини микробита налази се још један тастер који омогућава поновно покретање (ресетовање) учитаног програма.</p>
+<p><strong>Компас</strong></p>
+<p>Микробит има уграђен и компас. Мoжемо да одредимо јачину магнетног поља у његовој близини, као и тренутну оријентацију уређаја у односу на стране света.</p>
+<p><strong>Акцелерометар</strong></p>
+<p>Акцелерометар нам омогућава да детектујемо различите типове покрета микробита. Можемо регистровати када га неко протресе, нагне, испусти.
+Овај сензор свакако може допринети да наши пројекти постану садржајнији и још интересантнији.</p>
+<p><strong>Сензор за температуру</strong></p>
+<p>Не постоји посебан сензор за температуру који је уграђен у микробит, али je oмогућено да користимо сензор који мери температуру његовог процесора.
+Температура коју показује микробит није потпуно прецизна, али можемо да региструјемо њене промене и направимо различите пројекте који користе те податке.</p>
+<p><strong>Пинови</strong></p>
+<p>На ивици микробита налази се 25 извода (пинова) - 5 великих и 20 малих.
+Пет великих (основних) пинова означени су са <strong>0</strong>, <strong>1</strong>, <strong>2</strong>, <strong>3V</strong> i <strong>GND</strong>.
+Пинови 0, 1 и 2 су улазно-излазни пинови опште намене. Преко њих, употребом проводника са крокодил-штипаљкама, можемо на микробит
+повезати разне додатне сензоре, али и управљати бројним уређајима.
+Пинови 3V i GND (<em>ground</em> - уземљење, маса) служе за напајање. Иако је обележен са 3V, на излазу овог пина добијамо напон од 3.3V у односу на масу.</p>
+<p><strong>Bluetooth</strong></p>
+<p>Микробит је опремљен и <em>BLE (Bluetooth Low Energy)</em> антеном пoмоћу које може
+бежично да комуницира са више других микробитова, рачунаром,
+мобилним телефоном или неким другим уређајем. Комуникација са другим уређајима је двосмерна, што значи да микробит може да прима податке са њих,
+али и да им прослеђује податке.</p>
+<hr class="docutils" />
+<p>Микробит се најједноставније програмира преко уређивача блокова, али није много сложеније ни ако програмирамо у неком од правих, текстуалних програмских језика, попут ЈаваСкрипта или Пајтона.</p>
+<p>Верзија Пајтона која се користи у раду са микробитом (и на неким другим, сличним платформама) се зове Микропајтон (<em>MicroPython</em>). Микропајтон је поједностављена верзија Пајтона, која не подржава баш све што постоји у стандардном Пајтону. На пример, у Микропајтону нећемо моћи да користимо наша слова и остале <em>Unicode</em> карактере или да форматирамо стрингове.
+Могуће је да ћете наићи на још понеко ограничење, али шансе за то су мале јер ћете имати на располагању све делове Пајтона који нама могу затребати.</p>
+<p>Окружење у коме се микробит најједноставнијe програмира у Пајтону (тачније Микропајтону) је <strong>Mu</strong> (Мју). Иако ћемо ово окружење највише користити само као едитор за писање програма, оно у себи садржи и друге корисне могућности, које ћемо донекле упознати.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>Инсталација Мју окружења за развој<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>Инсталацију Мју окружења можете пронаћи на адреси <a class="reference external" href="https://codewith.mu/en/download">https://codewith.mu/en/download</a>.</p>
+<p>Изаберите oперативни систем који користите и преузмите инсталацију.
+Преузета датотека ће се вероватно наћи у фасцикли <em>Downloads</em> (преузимања).
+Пронађите је и покрените двокликом.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="mu12" class="align-center" src="_images/mu12.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Прихватите услове лиценце као што је приказано на слици и изаберите предвиђене кориснике и одредиште за апликацију:</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="mu34" class="align-center" src="_images/mu34.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Инсталација Мју апликације је успешно завршена, спремни смо за рад!</strong></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="mu5" class="align-center" src="_images/mu5.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>Мју окружење<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>На самом почетку неопходно је да припремимо окружење за рад са микробитом.
+То ћемо урадити тако што ћемо кликнути на <em>Mode</em> у горњем левом углу и изабрати <em>BBC micro:bit</em> мод.</p>
+<a class="reference internal image-reference" href="_images/mu6.png"><img alt="mu6" class="align-center" src="_images/mu6.png" style="width: 505.68px; height: 362.88px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Већ смо рекли да је окружење за рад веома једноставно и прегледно.</p>
+<p>Главни мени састоји се из петнаест ставки:</p>
+<img alt="mu7" class="align-center" src="_images/mu7.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="stavke" class="align-center" src="_images/stavke.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Спремни смо да саставимо прве програмске линије!</strong></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id5">
+<h3>Проверите знање<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Питање 1: Колико се светлећих диода налази на предњој страни микробита?</strong></p>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="q1_1">
+            
+            <li data-component="answer"  id="q1_1_opt_a">30</li><li data-component="feedback" id="q1_1_opt_a">Одговор није тачан, покушајте поново!</li>
+            
+            <li data-component="answer"  id="q1_1_opt_b">36</li><li data-component="feedback" id="q1_1_opt_b">Одговор није тачан, покушајте поново!</li>
+            
+            <li data-component="answer"  id="q1_1_opt_c">24</li><li data-component="feedback" id="q1_1_opt_c">Одговор није тачан, покушајте поново!</li>
+            
+            <li data-component="answer" data-correct id="q1_1_opt_d">25</li><li data-component="feedback" id="q1_1_opt_d">Тако је, на микробиту се налази 25 светлећих диода које су распоређене у пет врста и пет колона.</li>
+            
+
+            </ul>
+            </div>
+            <div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Питање 2: Који од наведених сензора микробит нема уграђен?</strong></p>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="q1_2">
+            
+            <li data-component="answer"  id="q1_2_opt_a">сензор за температуру</li><li data-component="feedback" id="q1_2_opt_a">Одговор није тачан, на микробиту се налази овај сензор.</li>
+            
+            <li data-component="answer"  id="q1_2_opt_b">магнетометар (за јачину магнетног поља)</li><li data-component="feedback" id="q1_2_opt_b">Одговор није тачан, на микробиту се налази овај сензор.</li>
+            
+            <li data-component="answer" data-correct id="q1_2_opt_c">сензор за притисак</li><li data-component="feedback" id="q1_2_opt_c">Тако је, на микробиту се не налази сензор за притисак, али је могуће повезати додатни сензор преко пинова.</li>
+            
+            <li data-component="answer"  id="q1_2_opt_d">сензор за ниво осветљености</li><li data-component="feedback" id="q1_2_opt_d">Одговор није тачан, на микробиту се налази овај сензор.</li>
+            
+
+            </ul>
+            </div>
+            <div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Питање 3: Да ли је могуће бежично управљати микробитом?</strong></p>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="q1_3">
+            
+            <li data-component="answer"  id="q1_3_opt_a">није могуће</li><li data-component="feedback" id="q1_3_opt_a">Одговор није тачан, покушајте поново!</li>
+            
+            <li data-component="answer"  id="q1_3_opt_b">могуће је, микробит има уграђену Wi-Fi антену</li><li data-component="feedback" id="q1_3_opt_b">Одговор није тачан, покушајте поново!</li>
+            
+            <li data-component="answer"  id="q1_3_opt_c">могуће је само ако имамо оптичку видљивост</li><li data-component="feedback" id="q1_3_opt_c">Одговор није тачан, покушајте поново!</li>
+            
+            <li data-component="answer" data-correct id="q1_3_opt_d">могуће је, микробит има уграђену BLE антену</li><li data-component="feedback" id="q1_3_opt_d">Тачно, више микробитова може да комуницира истовремено, а могућа је и комуникација са рачунаром, мобилним телефоном или неким другим уређајем преко Bluetooth-a</li>
+            
+
+            </ul>
+            </div>
+            <div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Питање 4: Ако желимо графички да прикажемо податке са неког сензора у реалном времену, користићемо</strong></p>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="q1_4">
+            
+            <li data-component="answer"  id="q1_4_opt_a">Flash</li><li data-component="feedback" id="q1_4_opt_a">Одговор није тачан, покушајте поново!</li>
+            
+            <li data-component="answer"  id="q1_4_opt_b">REPL</li><li data-component="feedback" id="q1_4_opt_b">Одговор није тачан, покушајте поново!</li>
+            
+            <li data-component="answer" data-correct id="q1_4_opt_c">Plotter</li><li data-component="feedback" id="q1_4_opt_c">Тако је, Plotter омогућава да графички прикажемо очитавања са сензора који се налазе на микробиту.</li>
+            
+            <li data-component="answer"  id="q1_4_opt_d">Tidy</li><li data-component="feedback" id="q1_4_opt_d">Одговор није тачан, покушајте поново!</li>
+            
+
+            </ul>
+            </div>
+            <div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Питање 5: Дугме *Flash* служи да:</strong></p>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="q1_5">
+            
+            <li data-component="answer"  id="q1_5_opt_a">избришемо садржај микробита</li><li data-component="feedback" id="q1_5_opt_a">Одговор није тачан, покушајте поново!</li>
+            
+            <li data-component="answer"  id="q1_5_opt_b">проверимо да ли у програму има грешака</li><li data-component="feedback" id="q1_5_opt_b">Одговор није тачан, покушајте поново!</li>
+            
+            <li data-component="answer"  id="q1_5_opt_c">сачувамо програм на рачунару</li><li data-component="feedback" id="q1_5_opt_c">Одговор није тачан, покушајте поново!</li>
+            
+            <li data-component="answer" data-correct id="q1_5_opt_d">учитамо програм у микробит</li><li data-component="feedback" id="q1_5_opt_d">Одговор је тачан, један од начина да учитамо програм у микробит јесте помоћу Flash дугмета.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Микропајтон - пројектна настава' data-toggle="tooltip"><a href="index.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - Основне функције' data-toggle="tooltip"><a href="OsnovneFunkcije.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Микропајтон - пројектна настава' data-toggle="tooltip"><a href="index.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Основне функције' data-toggle="tooltip"><a href="OsnovneFunkcije.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container text-center">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="text-center">&copy; 2020 <a href="https://www.britishcouncil.rs/en">British Council</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>
