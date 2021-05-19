@@ -49,7 +49,7 @@ master_doc = 'index'
 # General information about the project.
 project = 'МycroPython за уредот Микро:бит'
 #pylint: disable=redefined-builtin
-copyright = '2020 Фондација Петља'
+copyright = '2021 Фондација Петља'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -129,7 +129,7 @@ html_context = {'course_id': 'microbit_micropython_vii_viii',
                 'proxy_uri_files': '/jobe/index.php/restapi/files/',
                 'downloads_enabled': 'false',
                 'enable_chatcodes': 'false',
-                'runestone_version': pkg_resources.require("runestone")[0].version
+                'lang': 'sr-Cyrl'
                }
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for

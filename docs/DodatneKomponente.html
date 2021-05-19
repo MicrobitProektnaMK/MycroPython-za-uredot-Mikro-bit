@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl"></html>
   <head>
     <meta charset="utf-8" />
-    <title>Поврзување дополнителни компоненти &#8212; Програмирање микробит уређаја у Микропајтону – приручник за пројектну наставу за седми и осми разред</title>
-    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Поврзување дополнителни компоненти &#8212; Програмирање микробит уређаја у Микропајтону – приручник за пројектну наставу за седми и осми разред</title>
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/activecode.css" />
     <link rel="stylesheet" type="text/css" href="_static/codemirror.css" />
     <link rel="stylesheet" type="text/css" href="_static/clickable.css" />
@@ -26,12 +26,15 @@
     <link rel="stylesheet" type="text/css" href="_static/webglinteractive.css" />
     <link rel="stylesheet" type="text/css" href="_static/karel.css" />
     <link rel="stylesheet" type="text/css" href="_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="_static/simanim.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pycode.css" />
+    <link rel="stylesheet" type="text/css" href="_static/p5js.css" />
     <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="_static/flatly.min.css" type="text/css" />
-    <link rel="stylesheet" href="_static/petlja.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <link rel="stylesheet" href="_static/petlja-runestone.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/runestonebase.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
@@ -129,7 +132,27 @@
     <script type="text/javascript" src="_static/blockpy/blocks/turtles.js"></script>
     <script type="text/javascript" src="_static/blockpy/blocks/text.js"></script>
     <script type="text/javascript" src="_static/blockpy-modal.js"></script>
+    <script type="text/javascript" src="_static/simanim.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.16.1/full/pyodide.js"></script>
+    <script type="text/javascript" src="_static/pycode.js"></script>
+    <script type="text/javascript" src="//toolness.github.io/p5.js-widget/p5-widget.js"></script>
+    <script type="text/javascript" src="_static/p5js.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.sr.js"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.sr.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.sr.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="_static/parsons-i18n.sr.js"></script>
+    <script type="text/javascript" src="_static/parsons-i18n.sr-Latn.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.sr.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.sr-Latn.js"></script>
     <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="_static/jquery-fix.js"></script>
     <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
@@ -156,17 +179,17 @@
 <script type="text/javascript">
   eBookConfig = {};
   eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
-  eBookConfig.app = eBookConfig.host+'/runestone';
-  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.app = eBookConfig.host + '/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
   eBookConfig.course = 'microbit_micropython_vii_viii';
-  eBookConfig.logLevel = 0;
-  eBookConfig.loginRequired = false;
+  eBookConfig.logLevel = '0';
+  eBookConfig.loginRequired = 'false';
   eBookConfig.build_info = "";
   eBookConfig.isLoggedIn = false;
-  eBookConfig.useRunestoneServices = false;
-  eBookConfig.python3 = true;
+  eBookConfig.useRunestoneServices = 'false';
+  eBookConfig.python3 = 'true';
   eBookConfig.basecourse = 'microbit_micropython_vii_viii';
-  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.runestone_version = '';
   eBookConfig.imagesDir = '_images/';
   eBookConfig.staticDir = '_static/';
   if(typeof(Sk) != "undefined")
@@ -311,7 +334,7 @@
 </div>
 </div>
 <div class="section" id="id7">
-<h2>Звучници и слушалице<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<h2>Звучници и слушалки<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
 <p>Уредот <em>Микро:бит</em> нема вградени звучници, но многу лесно може да додадеме надворешен звучник. Ако не ви се наоѓа при рака звучник од некој постар уред или системски звучник од некој компјутер, ќе ви послужат и слушалки од мобилен телефон.</p>
 <p>На сликата подолу е прикажано како се поврзува звучник со уредот <em>Микро:бит</em>.</p>
 <div class="line-block">
@@ -414,7 +437,7 @@
             <div class="course-box course-box-question course-content">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="q3_1">
             
-            <li data-component="answer" data-correct id="q3_1_opt_a">каде што кратките пинови се врзуваат со GND на уредот *Микро:бит*.</li><li data-component="feedback" id="q3_1_opt_a">Тако је, зарез се налази изнад краће ножице, која представља негативан крај диоде и везује се на GND пин микробита.</li>
+            <li data-component="answer" data-correct id="q3_1_opt_a">каде што кратките пинови се врзуваат со GND на уредот *Микро:бит*.</li><li data-component="feedback" id="q3_1_opt_a">14.    Така е, малиот рез се наоѓа над пократката нога, која претставува негативен крај на диодата и се поврзува со GND пинот на уредот *Микро:бит*.</li>
             
             <li data-component="answer"  id="q3_1_opt_b">не значи ништо, тој е фабричка грешка.</li><li data-component="feedback" id="q3_1_opt_b">Одговорот не е точен, обидете се повторно!</li>
             
@@ -435,7 +458,7 @@
             
             <li data-component="answer"  id="q3_2_opt_a">... диодата нема да свети.</li><li data-component="feedback" id="q3_2_opt_a">Одговорот не е точен, обидете се повторно!</li>
             
-            <li data-component="answer" data-correct id="q3_2_opt_b">... диодата може да прегори.</li><li data-component="feedback" id="q3_2_opt_b">Тако је, редно везани отпорник смањиће јачину струје кроз светлећу диоду.</li>
+            <li data-component="answer" data-correct id="q3_2_opt_b">... диодата може да прегори.</li><li data-component="feedback" id="q3_2_opt_b">15.    Така е, редно поврзаниот отпорник ќе ја намали јачината на струјата низ светлечката диода.</li>
             
             <li data-component="answer"  id="q3_2_opt_c">... диодата ќе треба обратно да се поврзе.</li><li data-component="feedback" id="q3_2_opt_c">Одговорот не е точен, обидете се повторно!</li>
             
@@ -454,7 +477,7 @@
             
             <li data-component="answer"  id="q3_3_opt_a">4 жици (проводници)</li><li data-component="feedback" id="q3_3_opt_a">Одговорот не е точен, обидете се повторно!</li>
             
-            <li data-component="answer" data-correct id="q3_3_opt_b">3 жици (проводници)</li><li data-component="feedback" id="q3_3_opt_b">Серво мотор на себи има три жице - браон, црвену и жуту које повезујемо на напајање и неки од пинова како бисмо њиме управљали.</li>
+            <li data-component="answer" data-correct id="q3_3_opt_b">3 жици (проводници)</li><li data-component="feedback" id="q3_3_opt_b">16.    Сервомоторот треба да има три жици, кафеава, црвена и жолта жица, кои ќе ги поврземе со напојувањето и некои пинови за да може да управуваме со него.</li>
             
             <li data-component="answer"  id="q3_3_opt_c">2 жици (проводници)</li><li data-component="feedback" id="q3_3_opt_c">Одговорот не е точен, обидете се повторно!</li>
             
@@ -467,22 +490,24 @@
 <div class="line"><br /></div>
 </div>
 <p><strong>Прашање 4: Кога го поврзуваме сервомоторот со уредот Микро:бит, жолтата жица од сервомоторот ја поврзуваме:</strong></p>
-
-            <div class="course-box course-box-question course-content">
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="q3_4">
-            
-            <li data-component="answer" data-correct id="q3_4_opt_a">со некој од пиновите 0, 1, 2.</li><li data-component="feedback" id="q3_4_opt_a">Ово је тачан одговор, жута жица је сигнална и везује се на пин 0, 1 или 2 (уколико немамо додатни конектор да приступимо осталим пиновима)</li>
-            
-            <li data-component="answer"  id="q3_4_opt_b">со 3V.</li><li data-component="feedback" id="q3_4_opt_b">Одговорот не е точен, обидете се повторно!</li>
-            
-            <li data-component="answer"  id="q3_4_opt_c">со GND.</li><li data-component="feedback" id="q3_4_opt_c">Одговорот не е точен, обидете се повторно!</li>
-            
-            <li data-component="answer"  id="q3_4_opt_d">исклучиво преку дополнителен конектор на некој од помалите пинови.</li><li data-component="feedback" id="q3_4_opt_d">Одговорот не е точен, обидете се повторно!</li>
-            
-
-            </ul>
-            </div>
-            <div class="line-block">
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">F:\petlja\bc\makedonci prirucnik\Microbit_projektna_MK\_sources\DodatneKomponente.rst</span>, line 344)</p>
+<p>Error in “mchoice” directive:
+invalid option block.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. mchoice:: q3_4
+    :answer_a:  со некој од пиновите 0, 1, 2.
+    :answer_b:  со 3V.
+    :answer_c:  со GND.
+    :answer_d:  исклучиво преку дополнителен конектор на некој од помалите пинови.
+    :correct: a
+    :feedback_a:17.     Одговорот е точен, жолтата жица е сигнална и се поврзува со пиновите 0, 1 или 2 (доколку немаме дополнителен конектор за да пристапиме до останатите пинови).
+    :feedback_b: Одговорот не е точен, обидете се повторно!
+    :feedback_c: Одговорот не е точен, обидете се повторно!
+    :feedback_d: Одговорот не е точен, обидете се повторно!
+</pre></div>
+</div>
+</div>
+<div class="line-block">
 <div class="line"><br /></div>
 </div>
 <p><strong>Прашање 5: Дали може уредот *Микро:бит* да управува со три сервомотори?</strong></p>
@@ -494,7 +519,7 @@
             
             <li data-component="answer"  id="q3_5_opt_b">Не може да се поврзат толку мотори на уредот *Микро:бит*.</li><li data-component="feedback" id="q3_5_opt_b">Одговорот не е точен, обидете се повторно!</li>
             
-            <li data-component="answer" data-correct id="q3_5_opt_c">Може, но не без дополнително напојување или дополнителна компонента бидејќи уредот *Микро:бит* нема доволна моќност.</li><li data-component="feedback" id="q3_5_opt_c">Тако је, постоји више начина да се ово изведе, али не без неких додатних компоненти и додатног напајања</li>
+            <li data-component="answer" data-correct id="q3_5_opt_c">Може, но не без дополнително напојување или дополнителна компонента бидејќи уредот *Микро:бит* нема доволна моќност.</li><li data-component="feedback" id="q3_5_opt_c">18.    Така е, постојат повеќе начини на кои може да се изведе ова, но не без дополнителни компоненти и дополнително напојување.</li>
             
             <li data-component="answer"  id="q3_5_opt_d">Физички е возможно, но не постои програмско решение.</li><li data-component="feedback" id="q3_5_opt_d">Одговорот не е точен, обидете се повторно!</li>
             
@@ -509,7 +534,7 @@
             <div class="course-box course-box-question course-content">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="q3_6">
             
-            <li data-component="answer" data-correct id="q3_6_opt_a">GND пинот на уредот *Микро:бит*.</li><li data-component="feedback" id="q3_6_opt_a">Ово је тачан одговор!</li>
+            <li data-component="answer" data-correct id="q3_6_opt_a">GND пинот на уредот *Микро:бит*.</li><li data-component="feedback" id="q3_6_opt_a">Одговорот е точен!</li>
             
             <li data-component="answer"  id="q3_6_opt_b">кој било од пиновите.</li><li data-component="feedback" id="q3_6_opt_b">Одговорот не е точен, обидете се повторно!</li>
             
@@ -556,7 +581,7 @@
         <div class="text-center">
             <hr>
             <p class="text-muted">
-                <span class="pull-left">&copy; 2020 British Council (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+                <span class="pull-left">&copy; 2019 Petlja (Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
             </p>
         </div>
     </div>

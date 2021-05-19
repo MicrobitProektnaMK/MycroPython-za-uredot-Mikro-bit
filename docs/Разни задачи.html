@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Разни задачи &#8212; Програмирање микробит уређаја у Микропајтону – приручник за пројектну наставу за седми и осми разред</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="_static/simanim.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pycode.css" />
+    <link rel="stylesheet" type="text/css" href="_static/p5js.css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/matrixeq.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/showEval.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="_static/Blob.js"></script>
+    <script type="text/javascript" src="_static/karelCorner.js"></script>
+    <script type="text/javascript" src="_static/karelRobot.js"></script>
+    <script type="text/javascript" src="_static/karelWorld.js"></script>
+    <script type="text/javascript" src="_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="_static/karelUI.js"></script>
+    <script type="text/javascript" src="_static/karel.js"></script>
+    <script type="text/javascript" src="_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/notes.js"></script>
+    <script type="text/javascript" src="_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="_static/blockpy-modal.js"></script>
+    <script type="text/javascript" src="_static/simanim.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.16.1/full/pyodide.js"></script>
+    <script type="text/javascript" src="_static/pycode.js"></script>
+    <script type="text/javascript" src="//toolness.github.io/p5.js-widget/p5-widget.js"></script>
+    <script type="text/javascript" src="_static/p5js.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Идеи за проекти" href="Проекти/toctree.html" />
+    <link rel="prev" title="Поврзување дополнителни компоненти" href="Поврзување дополнителни компоненти.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'microbit_micropython_vii_viii';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'microbit_micropython_vii_viii';
+  eBookConfig.runestone_version = '';
+  eBookConfig.imagesDir = '_images/';
+  eBookConfig.staticDir = '_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./">МycroPython за уредот Микро:бит</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content" style="margin-top: 70px;">
+  
+  <div class="section" id="id1">
+<h1>Разни задачи<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Секој проблем секогаш може да се реши на повеќе начини. Ова поглавје е наменето, со помош на уште неколку примери, самостојно да вежбате програмирање со уредот <em>Микро:бит</em>. Секоја задача обидете се прво да ја решите самите, па дури потоа споредете го вашето решение со нашиот предлог.</p>
+<p>Додека се обидувате да најдете решение, слободно служете се со решените примери кои се достапни во претходните поглавја.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Задача 1:</strong></p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Напишете код со којшто ќе се вклучува диодата на главната дијагонала од екранот на уредот Микро:бит.</strong></p>
+
+    </p></div></div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="_images/dijagonala.png"><img alt="dijagonala" class="align-center" src="_images/dijagonala.png" style="width: 242.39999999999998px; height: 202.79999999999998px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Главната дијагонала претставува линија што ги поврзува долниот лев агол и долниот десен агол на екранот. Оваа задача ќе ја решиме на два начина.</p>
+<p>Првото решение е за секоја диода да користиме функција којашто ќе ја вклучи. Обидете се!</p>
+
+    <div data-component="reveal" id="Задатак1a"   data-showtitle="Прво решение:" data-hidetitle="Cкриј решение">
+    <p>Едно од можните решенија е следново:</p>
+
+<div data-childcomponent="dijagonala" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=dijagonala data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      
+
+display.set_pixel(0, 0, 9)
+display.set_pixel(1, 1, 9)
+display.set_pixel(2, 2, 9)
+display.set_pixel(3, 3, 9)
+display.set_pixel(4, 4, 9)
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    <p>Можеме да заклучиме дека за диодите кои се наоѓаат на главната дијагонала бројот на редови и колони е ист. Имајќи го овој факт предвид, обидете се да составите решение во кое ќе ја примените јамката <em>for</em>.</p>
+
+    <div data-component="reveal" id="Задатак1b"   data-showtitle="Второ решение:" data-hidetitle="Cкриј решение">
+    
+<div data-childcomponent="dijagonala_2" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=dijagonala_2 data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      
+
+for i in range(0, 5):
+    display.set_pixel(i, i, 9)
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    <ul class="simple">
+<li><p>Овие два кода не се разликуваат многу во должината, со оглед на тоа дека вклучуваме само пет диоди. Колку линии код би ни биле потребни за 10 000 диоди, сместени во 100 редови и 100 колони за првото решение, а колку за второто?</p></li>
+<li><p>Споредната дијагонала на екранот ги поврзува долниот лев агол и горниот десен агол. Во каков сооднос се редовите и колоните кои се наоѓаат на оваа дијагонала? Обидете се да составите код со којшто ќе се вклучуваат диодите кои се наоѓаат на споредната дијагонала.</p></li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Задача 2:</strong></p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Напишете код којшто со паузи од половина секунда ќе вклучува една по една диода на екранот по колони, почнувајќи од горните диоди од првата колона.</strong></p>
+
+    </p></div></div>
+
+    <div data-component="reveal" id="Задатак2"   data-showtitle="Спореди го решението:" data-hidetitle="Cкриј решение">
+    <p>Едно од можните решенија е следново:</p>
+
+<div data-childcomponent="jedna_po_jedna_dioda" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=jedna_po_jedna_dioda data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      
+
+while True:
+    for x in range(0, 5):
+        for y in range(0, 5):
+            display.set_pixel(x, y, 9)
+            sleep(500)
+"   >
+
+
+</textarea>
+</div>
+<p>Дали ја увидовте предноста на применување циклуси во кодот?</p>
+
+    </div>
+    <ul class="simple">
+<li><p>Што би требало да смениме во кодот за да се вклучуваат диодите една по една во редовите?</p></li>
+<li><p>Што ќе се случи доколку линијата код sleep(500) ја поместиме за еден таб налево?</p></li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Задача 3:</strong></p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Ѕвезда – Напишете код којшто постепено ќе ја зголемува осветленоста на диодата која се наоѓа на средината од екранот (во третиот ред и третата колона), а потоа ќе ја намалува осветленоста од 0 до 9.</strong></p>
+
+    </p></div></div>
+
+    <div data-component="reveal" id="Задатак3a"   data-showtitle="Прво решение" data-hidetitle="Cкриј решение">
+    <blockquote>
+<div><p>Едно од можните решенија е следново:</p>
+
+<div data-childcomponent="zvezda" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=zvezda data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      
+
+while True:
+
+    for osvetljaj in range(10):
+        display.set_pixel(2, 2, osvetljaj)
+        sleep(200)  
+    for osvetljaj in range(9, 0, -1):
+        display.set_pixel(2, 2, osvetljaj)
+        sleep(200)
+"   >
+
+
+</textarea>
+</div>
+</div></blockquote>
+
+    </div>
+    <p>Параметрите на функцијата <em>display.set_pixel(x, y, osvetlenost)</em> кои ги користевме се: <strong>x</strong> – реден број на колоната кој може да има вредност од 0 до 4, <strong>y</strong> - реден број на редот кој исто може да има вредност од 0 до 4, а осветленоста може да биде од 0 до 9.</p>
+<p>Секој проблем може да се реши на повеќе начини! Обидете се да го решите овој проблем без да ја примените јамката <em>for</em>!</p>
+
+    <div data-component="reveal" id="Задатак3б"   data-showtitle="Второ решение" data-hidetitle="Cкриј решение">
+    <blockquote>
+<div><p>Едно од можните решенија е следново:</p>
+
+<div data-childcomponent="zvezda_2" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=zvezda_2 data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      
+
+korak = 1
+osvetljaj = 0
+
+while True:
+    display.set_pixel(2, 2, osvetljaj)
+    osvetljaj += korak
+    sleep(200)
+    if osvetljaj == 9 or osvetljaj == 0:  
+        korak = -korak
+"   >
+
+
+</textarea>
+</div>
+</div></blockquote>
+
+    </div>
+    <div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Задача 4:</strong></p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Напишете код којшто ќе овозможи да свети диодата која се наоѓа најсеверно.</strong></p>
+
+    </p></div></div>
+<p>Да се потсетиме, функцијата <em>compass.heading()</em> враќа азимут.</p>
+<a class="reference internal image-reference" href="_images/azimut.png"><img alt="azimut" class="align-center" src="_images/azimut.png" style="width: 238.5px; height: 217.5px;" /></a>
+
+    <div data-component="reveal" id="Задатак4"   data-showtitle="Споредете го решението!" data-hidetitle="Cкриј решение">
+    <p>Едно од можните решенија е следново:</p>
+
+<div data-childcomponent="pokazi_sever" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=pokazi_sever data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      
+
+compass.calibrate()
+while True:
+    ugao = compass.heading()
+    if ugao &gt; 45 and ugao &lt;= 135: 
+        # azimut ~ istok -&gt; ukljuci LED na sredini leve ivice
+        display.set_pixel(0, 2, 9)
+    elif ugao &gt; 135 and ugao &lt;= 225: # jug
+        # azimut ~ jug -&gt; ukljuci LED na sredini donje ivice
+        display.set_pixel(2, 4, 9)
+    elif ugao &gt; 225 and ugao &lt;= 315:
+        # azimut ~ zapad -&gt; ukljuci LED na sredini desne ivice
+        display.set_pixel(4, 2, 9)
+    else:
+        # azimut ~ sever -&gt; ukljuci LED na sredini gornje ivice
+        display.set_pixel(2, 0, 9)
+    sleep(100)
+    display.clear()
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    <p>Надополнете го кодот за да биде попрецизен, да вклучува дополнителни диоди во аглите на екранот кои би покажувале североисток, југозапад итн. (дополнително поделете ги интервалите на азимутот за кои ги дефиниравме страните на светот).</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Задача 5:</strong></p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Напишете код за “Роденденска песна”.</strong></p>
+
+    </p></div></div>
+<p>Нотите за оваа песна се:</p>
+<img alt="rodjendanska_note" class="align-center" src="_images/rodjendanska.jpg" />
+
+    <div data-component="reveal" id="Задатак5"   data-showtitle="Споредете го решението!" data-hidetitle="Cкриј решение">
+    <p>Едно од можните решенија е следново:</p>
+
+<div data-childcomponent="danas_nam_je_divan_dan" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=danas_nam_je_divan_dan data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="import music                                                
+
+danas_nam_je = [&quot;G4:4&quot;, &quot;G&quot;, &quot;E&quot;, &quot;C&quot;, &quot;A&quot;, &quot;A&quot;, &quot;G:8&quot;, &quot;F:4&quot;, &quot;F&quot;, &quot;E:8&quot;,
+         &quot;D:4&quot;, &quot;D&quot;, &quot;C:8&quot;]
+ziveo_ziveo = [&quot;A4:4&quot;, &quot;F&quot;, &quot;A:8&quot;, &quot;G:4&quot;, &quot;E&quot;, &quot;G:8&quot;, &quot;F:4&quot;, &quot;F&quot;, &quot;E&quot;, &quot;D&quot;, ]
+bi_i_oo = [&quot;E&quot;, &quot;F&quot;, &quot;G:8&quot;]
+bii_o = [&quot;C:8&quot;, &quot;C:4&quot;]
+
+for i in range(2):  # prva dva stiha imaju iste note
+    music.play(danas_nam_je) 
+music.play(ziveo_ziveo)
+music.play(bi_i_oo)
+music.play(ziveo_ziveo)
+music.play(bii_o)
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    <p>Секако, може да наведеме и целосна листа на сите ноти, но со воочување на деловите од мелодијата кои се повторуваат ја скративме должината на кодот.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Задача 6:</strong></p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Напишете код којшто на екранот ќе ја испишува вредноста на температурата во Целзиусови степени кога ќе се притисне копчето А, во Фаренхајтови степени кога ќе се притисне копчето B, а во Келвини кога ќе се притиснат двете копчиња наеднаш.</strong></p>
+
+    </p></div></div>
+<p>Формулата со која ја пресметуваме вредноста на температурата во Фаренхајтови степени е: <strong>F = 1.8*C + 32</strong></p>
+<p>Формулата со која ја пресметуваме вредноста на температурата во Келвини е: <strong>К = C + 273.15</strong>, где је <strong>C</strong> при што C е температурата во Целзиусови степени која ја отчитува уредот <em>Микро:бит</em>.</p>
+
+    <div data-component="reveal" id="Задатак6"   data-showtitle="Споредете го решението!" data-hidetitle="Cкриј решение">
+    <p>Едно од можните решенија е следново:</p>
+
+<div data-childcomponent="temperatura_c_f_k" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=temperatura_c_f_k data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      
+
+while True:
+    c = temperature()
+    if button_a.is_pressed() and button_b.is_pressed():
+        display.scroll(str(c*1.8+32) + &apos; F&apos;)
+    elif button_a.is_pressed():
+        display.scroll(str(c) + &apos; C&apos;)
+    elif button_b.is_pressed():
+        display.scroll(str(c + 273.15) + &apos; K&apos;)
+    sleep(100)
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    <div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Задача 7:</strong></p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Сигнализација за премин преку железничка пруга – Напишете код којшто ќе овозможи наизменично да се вклучуваат/исклучуваат двете светлечки диоди поврзани со пиновите на уредот Микро:бит.</strong></p>
+
+    </p></div></div>
+
+    <div data-component="reveal" id="Задатак7"   data-showtitle="Споредете го решението!" data-hidetitle="Cкриј решение">
+    <p>Кодот е сличен на решението за Пример 16 од поглавјето Основни функции:</p>
+
+<div data-childcomponent="pruzni_prelaz" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=pruzni_prelaz data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      
+
+while True:
+    pin1.write_digital(1)
+    pin2.write_digital(0)
+    sleep(500)
+    pin1.write_digital(0)
+    pin2.write_digital(1)
+    sleep(500)
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    <div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Задача 8:</strong></p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Напишете код којшто ќе овозможи со притискање на копчето А безжично да се вклучи, односно со притискање на копчето B безжично да се исклучи диода поврзана на друг уред Микро:бит.</strong></p>
+
+    </p></div></div>
+
+    <div data-component="reveal" id="Задатак8"   data-showtitle="Споредете го решението!" data-hidetitle="Cкриј решение">
+    <p>Ќе составиме два кода – првиот ќе го вчитаме во уредот Микро:бит кој управува со диодата, а вториот во уредот Микро:бит со кој е поврзана диодата.</p>
+<p>Кодот за првиот уред Микро:бит ќе ни овозможи преку радио да проследиме сигнал 0 или 1, зависно од тоа кое копче ќе го притиснеме:</p>
+
+<div data-childcomponent="radio_veza_slanje" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=radio_veza_slanje data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      
+import radio
+
+radio.on()
+
+while True:
+    if button_a.is_pressed():
+        radio.send(&quot;1&quot;)
+    if button_b.is_pressed():
+        radio.send(&quot;0&quot;)
+    sleep(100)
+"   >
+
+
+</textarea>
+</div>
+<p>Другиот уред Микро:бит ја прима оваа вредност и ни овозможува да ја вклучиме/исклучиме диодата која е поврзана со пинот 1:</p>
+
+<div data-childcomponent="radio_veza_prijem" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=radio_veza_prijem data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      
+import radio
+
+radio.on()
+
+while True:
+    dioda = radio.receive()
+    if dioda is not None:
+        if dioda == &quot;1&quot;:
+            pin1.write_digital(1)
+        if dioda == &quot;0&quot;:
+            pin1.write_digital(0)
+        sleep(100)
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    <div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Задача 9:</strong></p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Напишете код којшто симулира “трчачко светло”. На пиновите 0, 1 и 2 треба да се поврзат светлечки диоди коишто редоследно во линија, наизменично ќе се вклучуваат и исклучуваат.</strong></p>
+
+    </p></div></div>
+
+    <div data-component="reveal" id="Задатак9a"   data-showtitle="Споредете го решението!" data-hidetitle="Cкриј решение">
+    <p>Едно од можните решенија е следново:</p>
+
+<div data-childcomponent="trcece_svetlo" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=trcece_svetlo data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      
+
+while True:
+    pin0.write_digital(1)
+    sleep(200)
+    pin0.write_digital(0)
+    sleep(200)
+    pin1.write_digital(1)
+    sleep(200)
+    pin1.write_digital(0)
+    sleep(200)
+    pin2.write_digital(1)
+    sleep(200)
+    pin2.write_digital(0)
+    sleep(200)
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    <p>Замислете дека се работи за некој друг контролер и дека треба да се вклучат и исклучат петнаесет светлечки диоди. Колку линии би имал кодот? Можеме да извлечеме заклучок дека нашето прво решение би можело да биде поелегантно, иако и вака е функционално. За да биде кодот пократок и попрегледен, можеме пиновите со коишто управуваме да ги сместиме во терка, а тоа што треба да го сториме со секој од нив е да го ставиме во циклусот <em>for</em>.</p>
+
+    <div data-component="reveal" id="Задатак9b"   data-showtitle="Споредете го решението!" data-hidetitle="Cкриј решение">
+    <p>Погледнете го и тестирајте го и вториот предлог.</p>
+
+<div data-childcomponent="trcece_svetlo_2" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=trcece_svetlo_2 data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      
+
+pinovi = [pin0, pin1, pin2]
+
+while True:
+    for i in range(0, 3):
+        pinovi[i].write_digital(1)
+        sleep(100)
+        pinovi[i].write_digital(0)
+        sleep(100)
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    <div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Задача 10:</strong></p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Напишете код за симулатор за коцка за играта Не лути се, човеку!, којшто кога ќе се протресе уредот Микро:бит ќе прикажува одреден број точки распоредени како на вистинска коцка.</strong></p>
+
+    </p></div></div>
+
+    <div data-component="reveal" id="Задатак10"   data-showtitle="Споредете го решението!" data-hidetitle="Cкриј решение">
+    <p>Прво ќе ги дефинираме сликите кои ќе се прикажуваат наместо броеви, а потоа ќе ги поврземе со случајната вредност генерирана од уредот Микро:бит:</p>
+
+<div data-childcomponent="kockica_tackice" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=kockica_tackice data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      
+import random
+
+br1 = Image(&quot;00000:00000:00900:00000:00000&quot;)
+br2 = Image(&quot;00000:09000:00000:00090:00000&quot;)
+br3 = Image(&quot;00000:09000:00900:00090:00000&quot;)
+br4 = Image(&quot;00000:09090:00000:09090:00000&quot;)
+br5 = Image(&quot;00000:09090:00900:09090:00000&quot;)
+br6 = Image(&quot;00000:09090:09090:09090:00000&quot;)
+brojevi = [br1, br2, br3, br4, br5, br6]
+while True:
+    if accelerometer.is_gesture(&apos;shake&apos;):
+        n = random.randint(0, 5)
+        display.show(brojevi[n])"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    <div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Задача 11:</strong></p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Напишете код за алармен систем. Системот се вклучува со копчето A, а се исклучува со копчето B. Кога уредот Микро:бит се поместува во однос на x-оската додека е вклучен системот, алармот се активира и почнува да свири сирената. Сирената треба да свири сè додека не се исклучи системот со притискање на копчето B.</strong></p>
+
+    </p></div></div>
+
+    <div data-component="reveal" id="Задатак11"   data-showtitle="Споредете го решението!" data-hidetitle="Cкриј решение">
+    <p>Ако за граница за поместување која треба да активира аларм ја земеме вредноста 100, кодот ќе изгледа вака:</p>
+
+<div data-childcomponent="alarm" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=alarm data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      
+import music 
+
+ukljucen = False
+
+while True: 
+
+    print(accelerometer.get_x())  # ako želimo da pratimo vrednosti x u REPL
+    if button_a.was_pressed():
+        ukljucen = True
+    if button_b.was_pressed():
+        ukljucen = False
+
+    if ukljucen and abs(accelerometer.get_x()) &gt; 100:
+        music.pitch(1000, 100)
+        music.pitch(500, 100)
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    <div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Задача 12:</strong></p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Напишете код којшто на Plotter врши отчитување на температура надвор од просторијата со уредот Микро:бит. Доколку надворешната температура е под 20 степени, на уредот Микро:бит којшто се наоѓа во просторијата ќе се испише „studeno“.</strong></p>
+
+    </p></div></div>
+
+    <div data-component="reveal" id="Задатак12"   data-showtitle="Споредете го решението!" data-hidetitle="Cкриј решение">
+    <p>Веќе имавме сличен пример во претходното поглавје. Разликата е во тоа што овој пат ги отчитуваме податоците од другиот уред <em>Микро:бит</em>. Код за уредот <em>Микро:бит</em> кој се наоѓа надвор од просторијата (испраќа податоци за температурата):</p>
+
+<div data-childcomponent="temperatura_napolju_a" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=temperatura_napolju_a data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      
+import radio
+
+radio.on()
+
+while True:
+    temperatura = temperature()
+    display.scroll(str(temperatura))
+    radio.send(str(temperatura))
+    sleep(1000)
+"   >
+
+
+</textarea>
+</div>
+<p>Код за уредот <em>Микро:бит</em> кој се наоѓа во просторијата (прима податоци за температурата и испишува порака):</p>
+
+<div data-childcomponent="temperatura_napolju_b" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=temperatura_napolju_b data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      
+import radio
+
+radio.on()
+
+while True:
+    temperatura = radio.receive()
+    if temperatura is not None:
+        temperatura = int(temperatura)  # pretvaramo dobijenu vrednost u broj
+        print((temperatura,))  # Plotter radi samo sa torkama
+        if temperatura &lt; 20:
+            display.scroll(&quot;hladno&quot;)
+    sleep(2000)
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    <div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Задача 13:</strong></p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Напишете код којшто ќе управува со екранот така што секоја секунда наизменично ќе се вклучуваат диодите од првите две колони и последните две колони.</strong></p>
+
+    </p></div></div>
+
+    <div data-component="reveal" id="Задатак13"   data-showtitle="Споредете го решението!" data-hidetitle="Cкриј решение">
+    <p>Едно од можните решенија е следново:</p>
+
+<div data-childcomponent="kolone_naizmenicno" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=kolone_naizmenicno data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      
+
+def postavi_kolone(kolona1, kolona2, osvetljenost):
+    for red in range(5):
+        display.set_pixel(kolona1, red, osvetljenost)
+        display.set_pixel(kolona2, red, osvetljenost)
+    sleep(500)
+
+while True:
+    postavi_kolone(0, 1, 9) # ukljuci prve dve kolone
+    postavi_kolone(0, 1, 0) # iskljuci prve dve kolone
+    postavi_kolone(3, 4, 9) # ukljuci poslednje dve kolone
+    postavi_kolone(3, 4, 0) # iskljuci poslednje dve kolone
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    <p>Што би требало да се смени за да се вклучуваат и исклучуваат диодите по редови наместо по колони?</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Задача 14:</strong></p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Напишете код којшто со помош на копчињата А и B ќе управува со сервомотор. Замислете дека на моторот е поврзана пумпа. Со притискање на копчето А треба да ја кренеме рампата, а со притискање на копчето В да ја спуштиме.</strong></p>
+
+    </p></div></div>
+
+    <div data-component="reveal" id="Задатак14"   data-showtitle="Споредете го решението!" data-hidetitle="Cкриј решение">
+    <p>Едно од можните решенија е следново (вредностите за крајните положби на рампата одредете ги сами експериментално):</p>
+
+<div data-childcomponent="servo_rampa" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=servo_rampa data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      
+
+# signali ce trajati po 20 milisekundi
+pin0.set_analog_period(20)
+
+while True:
+    if button_a.is_pressed():
+        pin0.write_analog(160) # podizanje rampe
+    if button_b.is_pressed():
+        pin0.write_analog(60) # spustanje rampe
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    <div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Задача 15:</strong></p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Напишете код којшто ќе овозможи со вртење на потенциометарот да управуваме со брзината на трепкање на срцето коешто е прикажано на екранот.</strong></p>
+
+    </p></div></div>
+<p>Брзината на трепкање на срцето ќе ја прилагодуваме со тоа што ќе ја зголемуваме и намалуваме должината на паузата помеѓу двете прикажувања на иконата. Потенциометарот поврзете го со пинот 0, како што е објаснето во поглавјето <em>Дополнителни компоненти</em>.</p>
+
+    <div data-component="reveal" id="Задатак15"   data-showtitle="Споредете го решението!" data-hidetitle="Cкриј решение">
+    <p>Со вртење на потенциометарот отчитуваме вредност од 0 до 1023 на пинот со којшто е поврзан (ова може да го проверите со тоа што ќе напишете код кој ќе ја испишува на екранот вредноста на пинот), па оттаму таа вредност може да ја употребиме за дефинирање на должината на паузата (ќе додадеме 50 за да не ни биде паузата нула кога потенциометарот е во долна положба).</p>
+
+<div data-childcomponent="brzina_srca" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=brzina_srca data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      
+
+while True:
+    pauza = pin0.read_analog()+50
+    display.show(Image.HEART)
+    sleep(pauza)
+    display.clear()
+    sleep(pauza)
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    <p>Можеме да извлечеме заклучок дека паузата ќе биде најкратка во почетната положба на потенциометарот, па тогаш срцето ќе трепка најбрзо. Што треба да смените за да трепка срцето најбавно во почетната положба на потенциометарот (размислете како би го смениле кодот, но во поглед на начинот на поврзување)?</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Задача 16:</strong></p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Напишете код којшто ќе овозможи со вртење на потенциометарот да се вклучува еден по еден ред, почнувајќи од најдолниот ред. Диодите треба да светат со интензитет 5.</strong></p>
+
+    </p></div></div>
+<p>Поврзете го потенциометарот со пинот 0 како што е објаснето во поглавјето <em>Дополнителни компоненти</em> (може и со некој од другите пинови, но важно е и во кодот да се отчитани податоците од истиот пин).</p>
+<p>Во претходната задача веќе спомнавме дека на пинот којшто е поврзан со потенциометарот, зависно од положбата на потенциометарот, отчитуваме вредности од 0 до 1023. Еден од начините да ја решиме задачата е во рамките на интервалот (0, 1023) за секој ред од екранот да одредиме гранично ниво, така што за вредностите над граничното ниво ќе се вклучуваат диодите од тој ред на екранот. Граничните нивоа за редовите треба да бидат што порамномерно распоредени. На пример, за најгорниот ред 900, за вториот ред 700, за средниот ред 500, за четвртиот ред 300 и за најдолниот ред 100.</p>
+
+    <div data-component="reveal" id="Задатак16"   data-showtitle="Споредете го решението!" data-hidetitle="Cкриј решение">
+    <p>Програмско решење може изгледати овако</p>
+
+<div data-childcomponent="dodavanje_vrsta" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=dodavanje_vrsta data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      
+
+while True:
+
+    vrednost = pin0.read_analog()
+
+    if vrednost &gt; 900:
+        for i in range(0, 5):
+            display.set_pixel(i, 0, 5)
+    if vrednost &gt; 700:
+        for i in range(0, 5):
+            display.set_pixel(i, 1, 5)
+    if vrednost &gt; 500:
+        for i in range(0, 5):
+            display.set_pixel(i, 2, 5)
+    if vrednost &gt; 300:
+        for i in range(0, 5):
+            display.set_pixel(i, 3, 5)
+    if vrednost &gt; 100:
+        for i in range(0, 5):
+            display.set_pixel(i, 4, 5)
+    sleep(50)
+    display.clear()"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    <p>Наместо да ги одредуваме граничните нивоа за редовите, можевме и да го пресметаме бројот на редови на екранот кои сакаме да светат (на пример, со делење на отчитаната вредност на соодветно избраниот број). Потоа, за двојната јамка вклучуваме онолку редови од долниот дел на екранот колку што е потребно.</p>
+
+    <div data-component="reveal" id="Задатак16_2"   data-showtitle="Споредете го решението!" data-hidetitle="Cкриј решение">
+    <p>Програмско решење може изгледати овако</p>
+
+<div data-childcomponent="dodavanje_vrsta_2" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=dodavanje_vrsta_2 data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      
+
+while True:
+
+    vrednost = pin0.read_analog()
+    br_vrsta = (vrednost + 100) // 200
+    for x in range(5):
+        for y in range(5 - br_vrsta, 5):
+            display.set_pixel(x, y, 5)
+    sleep(50)
+    display.clear()
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    <p>Секако ова се само некои од можните решенија. Обидете се да го решите проблемот и на некој друг начин.</p>
+<p>Како би изгледал еден код кој треба да вклучи само по еден ред кој (фигуративно) ќе се крева и спушта зависно од положбата на потенциометарот?</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Задача 17:</strong></p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Напишете код којшто ќе овозможи на екранот да се прикажува бројот на допрениот пин.</strong></p>
+
+    </p></div></div>
+
+    <div data-component="reveal" id="Задатак16a"   data-showtitle="Прво решење" data-hidetitle="Cкриј решение">
+    <p>Едно од можните решенија е следново:</p>
+
+<div data-childcomponent="dodirnuti_pin" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=dodirnuti_pin data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      
+
+while True:
+    if pin0.is_touched():
+        display.show(0)
+    elif pin1.is_touched():
+        display.show(1)
+    elif pin2.is_touched():
+        display.show(2)
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    <p>Размислете дали можеме малку поинаку да го напишеме кодот…</p>
+
+    <div data-component="reveal" id="Задатак16b"   data-showtitle="Друго решење" data-hidetitle="Cкриј решение">
+    <p>Едно од решенијата е да се примени терка и циклус во кодот:</p>
+
+<div data-childcomponent="dodirnuti_pin_2" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=dodirnuti_pin_2 data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      
+
+pinovi = (pin0, pin1, pin2)
+
+while True:
+    for i in range(3):
+        if pinovi[i].is_touched():
+            display.show(i)
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    <p>Да се потсетиме, под допрен пин се подразбира дека со другата рака сме поврзани со GND преку спроводник!</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Задача 18:</strong></p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Напишете код којшто ќе овозможи управување со мотор или пумпа за вода. Кога ќе се притисне копчето А треба да се вклучи моторот, а кога ќе се притисне копчето B треба да се исклучи моторот.</strong></p>
+
+    </p></div></div>
+<p>Моторот, односно пумпата, поврзете го/ја како што е опишано во поглавјето <em>Дополнителни компоненти</em>. Го/ја вклучуваме и исклучуваме со впишување на дигиталната вредност 1, односно 0, на доделениот пин.</p>
+
+    <div data-component="reveal" id="Задатак18"   data-showtitle="Споредете го решението!" data-hidetitle="Cкриј решение">
+    
+<div data-childcomponent="kontrola_motora" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=kontrola_motora data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      
+
+while True:
+    if button_a.is_pressed():
+        pin0.write_digital(1)
+    if button_b.is_pressed():
+        pin0.write_digital(0)
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    <div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Задача 19:</strong></p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Напишете код којшто ќе овозможи од уредот Микро:бит да се слушне пораката Добар ден! кога ќе се притисне копчето А и Довидување! кога ќе се притисне копчето B.</strong></p>
+
+    </p></div></div>
+<p>За да слушнеме говор од уредот <em>Микро:бит</em>, потребно е да направиме две нешта: да поврземе звучник или слушалки на пинот 0 (прочитајте го поглавјето Дополнителни компоненти) и на самиот почеток да ја вклучиме библиотеката speech, за да можеме да ја користиме функцијата за репродуцирање говор.</p>
+
+    <div data-component="reveal" id="Задатак19"   data-showtitle="Споредете го решението!" data-hidetitle="Cкриј решение">
+    <p>Решението за овој проблем е многу едноставно!</p>
+
+<div data-childcomponent="govor" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=govor data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      
+import speech
+
+while True: 
+    if button_a.is_pressed():
+        speech.say(&quot;dobar dan!&quot;)
+    if button_b.is_pressed():
+        speech.say(&quot;dovidjenja!&quot;)
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    <p>Иако уредот нема јасно и правилно да го изговара секој збор, изговорениот текст ќе биде разбирлив во голема мера и оваа можност веројатно со задоволство ќе сакате да ја користите во проектите на кои ќе работите.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Задача 20:</strong></p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Напишете код којшто ќе го детектира нивото на осветленост во просторијата со примена на дополнителен фотоотпорник поврзан со пинот 0. Кога степенот на осветленост е поголем од 400, на екранот треба да пишува den, а спротивно од тоа nokj и да се вклучи диодата поврзана со пинот 1.</strong></p>
+
+    </p></div></div>
+<p>Диодата и фотоотпорникот ќе ги поврземе со соодветните пинови, како што е објаснето во поглавјето <em>Дополнителни компоненти</em>.</p>
+
+    <div data-component="reveal" id="Задатак20"   data-showtitle="Споредете го решението!" data-hidetitle="Cкриј решение">
+    <p>Решението за овој проблем е многу слично на примерите кои веќе ги сработивме.</p>
+
+<div data-childcomponent="foto_otpornik" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=foto_otpornik data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *
+
+while True:
+    osvetljaj = pin0.read_analog()
+    print(osvetljaj)  # za posmatranje vrednosti
+    if osvetljaj &gt; 400:
+        pin1.write_digital(0)
+        display.scroll(&quot;dan&quot;)
+    else:
+        pin1.write_digital(1)
+        display.scroll(&quot;noc&quot;)
+    sleep(200)"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    <div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Поврзување дополнителни компоненти' data-toggle="tooltip"><a href="Поврзување дополнителни компоненти.html">Претходно поглавје</a></li>
+    
+        <li id="relations-next" title='Next chapter - Идеи за проекти' data-toggle="tooltip"><a href="Проекти/toctree.html">Следно поглавје</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Поврзување дополнителни компоненти' data-toggle="tooltip"><a href="Поврзување дополнителни компоненти.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Идеи за проекти' data-toggle="tooltip"><a href="Проекти/toctree.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="pull-left">&copy; 2020 British Council (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

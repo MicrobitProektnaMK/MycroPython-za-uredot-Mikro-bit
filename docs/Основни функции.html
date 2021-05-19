@@ -1,0 +1,1831 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Основни функции &#8212; Програмирање микробит уређаја у Микропајтону – приручник за пројектну наставу за седми и осми разред</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="_static/simanim.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pycode.css" />
+    <link rel="stylesheet" type="text/css" href="_static/p5js.css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/matrixeq.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/showEval.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="_static/Blob.js"></script>
+    <script type="text/javascript" src="_static/karelCorner.js"></script>
+    <script type="text/javascript" src="_static/karelRobot.js"></script>
+    <script type="text/javascript" src="_static/karelWorld.js"></script>
+    <script type="text/javascript" src="_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="_static/karelUI.js"></script>
+    <script type="text/javascript" src="_static/karel.js"></script>
+    <script type="text/javascript" src="_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/notes.js"></script>
+    <script type="text/javascript" src="_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="_static/blockpy-modal.js"></script>
+    <script type="text/javascript" src="_static/simanim.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.16.1/full/pyodide.js"></script>
+    <script type="text/javascript" src="_static/pycode.js"></script>
+    <script type="text/javascript" src="//toolness.github.io/p5.js-widget/p5-widget.js"></script>
+    <script type="text/javascript" src="_static/p5js.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Поврзување дополнителни компоненти" href="Поврзување дополнителни компоненти.html" />
+    <link rel="prev" title="Вовед" href="Вовед.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'microbit_micropython_vii_viii';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'microbit_micropython_vii_viii';
+  eBookConfig.runestone_version = '';
+  eBookConfig.imagesDir = '_images/';
+  eBookConfig.staticDir = '_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./">МycroPython за уредот Микро:бит</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content" style="margin-top: 70px;">
+  
+  <div class="section" id="id1">
+<h1>Основни функции<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Веќе се запознавте со начинот на програмирање со програмскиот јазик Python, со правилата за пишување наредби и основните карактеристики на јазикот. Новина во поглед на претходната програма Python е примената на функциите за управување со уредот Микро:бит, кои се дефинирани во библиотеката која е предвидена за нив.</p>
+<p>Функциите кои ни се потребни се дефинирани во библиотеката на уредот <em>Микро:бит</em> и преку следните примери ќе научиме како да ги вчитуваме и применуваме во нашиот код, а потоа и како да го вчитаме кодот во уредот <em>Микро:бит</em> и да ги провериме резултатите од нашите задачи.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id2">
+<h2>Вклучување на библиотеката<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Библиотеката на уредот <em>Микро:бит</em> ја вклучуваме во нашиот код со помош на наредбата <em>import</em>. Наредбата <em>import</em> ќе ја употребуваме во следната форма:</p>
+
+<div data-childcomponent="fragment_import_microbit" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=fragment_import_microbit data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      "   >
+
+
+</textarea>
+</div>
+<p>Оваа наредба ни овозможува да ги користиме сите функции кои се достапни во библиотеката <em>Микро:бит</em> и со неа ќе започнува секој наш иден код.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>Управување со екран<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>Некои од основните функции со кои може да управуваме со екранот се следниве:</p>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<ul class="simple">
+<li><p><strong>display.scroll(porаka)</strong></p></li>
+<li><p><strong>display.show(slika)</strong></p></li>
+<li><p><strong>display.show(lista_na_sliki)</strong></p></li>
+<li><p><strong>display.clear()</strong></p></li>
+<li><p><strong>display.read_light_level()</strong></p></li>
+<li><p><strong>display.on()</strong></p></li>
+<li><p><strong>display.off()</strong></p></li>
+</ul>
+
+    </p></div></div>
+<p>Напоменавме дека екранот на уредот <em>Микро:бит</em> се состои од 25 светлечки диоди кои се распоредени во пет редови и пет колони. Екранот го користиме за да напишеме разни пораки (текст), да прикажеме слики (икони) или вредности кои ги отчитуваме од разни вградени или дополнителни сензори. Основната функција за прикажување текст е <em>display.scroll</em> и може се употреби на следниов начин:</p>
+
+<div data-childcomponent="fragment_display_scroll" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=fragment_display_scroll data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="display.scroll(&quot;Zdravo!&quot;)                                   "   >
+
+
+</textarea>
+</div>
+<p>Потребно е да го ставиме во заграда текстот што сакаме да се прикажува, како параметар на оваа функција. Како потсетување, текст во <em>Python</em> се пишува во наводници или меѓу два апострофа. Текстот ќе се испише еднаш, на начин на кој <em>ќе поминува низ екранот</em> од десно кон лево.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>За прикажување слики (икони) се користи функцијата <em>display.show</em>, која исто така е дел од библиотеката на уредот <em>Микро:бит</em>. Употребата на оваа функција изгледа вака:</p>
+
+<div data-childcomponent="Dojavljivac_zore" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=Dojavljivac_zore data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="display.show(Image.HEART)                                   "   >
+
+
+</textarea>
+</div>
+<p>Во овој случај, на екранот од уредот <em>Микро:бит</em> би требало да се појави срце:</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="_images/srce.png"><img alt="srce" class="align-center" src="_images/srce.png" style="width: 242.39999999999998px; height: 202.79999999999998px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Постојат голем број дефинирани икони меѓу кои се и следниве:</p>
+<img alt="ikone" class="align-center" src="_images/ikone.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Доколку сакате самите да нацртате слика и да ја прикажете, тоа може да го сторите на следниов начин:</p>
+
+<div data-childcomponent="fragment_display_show_2" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=fragment_display_show_2 data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="brod = Image(&quot;05050:05050:05050:99999:09990&quot;)	            
+display.show(brod)
+"   >
+
+
+</textarea>
+</div>
+<p>Нацртавме <em>brod</em>. Секоја вредност од 0-9 одредува колку ќе свети соодветната диода на екранот (0 – исклучена диода, 9 – диода која свети најсилно). Диодите почнуваат да светкаат ред по ред, од горе надолу, а во секој ред од лево на десно. На пример, првата група од 5 цифри ги активира да светат диодите во горниот ред на екранот.</p>
+<p><strong>Забелешка</strong>: Можеби на почеток ќе ви биде попрегледно да ги запишувате вредностите една под друга, како на пример:</p>
+
+<div data-childcomponent="fragment_display_show_3" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=fragment_display_show_3 data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="brod = Image(&quot;05050:&quot;                                       
+             &quot;05050:&quot;
+             &quot;05050:&quot;
+             &quot;99999:&quot;
+             &quot;09990&quot;)
+
+display.show(brod)
+"   >
+
+
+</textarea>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>За да ја избришеме моменталната содржина на екранот ја користиме функцијата:</p>
+
+<div data-childcomponent="fragment_display_clear" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=fragment_display_clear data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="display.clear()                                             "   >
+
+
+</textarea>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Повеќето прирачници за учење програмски јазици започнуваат со пишување на класичната порака <strong>„Zdravo na site!“</strong> (<em>Hello world!</em>). Таквиот код за уредот <em>Микро:бит</em> во <em>Python</em> е многу едноставен – доволно е да се напишат само две линии:</p>
+
+<div data-childcomponent="zdravo_svima" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=zdravo_svima data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      
+
+display.scroll(&quot;Zdravo na site!&quot;)
+"   >
+
+
+</textarea>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Ова е нашиот прв целосен код кој е подготвен за извршување на уредот Микро:бит. Ќе провериме дали е функционален нашиот код.</p>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Откако ќе го внесете кодот во уредувачот <em>Мu</em>, проверете дали сте направиле некаква грешка (<em>Check</em>). Доколку има грешка, откако ќе ја поправите зачувајте ја промената (<em>Save</em>) и вчитајте го кодот во уредот <em>Микро:бит</em> (<em>Flash</em>). Додека се вчитува кодот во уредот <em>Микро:бит</em> неколку секунди ќе трепка жолтата диода која се наоѓа на неговата задна страна.</p>
+
+    </p></div></div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Пример 1:</strong></p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p>Напишете код којшто овозможува на уредот <em>Микро:бит</em> да се испише пораката <em>Здраво!</em> и да се прикаже срце. Оваа активност треба да се повторува додека е вклучен уредот <em>Микро:бит</em>.</p>
+
+    </p></div></div>
+<p>Решение:</p>
+
+<div data-childcomponent="zdravo_i_srce" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=zdravo_i_srce data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      
+
+while True:
+    display.scroll(&quot;Zdravo!&quot;)
+    display.show(Image.HEART)
+    sleep(2000)
+"   >
+
+
+</textarea>
+</div>
+<p>Да го разгледаме детално овој едноставен код и да се увериме дека сме го разбрале секој дел од кодот.</p>
+<p>Првиот ред од кодот ја вклучува библиотеката со функции за работа со уредот <em>Микро:бит</em>.</p>
+<p>Во јамката што почнува во третиот ред, условот во наредбата <em>while</em> е секогаш исполнет. Со тоа се постигнува да се повторува извршувањето на наредбите кои следуваат сè додека е вклучен уредот <em>Микро:бит</em> (или додека во него не се вчита некој друг код). На уредот <em>Микро:бит</em> ќе се прикаже пораката “Zdravo!“, а две секунди подоцна ќе се прикаже и срце. Тоа ќе се повторува неограничен број пати.</p>
+<p>На крајот од секое поминување низ јамката правиме пауза во времетраење од две секунди. За да го постигнеме тоа ја користиме функцијата <em>sleep</em>, која општо изгледа вака:</p>
+
+<div data-childcomponent="fragment_sleep" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=fragment_sleep data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="sleep(broj_milisekundi)                                     "   >
+
+
+</textarea>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Пример 2:</strong></p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Напишете код којшто одбројува од пет до нула и потоа прикажува дијамант.</strong></p>
+
+    </p></div></div>
+<p>Решение:</p>
+
+<div data-childcomponent="odbrojavanje" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=odbrojavanje data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *
+
+for broj in range(5, -1, -1):
+    display.show(str(broj))
+    sleep(1000)
+display.show(Image.DIAMOND)"   >
+
+
+</textarea>
+</div>
+<p>Променливата <em>broj</em> ќе зазема вредности од пет до нула, со тоа што секој пат ќе се смалува за еден (третиот број во заграда).</p>
+<ul class="simple">
+<li><p>Кои броеви би се прикажале доколку наместо овие вредности во заградата стојат (0, 10, 2)?</p></li>
+<li><p>Што би се случило доколку наместо функцијата <em>display.show</em> употребиме <em>display.scroll</em>? Која од овие две функции би ја употребиле попрво доколку се работи за двоцифрени броеви? Обидете се да го сторите тоа!</p></li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Овој пат ја употребивме функцијата:</p>
+
+<div data-childcomponent="fragment_str" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=fragment_str data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="str(vrednost)                                               "   >
+
+
+</textarea>
+</div>
+<p>Таа ни овозможува некоја вредност на број (на пример, податок отчитан од некој сензор) да го претвориме во текст за да го прикажеме на екранот. Доколку се обидете да прикажете број без претходно да го претворите во текст, ќе забележите дека и тоа е возможно. Меѓутоа, во другите програмски јазици претворањето во текст е може да биде неопходно, па затоа, за да создадеме навика, ќе го правиме тоа и понатаму во кодовите.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Пример 3:</strong></p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Напишете код со којшто на екранот ќе се исцрта положбата на стрелката од часовникот (стрелката нека се поместува на секои две секунди).</strong></p>
+
+    </p></div></div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="_images/sat_animacija.gif"><img alt="mikrobit" class="align-center" src="_images/sat_animacija.gif" style="width: 243.0px; height: 202.79999999999998px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Решение:</p>
+
+<div data-childcomponent="kazaljka" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=kazaljka data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      
+
+while True:
+    display.show(Image.ALL_CLOCKS, delay=1000)"   >
+
+
+</textarea>
+</div>
+<p>За овој пример се послуживме со веќе постоечката слика <em>Image.ALL_CLOCKS</em>, а кога со функцијата <em>display.show</em> ќе ја проследиме листата со слики таа ќе ја прикажува по ред секоја слика од листата. Поради тоа што е потребно паузата помеѓу секоја слика да трае една секунда, покрај неа дефиниравме и рамка за повикување на функцијата. Кога ќе ја повикаме оваа функција, може да наведеме во заграда и вредност со следните параметри:</p>
+<ul class="simple">
+<li><p><strong>wait</strong> - на пример, <em>wait = Тrue</em> aко сакаме кодот да почека да се заврши анимацијата пред да продолжи со следниот чекор;</p></li>
+<li><p><strong>loop</strong> - <em>loop = Тrue</em>, aкo сакаме анимацијата да се повторува неограничен број пати;</p></li>
+<li><p><strong>clear</strong> <em>clear = Тrue</em>, ако сакаме да ја избришеме содржината на екранот по извршената анимација.</p></li>
+</ul>
+<p><strong>Забелешка:</strong> Освен ако не наведеме поинаку, се подразбираат следниве вредности за овие параметри: <em>delay = 400, wait = Тrue, loop = False, clear = False</em></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Пример 4:</strong></p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Напишете код којшто прикажува брод што плови (анимација).</strong></p>
+
+    </p></div></div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="_images/brod_koji_plovi.gif"><img alt="brod_koji_plovi" class="align-center" src="_images/brod_koji_plovi.gif" style="width: 243.0px; height: 202.79999999999998px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Решение:</p>
+
+<div data-childcomponent="brod_koji_plovi" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=brod_koji_plovi data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      
+
+brod1 = Image(&quot;50000:50000:50000:99000:90000&quot;)
+brod2 = Image(&quot;05000:05000:05000:99900:99000&quot;)
+brod3 = Image(&quot;50500:50500:50500:99990:99900&quot;)
+brod4 = Image(&quot;05050:05050:05050:99999:09990&quot;)
+brod5 = Image(&quot;00505:00505:00505:09999:00999&quot;)
+brod6 = Image(&quot;00050:00050:00050:00999:00099&quot;)
+brod7 = Image(&quot;00005:00005:00005:00099:00009&quot;)
+brod8 = Image(&quot;00000:00000:00000:00009:00000&quot;)
+brod9 = Image(&quot;00000:00000:00000:00000:00000&quot;)
+
+brodovi = [brod1, brod2, brod3, brod4, brod5, brod6, brod7, brod8, brod9]
+
+while True:
+    display.show(brodovi, delay=500)
+"   >
+
+
+</textarea>
+</div>
+<p>Ако ви е поедноставно, може да ги испишете една под друга вредностите од светнувањето на диодите по редови (како што објаснивме претходно).</p>
+<ul class="simple">
+<li><p>Изменете го кодот за да се изврши анимацијата само еднаш.</p></li>
+<li><p>Обидете се да направите своја анимација!</p></li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Уште една функција за управување со екранот (но на сосема поинаков начин) е <em>display.read_light_level()</em>. Оваа функција овозможува со помош на диодите кои го сочинуваат екранот да вчитаме колкав е степенот на осветленост во околината на уредот <em>Микро:бит</em> (диодите може да се употребат на овој начин кога работат во инверзен режим). Вредноста што ќе ја добиеме со повикување на оваа функција може да биде помеѓу 0 и 255. Со користење на функцијата добиваме 0 кога е апсолутен мрак, а 255 кога имаме силна светлина. Со оваа функција може да се направат многу интересни апликации. На пример, уредот <em>Микро:бит</em> може да пали светло кога е ноќ и да го гаси кога е ден.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Пример 5:</strong></p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Напишете код којшто на екранот го испишува степенот на осветленост на уредот Микро:бит.</strong></p>
+
+    </p></div></div>
+<p>Решение:</p>
+
+<div data-childcomponent="osvetljenost" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=osvetljenost data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      
+
+while True:
+    svetlo = display.read_light_level()
+    display.scroll(str(svetlo))
+    sleep(500)
+"   >
+
+
+</textarea>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Пример 6:</strong></p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Надополнете го претходниот код со тоа што на уредот Микро:бит ќе трепка икона што претставува шаховска табла доколку светлото има вредност под 20, а инаку ќе се прикажува празен екран.</strong></p>
+
+    </p></div></div>
+<p>Решение:</p>
+
+<div data-childcomponent="osvetljenost_2" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=osvetljenost_2 data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      
+
+while True:
+    svetlo = display.read_light_level()
+    if button_b.was_pressed():
+        display.scroll(str(svetlo))
+
+    if svetlo &lt; 20:
+        display.show(Image.CHESSBOARD)
+        sleep(500)
+        display.clear()
+        sleep(500)
+    else:
+        display.clear()
+"   >
+
+
+</textarea>
+</div>
+<p>На почетокот од ова поглавје наведовме уште две функции за управување со екранот - <em>display.off()</em> и <em>display.on()</em>. Овие функции служат за вклучување и исклучување на целиот екран. Светлечките диоди кои го сочинуваат екранот се поврзани со некои од помалите пинови во уредот <em>Микро:бит</em>. Доколку е потребно за некој посложен проект да се ослободиме од овие пинови ќе ја употребиме функцијата <em>display_off</em>. Кога повеќе нема да ни бидат потребни тие пинови, екранот ќе можеме да го вклучиме со примена на функцијата <em>display.on()</em>.</p>
+<p>Уште една причина да ги повикаме овие функции е тоа што со нив ќе заштедиме енергија.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>Копчиња<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>На предната страна од уредот <em>Микро:бит</em> се наоѓаат две копчиња, копчето А и копчето В. Следните функции служат за следење на состојбата на копчињата:</p>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<ul class="simple">
+<li><p><strong>button_a.is_pressed()</strong></p></li>
+<li><p><strong>button_a.was_pressed()</strong></p></li>
+<li><p><strong>button_a.get_presses()</strong></p></li>
+<li><p><strong>button_b.is_pressed()</strong></p></li>
+<li><p><strong>button_b.was_pressed()</strong></p></li>
+<li><p><strong>button_b.get_presses()</strong></p></li>
+</ul>
+
+    </p></div></div>
+<p>Со функцијата <em>is_pressed()</em> се проверува дали е стиснато копчето. За да се добие потврден одговор со користењето на оваа функција (вредност <em>True</em>), потребно е да се стисне копчето во моментот додека се извршува функцијата. Можно е уредот <em>Микро:бит</em> во моментот додека се стиска копчето да извршува други наредби, па додека заврши со другите наредби корисникот да престане да го притиска копчето. Токму затоа се користи функцијата <em>was_pressed()</em>, којашто овозможува да се надмине овој проблем. Оваа функција овозможува да се провери дали било притиснато копчето (од последниот пат кога сме провериле до сегашниот момент).</p>
+<p>Функцијата <em>get_presses()</em> ни овозможува да провериме колку пати било притиснато копчето во одреден временски интервал.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Пример 7:</strong></p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Напишете код којшто ќе прикажува среќен емотикон кога ќе се притисне копчето А, тажен емотикон кога ќе се притисне копчето В и срце кога ќе се притиснат истовремено двете копчиња.</strong></p>
+
+    </p></div></div>
+<p>Решение:</p>
+
+<div data-childcomponent="tasteri" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=tasteri data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      
+
+while True:
+    if button_a.is_pressed() and button_b.is_pressed():
+        display.show(Image.HEART)
+    elif button_a.is_pressed():
+        display.show(Image.HAPPY)
+    elif button_b.is_pressed():
+        display.show(Image.SAD)
+    else:
+        display.clear()
+"   >
+
+
+</textarea>
+</div>
+<ul class="simple">
+<li><p>Размислете зашто ги проверувавме условите по овој редослед. Обидете се да пронајдете уште некое решение за кодот!</p></li>
+<li><p>Напишете код со кој ќе се испише пораката “pritisnato kopce” штом се притисне на кое било од копчињата (треба да се користи логичкото ИЛИ - <strong>or</strong>).</p></li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Пример 8:</strong></p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Напишете код којшто ќе изброи и прикаже колку пати било притиснато копчето А во рок од десет секунди.</strong></p>
+
+    </p></div></div>
+<p>Решение:</p>
+
+<div data-childcomponent="broj_pritisaka" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=broj_pritisaka data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      
+
+sleep(10000)
+display.scroll(str(button_a.get_presses()))
+"   >
+
+
+</textarea>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>Звук<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>Кога ќе го поврземе уредот <em>Микро:бит</em> со звучник или слушалки може да го користиме и за генерирање разни мелодии и звуци (како на пример, звук на сирена). Начинот на којшто се поврзува уредот со звучници или слушалки е објаснет на  <a class="reference external" href="DodatneKomponente.html">следната страница</a> .</p>
+<p>Основните функции коишто овозможуваат звукови и мелодии се:</p>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<ul class="simple">
+<li><p><strong>music.play(melodija)</strong></p></li>
+<li><p><strong>music.pitch(frekvencija, trajanje)</strong></p></li>
+<li><p><strong>music.set_tempo(ticks=ticks_vrednost, bpm=bpm_vrednost)</strong></p></li>
+</ul>
+
+    </p></div></div>
+<p>Сите функции поврзани со генерирање звук преку уредот <em>Микро:бит</em> се дефинирани во модулот <em>music</em> и доколку сакаме да ги користиме во кодот, неопходно е уште на почетокот да го вклучиме овој модул.</p>
+
+<div data-childcomponent="fragment_import_music" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=fragment_import_music data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="import music                                                "   >
+
+
+</textarea>
+</div>
+<p>За тонот што сакаме да го слушнеме, потребно е во форма на стринг (низок) да наведеме три работи: име на соодветната нота, број на октавата и времетраење. На пример, ’C4:8’ ја означува нотата ’C’ четврта октава, која трае 8 отчукувања (анг. <em>ticks</em>).</p>
+<p><strong>Забелешка:</strong> Не прави разлика дали ќе ги пишувате нотите со голема или мала буква и дали ќе ги ставате меѓу апострофи или во наводници!</p>
+<p>Од вака запишаните ноти може да создадеме листа која ќе ја проследиме со функцијата <em>music.play</em> како параметар.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Пример 9:</strong></p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Напишете код којшто ќе овозможи со уредот Микро:бит да се слушне мелодијата “На крајот од селото”….</strong></p>
+
+    </p></div></div>
+<p>Решение:</p>
+
+<div data-childcomponent="na_kraj_sela" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=na_kraj_sela data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="import music                                                
+
+na_krajot_od_seloto = [&apos;E4:4&apos;, &apos;F&apos;, &apos;G&apos;, &apos;G&apos;]
+zolta_kukja = na_krajot_od_seloto
+ta_ta_ta = [&apos;E4:4&apos;, &apos;F&apos;, &apos;G:8&apos;]
+zolta_kukjicka = [&apos;G4:4&apos;, &apos;G&apos;, &apos;F&apos;, &apos;F&apos;, &apos;E:8&apos;]
+
+music.play(na_krajot_od_seloto)
+for i in range(2):
+    music.play(zolta_kukja)
+    music.play(ta_ta_ta)
+music.play(zolta_kukjicka)
+"   >
+
+
+</textarea>
+</div>
+<p>Издвоивме дел од секвенците од мелодијата кои се повторуваат за да не ги пишуваме повторно, туку да ги повикаме повеќепати во рамките на кодот. Како што можевте да забележите, на некои места ги изоставивме бројот на октавата и должината на нотата. Тоа го сториме, бидејќи доколку нема промена во однос на претходната нота, ќе останат запаметени овие вредности. Значи, доволно е да наведеме само доколку постои некоја измена.</p>
+<p>Нотите претставуваат тонови со точно определена фреквенција. Доколку сакаме преку уредот <em>Микро:бит</em> да слушнеме и некои други тонови (коишто не се ноти), тоа може да го постигнеме со користење на функцијата <em>music.pitch(frekvencija, traеnje)</em>. Оваа функција има два параметри, а тоа се фреквенција (број на вибрации во секунда) и траење на тонот во милисекунди. Еве и еден пример</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Пример 10:</strong></p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Напишете код којшто ќе емитува звук сличен на полициска сирена.</strong></p>
+
+    </p></div></div>
+<p>Решение:</p>
+
+<div data-childcomponent="sirena" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=sirena data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="import music                                                
+
+while True:
+    for frekv in range(880, 1760, 16):
+        music.pitch(frekv, 15)
+    for frekv in range(1760, 880, -16):
+        music.pitch(frekv, 15)
+"   >
+
+
+</textarea>
+</div>
+<p>Првиот циклус ни овозможува да слушаме тонови со фреквенција од 880Hz до 1760Hz со чекор 16 (Hz - херц, единица за фреквенција), додека пак вториот циклус го повторува истото но во обратен редослед. Во првиот циклус фреквенцијата расте, а во вториот опаѓа, па се добива карактеристичен завивачки звук.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Темпо</strong></p>
+<p>Кога сакаме некоја мелодија да ја слушнеме во побрзо или побавно темпо ја користиме функцијата <em>music.set_tempo</em>. Поими кои се поврзани со оваа функција и треба да ги знаеме се: <em>ticks</em> (тикс: отчукувања) и <em>beats</em> (битс: удари). Битот во музиката е основна единица за ритам и честопати се преведува како <em>отчукување</em>. Во недостиг на подобро решение, за да не ги измешаме овие два поима, овде ќе ги користиме како што се употребуваат во англискиот јазик - <em>бит</em> и <em>тик</em>. Битот може да се сфати како главно и посилно отчукување, а тикот како споредно и послабо отчукување коешто се појавува почесто од битот.</p>
+<p>Функцијата <em>music.set_tempo</em> има два параметри, <em>ticks</em> и <em>bpm</em>. Со параметарот <em>ticks</em> се задава број на тикови од кои се состои секој бит, а со параметарот <em>bpm</em> се задава одреден број битови во минута (<em>bpm</em> е скратено од <em>beats per minute</em>). Кога ја повикуваме функцијата може да изоставиме еден и двата параметри и во тој случај за изоставениот параметар (или параметри) се користи вредноста која се подразбира. Вредноста која се подразбира за <em>ticks</em> е 4, а за <em>bpm</em> е 120. Па така, на пример, <em>music.set_tempo()</em> е исто што и <em>music.set_tempo(ticks=4, bpm=120)</em>, а <em>music.set_tempo(bpm=180)</em> е исто што и <em>music.set_tempo(ticks=4, bpm=180)</em>.</p>
+<p>Времетраењето на еден тик се добива кога 1 минута ќе ја поделиме со производот од вредноста од двата параметри. Ако не ја промениме вредноста која се подразбира, еден тик трае  <span class="math notranslate nohighlight">\({1 min \over {4 \cdot 120}} = 0.125 s = 125 ms~\)</span>. Ова ни е важно, бидејќи времетраењето на нотите се задава во тикови, па на пример, една нота од 4 тикови трае <span class="math notranslate nohighlight">\(4 \cdot 125 ms = 500 ms\)</span>.</p>
+<p>Ако сакаме една нота од 4 тикови да трае <span class="math notranslate nohighlight">\(1000 ms~\)</span>, можеме пред да ја повикаме функцијата <em>music.play</em> да го наместиме темпото со 60 битови во минута со повикување на <em>music.set_tempo(bpm=60)</em>, бидејќи тогаш еден тик ќе трае <span class="math notranslate nohighlight">\({1 min \over {4 \cdot 60}} = 0.250 s = 250 ms~\)</span>.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Во рамките на модулот <em>music</em> постојат и неколку однапред дефинирани мелодии кои може да ги користите. Некои од нив се следниве:</p>
+<ul class="simple">
+<li><p>music.WEDDING (свадбена мелодија)</p></li>
+<li><p>music.BIRTHDAY (роденденска мелодија)</p></li>
+<li><p>music.POWER_UP (вклучување)</p></li>
+<li><p>music.POWER_DOWN (исклучување)</p></li>
+<li><p>music.ENTERTAINER (“Забавувач”, С. Џоплин)</p></li>
+</ul>
+<p>Па, наместо да пишувате ноти, на пример за <em>Прелудиум</em> (Ј. С. Бах), може да го сторите следново:</p>
+
+<div data-childcomponent="preludijum" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=preludijum data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="import music                                                
+
+notes = [
+    &apos;c4:1&apos;, &apos;e&apos;, &apos;g&apos;, &apos;c5&apos;, &apos;e5&apos;, &apos;g4&apos;, &apos;c5&apos;, &apos;e5&apos;, &apos;c4&apos;, &apos;e&apos;, &apos;g&apos;,
+    &apos;c5&apos;, &apos;e5&apos;, &apos;g4&apos;, &apos;c5&apos;, &apos;e5&apos;, &apos;c4&apos;, &apos;d&apos;, &apos;a&apos;, &apos;d5&apos;, &apos;f5&apos;,
+    &apos;a4&apos;, &apos;d5&apos;, &apos;f5&apos;, &apos;c4&apos;, &apos;d&apos;, &apos;a&apos;, &apos;d5&apos;, &apos;f5&apos;, &apos;a4&apos;, &apos;d5&apos;, 
+    &apos;f5&apos;, &apos;b3&apos;, &apos;d4&apos;, &apos;g&apos;, &apos;d5&apos;, &apos;f5&apos;, &apos;g4&apos;, &apos;d5&apos;, &apos;f5&apos;, 
+    &apos;b3&apos;, &apos;d4&apos;, &apos;g&apos;, &apos;d5&apos;, &apos;f5&apos;, &apos;g4&apos;, &apos;d5&apos;, &apos;f5&apos;,
+    &apos;c4&apos;, &apos;e&apos;, &apos;g&apos;, &apos;c5&apos;, &apos;e5&apos;, &apos;g4&apos;, &apos;c5&apos;, &apos;e5&apos;, &apos;c4&apos;, 
+    &apos;e&apos;, &apos;g&apos;, &apos;c5&apos;, &apos;e5&apos;, &apos;g4&apos;, &apos;c5&apos;, &apos;e5&apos;, &apos;c4&apos;, &apos;e&apos;, &apos;a&apos;, 
+    &apos;e5&apos;, &apos;a5&apos;, &apos;a4&apos;, &apos;e5&apos;, &apos;a5&apos;, &apos;c4&apos;, &apos;e&apos;, &apos;a&apos;, &apos;e5&apos;, &apos;a5&apos;,
+    &apos;a4&apos;, &apos;e5&apos;, &apos;a5&apos;, &apos;c4&apos;, &apos;d&apos;, &apos;f#&apos;, &apos;a&apos;, &apos;d5&apos;, &apos;f#4&apos;, 
+    &apos;a&apos;, &apos;d5&apos;, &apos;c4&apos;, &apos;d&apos;, &apos;f#&apos;, &apos;a&apos;, &apos;d5&apos;, &apos;f#4&apos;, 
+    &apos;a&apos;, &apos;d5&apos;, &apos;b3&apos;, &apos;d4&apos;, &apos;g&apos;, &apos;d5&apos;, &apos;g5&apos;, &apos;g4&apos;, &apos;d5&apos;, 
+    &apos;g5&apos;, &apos;b3&apos;, &apos;d4&apos;, &apos;g&apos;, &apos;d5&apos;, &apos;g5&apos;, &apos;g4&apos;, &apos;d5&apos;, &apos;g5&apos;, 
+    &apos;b3&apos;, &apos;c4&apos;, &apos;e&apos;, &apos;g&apos;, &apos;c5&apos;, &apos;e4&apos;, &apos;g&apos;, &apos;c5&apos;, &apos;b3&apos;, &apos;c4&apos;, 
+    &apos;e&apos;, &apos;g&apos;, &apos;c5&apos;, &apos;e4&apos;, &apos;g&apos;, &apos;c5&apos;, &apos;a3&apos;, &apos;c4&apos;, &apos;e&apos;, &apos;g&apos;, 
+    &apos;c5&apos;, &apos;e4&apos;, &apos;g&apos;, &apos;c5&apos;, &apos;a3&apos;, &apos;c4&apos;, &apos;e&apos;, &apos;g&apos;, &apos;c5&apos;, &apos;e4&apos;, 
+    &apos;g&apos;, &apos;c5&apos;, &apos;d3&apos;, &apos;a&apos;, &apos;d4&apos;, &apos;f#&apos;, &apos;c5&apos;, &apos;d4&apos;, &apos;f#&apos;, &apos;c5&apos;, 
+    &apos;d3&apos;, &apos;a&apos;, &apos;d4&apos;, &apos;f#&apos;, &apos;c5&apos;, &apos;d4&apos;, &apos;f#&apos;, &apos;c5&apos;, &apos;g3&apos;, &apos;b&apos;, 
+    &apos;d4&apos;, &apos;g&apos;, &apos;b&apos;, &apos;d&apos;, &apos;g&apos;, &apos;b&apos;, &apos;g3&apos;, &apos;b3&apos;, &apos;d4&apos;, &apos;g&apos;, &apos;b&apos;, 
+    &apos;d&apos;, &apos;g&apos;, &apos;b&apos;
+    ]
+
+music.play(notes)
+"   >
+
+
+</textarea>
+</div>
+<p>Дел од оваа мелодија ќе може да слушнете и ако напишете само:</p>
+
+<div data-childcomponent="preludijum_deo" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=preludijum_deo data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="import music	                                            
+
+music.play(music.PRELUDE)
+"   >
+
+
+</textarea>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>Генерирање случајни броеви<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<p>Можеби ќе посакате да направите некоја игра или проект во кој ќе ви биде потребна некоја случајно избрана вредност. Случајната вредност во кодот може да ја добиеме доколку употребиме некоја од следните функции:</p>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<ul class="simple">
+<li><p><strong>random.randint(a, b)</strong></p></li>
+<li><p><strong>random.random()</strong></p></li>
+<li><p><strong>random.randrange(stop)</strong></p></li>
+<li><p><strong>random.choice(seq)</strong></p></li>
+<li><p><strong>random.getrandbits(n)</strong></p></li>
+</ul>
+
+    </p></div></div>
+<p>Овие функции се дефинирани во модулот <em>random</em> во стандардната библиотека на <em>Python</em> (може да се користи и во обичен код во <em>Python</em>), па потребно e на почетокот да ја вчитаме содржината од овој модул.
+Кои вредности ќе ги добиеме со помош на овие функции?</p>
+<ul class="simple">
+<li><p><strong>random.randint(a, b)</strong> - случаен број помеѓу <strong>а</strong> и <strong>b</strong>, вклучително граничните броеви;</p></li>
+<li><p><strong>random.random()</strong> - случаен реален број помеѓу 0 и 1;</p></li>
+<li><p><strong>random.randrange(n)</strong> - случаен цел број од 0 до n-1;</p></li>
+<li><p><strong>random.choice(sekv)</strong> - избира случајна вредност од некоја секвенца (на пример, листа).</p></li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Пример 11:</strong></p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Напишете код којшто ќе симулира коцка за играта “Не лути се, човеку!” на следниов начин:</strong></p>
+<p><strong>Додека не се притисне копчето А, на екранот случајно се менуваат вредностите од еден до шест. Кога ќе го притиснеме копчето А, цифрата која ќе се прикаже во тој момент треба да се задржи пет секунди на екранот.</strong></p>
+
+    </p></div></div>
+<p>Решение:</p>
+
+<div data-childcomponent="kockica" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=kockica data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="import random                                               
+from microbit import *
+
+while True:
+    broj = random.randint(1, 6)
+    display.show(str(broj))
+    if button_a.is_pressed():
+        sleep(5000)
+"   >
+
+
+</textarea>
+</div>
+<ul class="simple">
+<li><p>Обидете се да го измените кодот, со тоа што наместо цифри на екранот ќе се прикажуваат слики со точки кои ќе бидат распоредени како на вистинска коцка.</p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/kockica.gif"><img alt="kockica" class="align-center" src="_images/kockica.gif" style="width: 240.0px; height: 200.0px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="bluetooth">
+<h2><em>Bluetooth</em><a class="headerlink" href="#bluetooth" title="Permalink to this headline">¶</a></h2>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><strong>Уредот Микро:бит има хардвер кој му овозможува да работи како Bluetooth (BLE) уред, но не поседува доволно меморија за да поддржи код напишан во MicroPython за негово управување.</strong></p>
+<p><strong>Иако во MicroPython не е возможно да се напише код кој ќе овозможи уредот Микро:бит да комуницира со други уреди (компјутер, паметен телефон и сл.), може да се создаде ефикасна безжична мрежа на голем број уреди Микро:бит. Во образовен контекст, овој вид комуникација е многу поедноставен и поинтересен.</strong></p>
+
+    </p></div></div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>Радио<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<p>Една од најинтересните можности кои ги нуди уредот <em>Микро:бит</em> е меѓусебната безжична комуникација со други уреди <em>Микро:бит</em>. Засега, за оваа намена ќе ги користиме следните функции:</p>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<ul class="simple">
+<li><p><strong>radio.on()</strong></p></li>
+<li><p><strong>radio.off()</strong></p></li>
+<li><p><strong>radio.send(poraka)</strong></p></li>
+<li><p><strong>radio.receive()</strong></p></li>
+<li><p><strong>radio.config(razlicni parametri)</strong></p></li>
+<li><p><strong>radio.reset()</strong></p></li>
+</ul>
+
+    </p></div></div>
+<p>Уредот <em>Микро:бит</em> троши повеќе енергија кога е овозможено испраќање и примање сигнал. Поради тоа, имаме опција да вклучиме радио врска со функцијата <em>radio.on()</em> кога сакаме да ја користиме, односно да ја исклучиме со функцијата <em>radio.off()</em> кога не ни е потребна.</p>
+<p>Кога е вклучена радио врската (откако сме ја повикале функцијата <em>radio.on()</em>), може да испраќаме пораки од уредот <em>Микро:бит</em> со помош на функцијата <em>radio.send(porаka)</em>, каде што porаka е некој текстуален податок (стринг). Другиот или другите уреди <em>Микро:бит</em> може да примаат текстуална порака со повикување на функцијата <em>radio.receive()</em>.</p>
+<p>Честопати, комуникацијата помеѓу уредите <em>Микро:бит</em> се чини мошне едноставна. На пример, еден уред <em>Микро:бит</em> испраќа порака, а друг ја прима, при што можат и да си ги сменат улогите. Во поголемиот број примени ова е сосема доволно. Доколку имаме посложени сценарија, може на пример да е потребно повеќе уреди <em>Микро:бит</em> да испраќаат пораки, а еден уред <em>Микро:бит</em> (посебно одреден) да ги прима и да ги извршува соодветните задачи по примањето на секоја од пораките. Во тој случај, испратената порака може да ја прими секој од уредите <em>Микро:бит</em>, но само еден од нив е програмиран да го прави тоа. Можна е и обратна организација, во која само еден уред <em>Микро:бит</em> ќе испраќа пораки, а сите останати ќе ги примаат и извршуваат соодветните задачи. Во многу ретки случаи има потреба од посложена комуникација од горенаведените – не ни е потребен сложен облик на комуникација во проектите кои се предложени во продолжение, иако тие се прилично разновидни и (се надеваме) интересни.</p>
+<p>Кога во една училница две групи ученици работат на ист проект во кој се користи радио врска, може да се случи уредите на едната група ненамерно да примаат пораки од уредите од другата група и тоа да го попречува работењето и да создава забуна кај учениците кои работат на проектот. Во таков случај, потребно е да ги поделиме уредите <em>Микро:бит</em> по групи, така што секоја група ќе остварува комуникација во рамките на групата и групите нема да си се мешаат во разговорите. Тоа може да го постигнеме со помош на функцијата radio.config()*. Оваа функција служи да ги избереме параметрите за комуникација. Еден од параметрите за комуникација е <em>channel</em> (канал). Каналите за комуникација може да имаат вредност од 0 до 83 и параметарот <em>channel</em> може да се постави на која било од нив. На почеток, додека не ја смениме вредноста на каналот, сите уреди <em>Микро:бит</em> комуницираат преку каналот 7. За да избегнеме групите да си се мешаат во разговорите една на друга, доволно е уредите <em>Микро:бит</em> од секоја група да користат еден канал, на пример <em>radio.config(channel = 3)</em>, а уредите од другата група да користат друг канал, на пример <em>radio.config(channel = 4)</em>, или да ги оставиме на каналот 7 ако нема трета група на која би ѝ пречело тоа.</p>
+<p>Со функцијата <em>radio.config()</em> може да се изберат и други параметри за комуникација, како на пример, максимална дозволена должина на порака, максимален број пораки кои може да чекаат да бидат прочитани (ако за многу кратко време се испратат премногу пораки, некои од нив ќе се изгубат), јачина на радио сигналот (појак сигнал значи поголем досег, но и побрзо трошење на батеријата) итн., но ние нема да ги користиме другите параметри. Функцијата <em>radio.reset()</em> служи за да ги вратиме сите овие параметри на почетните вредности, односно вредностите кои се подразбираат.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Пример 12:</strong></p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Напишете код којшто овозможува комуникација помеѓу два уреди Микро:бит. Доколку од едниот уред Микро:бит испратиме некој број, на другиот уред Микро:бит треба да се појави пет пати поголемa вредност.</strong></p>
+
+    </p></div></div>
+<p>Кодот за првиот уред <em>Микро:бит</em> ќе го прави следново: со притискање на копчето А ќе се зголемува вредноста на бројот за еден, со притискање на копчето В ќе се намалува вредноста за еден, а со притискање на двете копчиња наеднаш ќе се проследи до другиот уред <em>Микро:бит</em> моменталната вредност на бројот:</p>
+
+<div data-childcomponent="petx_slanje" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=petx_slanje data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      
+import radio
+
+radio.on()
+broj = 0
+
+while True:
+    display.show(str(broj))
+    if button_a.was_pressed():
+        broj += 1
+    if button_b.was_pressed():
+        broj -= 1
+    if button_a.is_pressed() and button_b.is_pressed():
+        radio.send(str(broj))
+    sleep(500)"   >
+
+
+</textarea>
+</div>
+<p>Другиот уред <em>Микро:бит</em> ќе ја прими таа вредност, ќе ја зголеми за пет пати и ќе ја прикаже на екранот:</p>
+
+<div data-childcomponent="petx_prijem" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=petx_prijem data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      
+import radio
+
+radio.on()
+
+while True:
+    broj = radio.receive()
+    if broj is not None:
+        broj = int(broj)*5
+        display.scroll(str(broj))
+    sleep(100)"   >
+
+
+</textarea>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id9">
+<h2>Движење<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<p>Со помош на функцијата <strong>accelerometer.current_gesture()</strong> може да одредиме како во моментот се движи и е свртен уредот <em>Микро:бит</em>. Оваа функција враќа стринг, а можни вредности и значење на нејзиниот резултат се:</p>
+<ul class="simple">
+<li><p>‘up’ - уредот се крева;</p></li>
+<li><p>‘down’ - уредот се спушта;</p></li>
+<li><p>‘left’ - уредот се поместува налево;</p></li>
+<li><p>‘right’ - уредот се поместува надесно;</p></li>
+<li><p>‘face up’ - уредот е свртен со екранот (лицето) нагоре;</p></li>
+<li><p>‘face down’ - уредот е свртен со екранот (лицето) надолу;</p></li>
+<li><p>‘freefall’ - уредот слободно паѓа;</p></li>
+<li><p>‘shake’ - уредот се тресе;</p></li>
+<li><p>‘3g’ - уредот нагло забрзува или забавува. Ова обично значи дека уредот се соочува со некаква препрека, односно дека удрил во нешто;</p></li>
+<li><p>‘6g’ - како и претходно, само се работи за поголемо забрзување (забавување), односно посилен удар;</p></li>
+<li><p>‘8g’ - јуште поголемо забрзување (забавување), односно удар.</p></li>
+</ul>
+<p>Буквата <em>g</em> во ознаките <em>3g, 6g, 8g</em> го означува земјиното забрзување, а бројката пред буквата ни кажува колку пати насоченото забрзување (забавување) е поголемо од земјиното. Не е неопходно да тестирате дали функцијата <em>accelerometer.current_gesture()</em> навистина може да ги врати сите овие вредности, иако уредот <em>Микро:бит</em> е екстремно издржлив. ☺.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Покрај овие специфични начини на движење на уредот <em>Микро:бит</em>, може да се регистрираат и движења во одреден правец. За таа намена се користат следните функции, кои даваат вредности на забрзување долж координатната оска во илјадити делови од земјиното забрзување (мили-гe):</p>
+<ul class="simple">
+<li><p><strong>accelerometer.get_x()</strong></p></li>
+<li><p><strong>accelerometer.get_y()</strong></p></li>
+<li><p><strong>accelerometer.get_z()</strong></p></li>
+</ul>
+<p>Овие функции враќаат целобројни вредности во опсег од -2000 до 2000 (од -2 g до 2 g). Ако на пример, вредноста на функцијата <em>accelerometer.get_z()</em> е негативна, тоа значи или дека уредот забрзува во негативен правец долж оската <em>z</em>, или дека забавува во позитивен правец долж оската <em>z</em>. Овие два вида движење не може да се разликуваат со сензорите – кога сте во лифт кој забрзува движејќи се надолу се чувствувате исто (полесно) како кога сте во лифт кој забавува движејќи се нагоре. Исто така, забрзувањето во позитивен правец долж оската <em>z</em> не се разликува од забавувањето во негативен правец долж оската <em>z</em> (и двете даваат позитивни вредности со функцијата <em>accelerometer.get_z()</em>). Поради тоа, забрзувањето и забавувањето се изразуваат со исти единици за забрзување (во случајов земјино забрзување). Како што е утврдено, голема апсолутна вредност на забрзувањето многу полесно се постигнува со нагло намалување на апсолутната вредност на брзината, т.е. со забавување (удари), отколку со зголемување на брзината. Секако, сето тоа што важи за функцијата <em>accelerometer.get_z()</em> важи и за повикувањето на останатите две функции при забрзувањето долж оските <em>x</em> и <em>y</em>.</p>
+<p>Повикувањето на функцијата <strong>accelerometer.get_values()</strong> може да замени повикување на претходните три функции заедно, бидејќи оваа функција враќа уредена тројка броеви кои ја претставуваат вредноста на забрзувањето долж сите три оски по ред.</p>
+<p>Дефинирани се уште многу други функции за примање податоци со овој сензор.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Пример 13:</strong></p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Напишете код за играта “Лист, камен, ножички”. Када ќе се протресе уредот *Микро:бит*, на неговиот екран треба да се појави една од овие три слики по случаен избор.</strong></p>
+
+    </p></div></div>
+<p><em>Лист, камен, ножички</em> се игра во пар. Играчите истовремено ги протресуваат уредите <em>Микро:бит</em> и зависно од сликата која ја добиле добиваат поени според следното правило:</p>
+<ul class="simple">
+<li><p>исти слики - нерешен резултат;</p></li>
+<li><p>ножички и лист - играчот на кој му се паднале ножички добива еден поен;</p></li>
+<li><p>ножички и камен - играчот на кој му се паднало камен добива еден поен;</p></li>
+<li><p>камен и лист - играчот на кој му се паднало лист добива еден поен.</p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/pkm.gif"><img alt="papir_kamen_makaze" class="align-center" src="_images/pkm.gif" style="width: 240.0px; height: 200.4px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Ќе напишеме код што генерира случајни броеви. Секако, може да го надградите да се додава и прикажува бројот на освоени поени за секој играч (на пример, со притискање на некое копче).</p>
+<p>Решение:</p>
+
+<div data-childcomponent="papir_kamen_makaze" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=papir_kamen_makaze data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      
+import random
+
+list = Image(&quot;99999:90009:90009:90009:99999&quot;)
+kamen = Image(&quot;00000:09990:09990:09990:00000&quot;)
+nozicki = Image(&quot;99009:99090:00900:99090:99009&quot;)
+
+sliki = [list, kamen, nozicki]
+
+while True:
+    dvizanje = accelerometer.current_gesture()
+    if dvizanje == &quot;shake&quot;:
+        display.show(random.choice(sliki))
+"   >
+
+
+</textarea>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Пример 14:</strong></p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Напишете код којшто ќе прикажува ’-’ доколку уредот Микро:бит го поставиме хоризонтално, буквата D ако го навалиме на десната страна и буквата L доколку го навалиме на левата страна.</strong></p>
+
+    </p></div></div>
+<img alt="levodesno" class="align-center" src="_images/levodesno.png" />
+<p>Решение:</p>
+<p>Ќе ја користиме функцијата <em>accelerometer.get_x()</em>. Кога вредноста на функцијата е близу нула, знаеме дека уредот е во мирување во хоризонтална положба. Правиме обиди со кои ќе ја одредиме граничната вредност (во нашето решение таа е 40), и сите поголеми вредности кои ќе ги добиеме со оваа функција ќе ги сметаме за поместување, а помалите вредности од граничната вредност ќе ги игнорираме.</p>
+
+<div data-childcomponent="nagib" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=nagib data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *
+
+while True:
+    naklon = accelerometer.get_x()
+    if naklon &gt; 40:
+        display.show(&quot;D&quot;)
+    elif naklon &lt; -40:
+        display.show(&quot;L&quot;)
+    else:
+        display.show(&quot;-&quot;)"   >
+
+
+</textarea>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id10">
+<h2>Компас<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<p>Уредот <em>Микро:бит</em> е опремен со магнетометар којшто нуди широк спектар можности за изработка на различни проекти. За употреба на овој сензор дефинирани се следниве функции:</p>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<ul class="simple">
+<li><p><strong>compass.calibrate()</strong></p></li>
+<li><p><strong>compass.is_calibrated()</strong></p></li>
+<li><p><strong>compass.clear_calibration()</strong></p></li>
+<li><p><strong>compass.heading()</strong></p></li>
+<li><p><strong>compass.get_x()</strong></p></li>
+<li><p><strong>compass.get_y()</strong></p></li>
+<li><p><strong>compass.get_z()</strong></p></li>
+<li><p><strong>compass.get_field_strength()</strong></p></li>
+</ul>
+
+    </p></div></div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>За да го користите уредот <em>Микро:бит</em> како сензор неопходно е прво да го калибрирате. Токму за таа постапка служат првите три од горенаведените функции. Со првата функција започнува калибрацијата, со втората се проверува дали е калибриран уредот и со третата се брише претходната калибрација.</p>
+<p>Кога ќе започне калибрацијата, уредот <em>Микро:бит</em> не извршува никакви други операции додека таа не заврши. За да се калибрира уредот потребно е да го свртите и навалите во различни насоки, додека не засветат сите диоди на екранот, по што ќе се појави насмеан емотикон на екранот. Тоа значи дека уредот <em>Микро:бит</em> е калибриран и подготвен за понатамошна употреба, како и дека сега (покрај сите останати функционалности) може да се користат и останатите функции на модулот <em>compass</em>.</p>
+<p>Функцијата <em>compass.heading()</em> враќа цел број од 0 до 360 којшто претставува азимут, односно аголот во степени којшто уредот <em>Микро:бит</em> во моментот го поклопува со правецот север. За да добиеме точен резултат, потребно е додека се извршува функцијата <em>compass.heading()</em> уредот <em>Микро:бит</em> да биде во хоризонтална положба.</p>
+<a class="reference internal image-reference" href="_images/azimut.png"><img alt="azimut" class="align-center" src="_images/azimut.png" style="width: 397.5px; height: 362.5px;" /></a>
+<p>Врз основа на тој агол може да одредиме во кој правец е север, односно да одредиме кон која страна од светот сме свртени (да се ориентираме). На пример, ако имаме азимут 90, тоа значи дека уредот <em>Микро:бит</em> е свртен кон исток, ако имаме азимут 180 уредот <em>Микро:бит</em> е свртен кон југ и така натаму.</p>
+<p>Следните три функции (<em>compass.get_x()</em>, <em>compass.get_y()</em>, <em>compass.get_z()</em>) како резултат враќаат цели броеви, кои го претставуваат дејството на магнетното поле во околината на уредот, изразено во <em>nT (nano tesla)</em>. Овие броеви може да бидат позитивни или негативни, зависно од насоката во која делува полето долж правецот на одредената оска.</p>
+<p>Функцијата <em>compass.get_field_strength()</em> враќа цел број кој го претставува вкупното дејствување на магнетното поле во околината на уредот изразено во <em>nT</em>.</p>
+<p><strong>Пример 15:</strong></p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Напишете код којшто ќе ви овозможи уредот Микро:бит да го користите како компас. Не екранот треба да се прикажува соодветната буква, зависно од тоа на која страна е свртен уредот (N-север, Е-исток, W-запад, а S-југ).</strong></p>
+
+    </p></div></div>
+<a class="reference internal image-reference" href="_images/kompas.png"><img alt="kompas" class="align-center" src="_images/kompas.png" style="width: 481.2px; height: 399.0px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Решение:</p>
+
+<div data-childcomponent="kompas" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=kompas data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      
+
+compass.calibrate()
+
+while True:
+
+    agol = compass.heading()
+    
+    if agol &gt; 45 and agol &lt;= 135:
+        display.show(&quot;E&quot;) 
+    elif agol &gt; 135 and agol &lt;= 225:
+        display.show(&quot;S&quot;) 
+    elif agol &gt; 225 and agol &lt;= 315:
+        display.show(&quot;W&quot;) 
+    else:
+        display.show(&quot;N&quot;) 
+    
+    sleep(100)
+"   >
+
+
+</textarea>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id11">
+<h2>Управување со пиновите<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
+<p>Некои од најчесто употребуваните функции кои овозможуваат управување со пиновите на уредот <em>Микро:бит</em> (кои ни се потребни нам), а со тоа и управување со различни уреди се следните:</p>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<ul class="simple">
+<li><p><strong>read_digital()</strong></p></li>
+<li><p><strong>read_analog()</strong></p></li>
+<li><p><strong>write_digital(vrednost)</strong></p></li>
+<li><p><strong>write_analog(vrednost)</strong></p></li>
+<li><p><strong>set_analog_period(period)</strong></p></li>
+<li><p><strong>is_touched()</strong></p></li>
+</ul>
+
+    </p></div></div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Овие функции служат за отчитување на вредностите од пиновите (<em>read</em>) и за запишување на вредностите на пиновите (<em>write</em>). Од пиновите можеме да отчитуваме и на нив да ги запишуваме <strong>дигиталните</strong> и <strong>аналогните</strong> вредности на величините. Во што е разликата?</p>
+<p>Да го земеме за пример прекинувачот за светло. Тој може да се наоѓа во две состојби – да биде вклучен или исклучен, или да има или нема напон, еден или нула. Дигиталните величини се како прекинувачот. И тие може да се наоѓаат само во две состојби: 0 или 1. Вредностите кои ги отчитуваме од пинот, односно кои ги добиваме како резултат од користењето на функцијата <em>read_digital()</em> се секогаш 0 или 1. Исто така, вредностите кои ги запишуваме со помош на функцијата <em>write_digital(vrednost)</em> мора да бидат 0 или 1. Кога велиме 1, се подразбира вредноста на максималниот напон кој го дава уредот, а во случајот на уредот <em>Микро:бит</em> тоа е 3.3V. Оттаму, доколку на некој од пиновите ја впишеме дигиталната единица <em>write_digital(1)</em>, тоа значи дека на тој пин сме довеле напон од 3.3V.</p>
+<p>Дали имаме иста ситуација кога се работи за температурата или степенот на осветленост? Секако, не. Овие величини може да имаат многу различни вредности. Ги нарекуваме аналогни величини. Со примена на функцијата <em>write_analog(vrednost)</em> и <em>read_analog()</em> на уредот <em>Микро:бит</em> може да впишеме или отчитаме од неговите пинови вредности од 0 до 1023. Може да тестирате со тоа што ќе го поврзете потенциометарот со некој од пиновите (на <a class="reference external" href="DodatneKomponente.html">следната страница</a> прочитајте што е потенциометар и како се поврзува со уредот <em>Микро:бит</em>), поместете го неговиот лизгач од почетната до крајната положба додека на уредот <em>Микро:бит</em> извршувате код што ја испишува вредноста која е отчитана од тој пин.</p>
+<p>Со функцијата <em>set_analog_period</em> одредуваме колку милисекунди ќе биде присутен сигналот на одреден пин при секое извршување на функцијата <em>write_analog</em>. Доколку е потребно, најдобро е оваа вредност да ја избереме на почетокот на кодирањето.</p>
+<p>За жал, сите пинови на уредот <em>Микро:бит</em> не нудат можност за аналогно запишување или читање вредности, но основните големи пинови (0, 1, и 2) кои ќе ги користиме ја нудат таа можност и тоа е доволно за голем број примени.</p>
+<p>Уште една мошне интересна функција за работење со пиновите е <em>is_touched()</em>. Со оваа функција се проверува дали е допрен некој од пиновите. Под допрен се подразбира дека пинот е поврзан со спроводник со <em>GND</em> пин. Тој спроводник може да биде и нашето тело.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Забелешка:</strong> За да може да ги пробате решенијата од следните примери во кои се управува со пинови, прочитајте на <a class="reference external" href="DodatneKomponente.html">следната страница</a> како правилно да ја поврзувате светлечката диода со уредот <em>Микро:бит</em>.
+|</p>
+<p><strong>Пример 16:</strong></p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Напишете код којшто ќе овозможи на секоја секунда автоматски да се вклучува и исклучува светлечката диода поврзана со пинот 2 од уредот Микро:бит.</strong></p>
+
+    </p></div></div>
+<p>Решение:</p>
+
+<div data-childcomponent="pin_digitalni_izlaz" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=pin_digitalni_izlaz data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      
+
+while True:
+    pin2.write_digital(1)
+    sleep(1000)
+    pin2.write_digital(0)
+    sleep(1000)
+"   >
+
+
+</textarea>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Пример 17:</strong></p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Напишете код којшто ќе овозможи постепено да се зголемува и намалува јачината на светлината на диодата која е поврзана со пинот 1 од уредот Микро:бит.</strong></p>
+
+    </p></div></div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Решение:</p>
+
+<div data-childcomponent="pin_analogni_izlaz" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=pin_analogni_izlaz data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      
+
+osvetluvanje = 0
+cekor = 10
+
+while True:
+    pin1.write_analog(osvetluvanje)
+    osvetluvanje = osvetluvanje + cekor
+    sleep(100)
+    if osvetluvanje &gt; 255 or osvetluvanje == 0:
+        cekor = -cekor
+"   >
+
+
+</textarea>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Пример 18:</strong></p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Напишете код којшто ќе нацрта срце доколку го допреме пинот 1 или 2 од уредот Микро:бит.</strong></p>
+<p><strong>Забелешка:</strong> Со тоа што сме до допреле пинот се подразбира дека (на пример, со другата рака) сме поврзани со GND пинот и на тој начин го поврзуваме соодветниот пин со заземјувањето/масата.</p>
+
+    </p></div></div>
+<p>Решение:</p>
+
+<div data-childcomponent="pin_dodir" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=pin_dodir data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      
+
+while True:
+
+    if pin1.is_touched() or pin2.is_touched():
+        display.show(Image.HEART)
+    else:
+        display.clear()
+"   >
+
+
+</textarea>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id14">
+<h2>Температура<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
+<p>Веќе напоменавме дека уредот <em>Микро:бит</em> користи сензор кој е наменет за мерење на температурата на неговиот процесор. Функцијата која ни овозможува да ги вчитуваме вредностите на температурата во околината на уредот е следната:</p>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><strong>temperature()</strong></p>
+
+    </p></div></div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Пример 19:</strong></p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Напишете код којшто ќе ја испише вредноста на температурата во просторијата кога ќе се притисне копчето А на уредот Микро:бит</strong></p>
+
+    </p></div></div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Решение:</p>
+
+<div data-childcomponent="temperatura" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=temperatura data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      
+
+while True:
+    if button_a.is_pressed():
+        temp = temperature()
+        display.scroll(&quot;Temperaturata e:&quot; + str(temp) + &quot; C&quot;)
+    sleep(100)
+"   >
+
+
+</textarea>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id15">
+<h2>Интерактивна работа<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
+<p>За остварување интеракција со уредот <em>Микро:бит</em> преку компјутер ќе ни послужи копчето REPL коешто се наоѓа во главното мени од уредувачот <em>Мu (Mју)</em> (<em>REPL</em> е акроним од зборовите <em>read–eval–print loop</em>). Со активирањето на ова копче во уредувачот <em>Mu</em> се отвора дополнителен прозорец под прозорецот за внесување код.</p>
+<p>Овој прозорец ни овозможува да го користиме интерактивно уредот <em>Микро:бит</em>. Тоа значи дека од еден компјутер можеме да задаваме наредби една по друга, коишто ќе се извршуваат на уредот <em>Микро:бит</em>. На пример, ако искуцаме <em>display.set_pixel(2, 2, 9)</em> и притиснеме <em>Enter</em>, диодата којашто се наоѓа среде екранот ќе светне со најсилен интензитет.</p>
+<a class="reference internal image-reference" href="_images/REPL_interaktivno1.png"><img alt="REPL interaktivno" class="align-center" src="_images/REPL_interaktivno1.png" style="width: 548.4px; height: 493.79999999999995px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Од прозорецот <em>REPL</em> може да извршуваме и обични наредби од <em>Python</em>, како на пример <em>print(2+2)</em>.</p>
+<a class="reference internal image-reference" href="_images/REPL_interaktivno2.png"><img alt="REPL interaktivno" class="align-center" src="_images/REPL_interaktivno2.png" style="width: 493.2px; height: 291.0px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Иако можеби поради испишувањето на резултатите во прозорецот REPL не ви изгледа така, <strong>наредбата print исто така се извршува на уредот Микро:бит</strong>. Всушност, покрај тоа што може преку уредот <em>Микро:бит</em> интерактивно да се извршуваат обични наредби од <em>Python</em> и наредби што ги користат влезовите и излезите од самиот уред, истите може да се извршуваат и преку програмата. Со други зборови, покрај тоа што може интерактивно да се користи прозорецот <em>REPL</em>, може и да се пишуваат кодови кои освен сите влезови излези на уредот <em>Микро:бит</em> ќе го користат и влезот од тастатурата на компјутерот и ќе испишуваат текст во прозорецот <em>REPL</em>.</p>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>За да го користиме прозорецот <em>REPL</em> за текстуален влез и излез од кодот, се применува следнава постапка:</p>
+<ul class="simple">
+<li><p>напишете го кодот во уредувачот <em>Мu</em>;</p></li>
+<li><p>доколку прозорецот <em>REPL</em> е веќе отворен, затворете го (со клик на истото копче <em>REPL</em> во менито);</p></li>
+<li><p>префрлете го кодот на уредот <em>Микро:бит</em> со користење на копчето <em>Flash</em>;</p></li>
+<li><p>притиснете го копчето <em>REPL</em> за да го отворите прозорецот <em>REPL</em>;</p></li>
+<li><p>ресетирајте го уредот <em>Микро:бит</em> со притискање на копчето reset кое се наоѓа на задната страна на уредот. Со тоа постигнуваме уредот <em>Микро:бит</em> да стане свесен за прозорецот <em>REPL</em>.</p></li>
+</ul>
+
+    </p></div></div>
+<p>Програмите кои користат прозорец <em>REPL</em> за текстуален влез и излез можат значително да го поедностават создавањето на кодот. Еве само неколку примери:</p>
+<ul class="simple">
+<li><p>Доколку кодот не е целосно исправен, пораката за грешката полесно е да се прочита во прозорецот <em>REPL</em> отколку на малиот екран на уредот <em>Микро:бит</em>;</p></li>
+<li><p>Доколку нашиот код и понатаму не функционира како што сме замислиле, може да ја додадеме помошната наредба <em>print</em>, којашто во прозорецот <em>REPL</em> ќе испишува дополнителни информации. На тој начин ќе можеме полесно да го следиме кодот (кои наредби кога се извршуваат, кои вредности се променливи итн.) и да ги откриеме грешките во кодот. Откако ќе го поправиме кодот, треба да ја отстраниме наредбата <em>print</em> (или да ја ставиме во коментар доколку сметаме дека можеби повторно ќе ни затреба);</p></li>
+<li><p>Доколку во моментот не располагаме со дополнителна опрема, во меѓувреме, за тестирање и средување на напишаниот дел од кодот може да го користиме влезот од тастатурата, а подоцна, откако соодветно ќе го поврземе уредот <em>Микро:бит</em> со дополнителни компоненти, може да додадеме наредба за отчитување на соодветниот пин.</p></li>
+</ul>
+<p>Овие и некои други можности на програмитр кои преку сериската порта користат текстуален влез и излез од компјутерот, се илустрирани во додатокот на крајот од овој прирачник.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id16">
+<h2>Прикажување податоци во реално време<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h2>
+<p>Од претходно наведеното, јасно е дека прозорецот <em>REPL</em> може да го користиме за постојан текстуален приказ и следење на вредностите на одредени податоци за време на извршувањето на кодот.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Пример 20:</strong></p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Напишете код којшто ќе ни овозможи да ги следиме движењата на уредот Микро:бит во просторот, односно ќе отчитува, испишува и графички ќе прикажува вредности за x, y и z од акцлерометарот во реално време.</strong></p>
+
+    </p></div></div>
+<p><strong>Забелешка:</strong> За извршување на вакви кодови пожелно е да се набави подолг кабел, којшто ќе му овозможи слободно движење на уредот Микро:бит кога ќе биде приклучен на компјутер.</p>
+<p>Решение:</p>
+
+<div data-childcomponent="prikaz_u_realnom_vremenu" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=prikaz_u_realnom_vremenu data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      
+
+while True:
+    print(accelerometer.get_values())
+    sleep(200)
+"   >
+
+
+</textarea>
+</div>
+<p>Вредностите кои нè интересираат уште полесно можеме да ги следиме доколку се графички прикажани. За да го постигнеме тоа ќе ни послужи копчето <em>Plotter</em> во менито на околината <em>Мu</em>.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="ploter" class="align-center" src="_images/ploter.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Треба имате предвид дека од сите вредности кои ги испишуваме со кодот со помош на функцијата <em>print</em>, вградениот плотер автоматски ги прикажува само оние кои се во терка. На пример, доколку следниот код го извршуваме во отворените прозорци <em>REPL</em> и <em>Plotter</em>, вредностите на температурите ќе се испишуваат со текст, но нема да се прикажуваат графички:</p>
+
+<div data-childcomponent="plot_temperature1" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=plot_temperature1 data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      
+
+while True:
+    sleep(200)
+    t = temperature()
+    print(t)
+"   >
+
+
+</textarea>
+</div>
+<p>За да се прикажува и графички и температурата, потребно е нејзината вредност да се внесе во (едночлена) терка и да се испише на тој начин:</p>
+
+<div data-childcomponent="plot_temperature2" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=plot_temperature2 data-lang="python" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="from microbit import *                                      
+
+while True:
+    sleep(200)
+    t = (temperature(), )
+    print(t)
+"   >
+
+
+</textarea>
+</div>
+<p>Кодот којшто ги испишува вредностите кои се отчитани со акцелерометарот, ги прикажуваше и графички, бидејќи функцијата <em>accelerometer.get_values()</em> ѝ ја враќа вредноста на терката.</p>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Сите податоци кои ги прикажува <em>Plotter</em> додека е активен може да ги зачувате (<em>Save</em>). Зачуваната датотека може да ја најдете во папката mu_code на вашиот лаптоп, во датотеката со екстензија <strong>csv</strong> (<em>comma separated values</em>, вредности раздвоени со запирка). Ова е вообичаен формат и често се употребува за табеларни податоци, па вака зачувани може понатаму да ги обработувате со помош на различни програми (на пример, <em>MS Excel</em>).</p>
+
+    </p></div></div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id17">
+<h3>Проверите знање<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Прашање 1: Која функција ја користиме ако сакаме да ја избришеме содржината која е прикажана на екранот?</strong></p>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="q2_1">
+            
+            <li data-component="answer"  id="q2_1_opt_a">clear.screen()</li><li data-component="feedback" id="q2_1_opt_a">Одговорот не е точен, обидете се повторно!</li>
+            
+            <li data-component="answer"  id="q2_1_opt_b">clear.display()</li><li data-component="feedback" id="q2_1_opt_b">Одговорот не е точен, обидете се повторно!</li>
+            
+            <li data-component="answer"  id="q2_1_opt_c">display.empty()</li><li data-component="feedback" id="q2_1_opt_c">Одговорот не е точен, обидете се повторно!</li>
+            
+            <li data-component="answer" data-correct id="q2_1_opt_d">display.clear()</li><li data-component="feedback" id="q2_1_opt_d">Одговорот е точен, функцијата display.clear() служи за исклучување на сите диоди на екранот, односно за бришење на содржината на екранот.</li>
+            
+
+            </ul>
+            </div>
+            <div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Прашање 2: Функцијата random.random() ја користиме кога сакаме да генерираме:</strong></p>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="q2_2">
+            
+            <li data-component="answer"  id="q2_2_opt_a">случаен цел број</li><li data-component="feedback" id="q2_2_opt_a">Одговорот не е точен, обидете се повторно!</li>
+            
+            <li data-component="answer" data-correct id="q2_2_opt_b">случаен реален број помеѓу 0 и 1</li><li data-component="feedback" id="q2_2_opt_b">Така е, со оваа функција се генерира случајна вредност помеѓу 0 и 1.</li>
+            
+            <li data-component="answer"  id="q2_2_opt_c">не постои функција со ваков облик</li><li data-component="feedback" id="q2_2_opt_c">Одговорот не е точен, обидете се повторно!</li>
+            
+            <li data-component="answer"  id="q2_2_opt_d">некој број со пет различни цифри</li><li data-component="feedback" id="q2_2_opt_d">Одговорот не е точен, обидете се повторно!</li>
+            
+
+            </ul>
+            </div>
+            <div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Прашање 3: Доколку сакаме да создадеме мелодија со уредот Микро:бит, неопходно е на почетокот на кодирањето да вчитаме:</strong></p>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="q2_3">
+            
+            <li data-component="answer"  id="q2_3_opt_a">сите функции предвидени за работење со уредот Микро:бит (from microbit import *)</li><li data-component="feedback" id="q2_3_opt_a">Одговорот не е точен, обидете се повторно!</li>
+            
+            <li data-component="answer"  id="q2_3_opt_b">модулот radio од основната библиотека на Python (import radio)</li><li data-component="feedback" id="q2_3_opt_b">Одговорот не е точен, обидете се повторно!</li>
+            
+            <li data-component="answer" data-correct id="q2_3_opt_c">модулот music од основната библиотека на Python (import music)</li><li data-component="feedback" id="q2_3_opt_c">Одговорот е точен, функциите кои се предвидени за генерирање звук се наведени во модулот Music, во главната библиотека на Python.</li>
+            
+            <li data-component="answer"  id="q2_3_opt_d">ништо од горенаведеното</li><li data-component="feedback" id="q2_3_opt_d">Одговорот не е точен, обидете се повторно!</li>
+            
+
+            </ul>
+            </div>
+            <div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Прашање 4: Дали може да детектираме светлина доколку го покриеме екранот на уредот Микро:бит?</strong></p>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="q2_4">
+            
+            <li data-component="answer"  id="q2_4_opt_a">Можно е, сите сензори се наоѓаат на задната страна од уредот Микро:бит.</li><li data-component="feedback" id="q2_4_opt_a">Одговорот не е точен, обидете се повторно!</li>
+            
+            <li data-component="answer"  id="q2_4_opt_b">Уредот Микро:бит воопшто не може да детектира степен на осветленост.</li><li data-component="feedback" id="q2_4_opt_b">Одговорот не е точен, обидете се повторно!</li>
+            
+            <li data-component="answer"  id="q2_4_opt_c">Сензорот за степен на осветленост се наоѓа во процесорот, па затоа е возможно.</li><li data-component="feedback" id="q2_4_opt_c">Одговорот не е точен, обидете се повторно!</li>
+            
+            <li data-component="answer" data-correct id="q2_4_opt_d">Не е возможно, бидејќи за да се детектира светлина се користат диодите на екранот (во инверзен режим).</li><li data-component="feedback" id="q2_4_opt_d">Одговорот е точен, екранот на уредот Микро:бит не смее да биде покриен доколку сакаме да провериме колкава е осветленоста во околината.</li>
+            
+
+            </ul>
+            </div>
+            <div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Прашање 5: Дали е возможно повеќе уреди Микро:бит меѓусебно да комуницираат од две различни простории (преку ѕид)?</strong></p>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="q2_5">
+            
+            <li data-component="answer"  id="q2_5_opt_a">Не, уредите мора да си бидат видливи.</li><li data-component="feedback" id="q2_5_opt_a">Одговорот не е точен, обидете се повторно!</li>
+            
+            <li data-component="answer" data-correct id="q2_5_opt_b">Да, возможно е.</li><li data-component="feedback" id="q2_5_opt_b">Одговорот е точен, потребно е да се избере ист канал за сите уреди Микро:бит во групата и тие ќе можат (преку радио бранови) да разменуваат пораки меѓу себе.</li>
+            
+            <li data-component="answer"  id="q2_5_opt_c">Уредот Микро:бит има вграден WiFi, па може да се поврзат со интернет и да комуницираат.</li><li data-component="feedback" id="q2_5_opt_c">Одговорот не е точен, обидете се повторно!</li>
+            
+            <li data-component="answer"  id="q2_5_opt_d">Два уреди Микро:бит не можат да комуницираат безжично.</li><li data-component="feedback" id="q2_5_opt_d">Одговорот не е точен, обидете се повторно!</li>
+            
+
+            </ul>
+            </div>
+            <p><strong>Прашање 6: Доколку функцијата compass.heading() ја врати вредноста 135, тоа значи дека уредот Микро:бит е свртен кон:</strong></p>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="q2_6">
+            
+            <li data-component="answer"  id="q2_6_opt_a">североисток.</li><li data-component="feedback" id="q2_6_opt_a">Одговорот не е точен, обидете се повторно!</li>
+            
+            <li data-component="answer"  id="q2_6_opt_b">исток.</li><li data-component="feedback" id="q2_6_opt_b">Одговорот не е точен, обидете се повторно!</li>
+            
+            <li data-component="answer" data-correct id="q2_6_opt_c">југоисток.</li><li data-component="feedback" id="q2_6_opt_c">Такa е.</li>
+            
+            <li data-component="answer"  id="q2_6_opt_d">југ.</li><li data-component="feedback" id="q2_6_opt_d">Одговорот не е точен, обидете се повторно!</li>
+            
+
+            </ul>
+            </div>
+            </div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Вовед' data-toggle="tooltip"><a href="Вовед.html">Претходно поглавје</a></li>
+    
+        <li id="relations-next" title='Next chapter - Поврзување дополнителни компоненти' data-toggle="tooltip"><a href="Поврзување дополнителни компоненти.html">Следно поглавје</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Вовед' data-toggle="tooltip"><a href="Вовед.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Поврзување дополнителни компоненти' data-toggle="tooltip"><a href="Поврзување дополнителни компоненти.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="pull-left">&copy; 2020 British Council (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

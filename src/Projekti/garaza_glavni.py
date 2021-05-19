@@ -5,7 +5,7 @@ radio.on()
 
 KAPACITET_NA_GARAZATA = 6
 br_na_mesta = KAPACITET_NA_GARAZATA
-pin0.set_analog_period(20)  # za upravljanje pinom 0 - rampa
+pin0.set_analog_period(20)  # # za upravuvanje so pinot 0 - rampa
 
 while True:
     if br_na_mesta > 0:

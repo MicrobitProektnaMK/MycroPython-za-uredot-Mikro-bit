@@ -22,12 +22,12 @@
    .. toctree::
       :maxdepth: 1
 
-      ./Brojac koraka.rst
-      ./Bicikl.rst
-      ./Garaza.rst
-      ./Kockice za jamb.rst
-      ./Mikrobit klavijatura.rst
-      ./Semafor.rst
-      ./Zalivanje biljke.rst
-      ./UZ merac rastojanja.rst
-      ./Bezbednosni sistem.rst
+      ./Бројач на чекори.rst
+      ./Велосипед со сигнализација.rst
+      ./Гаража.rst
+      ./Коцки за јамб.rst
+      ./Клавијатура Микробит.rst
+      ./Семафор.rst
+      ./Автоматско полевање растенија.rst
+      ./Ултразвучен мерач на растојание.rst
+      ./Безбедносен систем.rst
