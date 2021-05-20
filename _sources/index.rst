@@ -54,10 +54,10 @@
 .. toctree::
 	:maxdepth: 2
 	
-	Вовед.rst
-	Основни функции.rst
-	Поврзување дополнителни компоненти.rst
-	Разни задачи.rst
-	Проекти/toctree.rst
-	Завршни зборови.rst
-	Додаток – Прозорец REPL во програмите.rst
+	Voved.rst
+	Osnovni_funkcii.rst
+	Povrzuvanje_dopolnitelni_komponenti.rst
+	Razni_zadaci.rst
+	Proekti/toctree.rst
+	Zavrsni_zborovi.rst
+	Dodatok – Prozorec REPL vo programite.rst

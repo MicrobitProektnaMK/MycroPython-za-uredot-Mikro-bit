@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>МycroPython за уредот Микро:бит &#8212; Програмирање микробит уређаја у Микропајтону – приручник за пројектну наставу за седми и осми разред</title>
+    <title>Завршни зборови &#8212; Програмирање микробит уређаја у Микропајтону – приручник за пројектну наставу за седми и осми разред</title>
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/activecode.css" />
@@ -154,7 +154,8 @@
     <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Вовед" href="Voved.html" />
+    <link rel="next" title="Додаток – Прозорец REPL во програмите" href="Dodatok – Prozorec REPL vo programite.html" />
+    <link rel="prev" title="Безбедносен систем" href="Proekti/Bezbednosen_sistem.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -216,94 +217,20 @@
 
 <div class="container col-md-8 col-md-offset-2" id="main-content" style="margin-top: 70px;">
   
-  <div class="section" id="ycropython">
-<h1><em>МycroPython</em> за уредот <em>Микро:бит</em><a class="headerlink" href="#ycropython" title="Permalink to this headline">¶</a></h1>
-<br/>
-<p><img alt="British Council"
-src="https://petljamediastorage.blob.core.windows.net/root/Media/Default/images/bctest.png" />
-    <img alt="UK Government" style="margin-left: 10px"
-src="https://petljamediastorage.blob.core.windows.net/root/Media/Default/images/uk_logo.png" /><br/>
-Овој прирачник е изработен со поддршка од Владата на Велика Британија, во рамките на проектот „Училишта на 21-от век“ којшто го спроведува Британски совет.</p>
-
-<br/>
-<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
-<img alt="Creative Commons License" style="border-width:0"
-src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br/>
-<span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">Прирачникот <i>„MycroPython – проектна настава“</i></span>
-е издаден од страна на <a xmlns:cc="http://creativecommons.org/ns#" href="https://www.britishcouncil.rs/en" property="cc:attributionName" rel="cc:attributionURL">Британски совет</a>
-под лиценцата
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
-<br/><div class="section" id="id1">
-<h2><em>МycroPython</em> за уредот <em>Микро:бит</em><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="id1">
+<h1>Завршни зборови<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>Сега сте веќе доволно искусни за да пишувате самостојно кодови со различна намена на уредот <em>Микро:бит</em>.</p>
+<p>Објаснивме како можат меѓусебно да комуницираат уреди <em>Микро:бит</em>, како може да ги поврземе со разни извршни уреди и како да отчитувате податоци од разни видови сензори. Понатаму може да продолжите сами.</p>
+<p>Фантазирајте, истражувајте, размислувајте, проучувајте, кодирајте, подредувајте и дополнувајте!</p>
+<p>На интернет ќе наидувате и на информации коишто не се точни. Сигурно ќе се најдете и во ситуација во која уредот што сте го замислиле нема да функционира како што треба, барем не од прва. Сето тоа е дел од нормалниот процес на развој.</p>
+<p>Не откажувајте се!</p>
+<p>Најдете начин соодветно да ја применувате современата технологија и со тоа да го направите светот околу вас полесно, побезбедно и поблагородно место за живеење!</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<a class="reference internal image-reference" href="_images/trep_srce.gif"><img alt="mikrobit" class="align-left" src="_images/trep_srce.gif" style="width: 240.0px; height: 200.4px;" /></a>
-<p>Овој прирачник е наменет за седмоодделенците од основните училишта и замислено е да придонесе да се реализираат часовите на кои е планирано да се изготвуваат проекти во <em>MicroPython</em> со уредот <em>Микро:бит</em>.</p>
-<p>Во прирачникот се посочени голем број примери во кои со помош на <em>Python</em> се управува со уредот. Сите идеи се детално објаснети, но самите кодови не се разгледуваат детално, туку се очекува учениците да имаат одредено предзнаење за програмирање со програмскиот јазик <em>Python</em>.</p>
-<p>Сите примери се тестирани во уредувачот <em>Mu (Мју)</em>, којшто е дизајниран на начин и почетниците во програмирањето да можат лесно да го инсталираат и користат.</p>
-<p>По едноставните примери на почетокот, во кои е објаснета примената на основните функции од библиотеката за работење со уредот <em>Микро:бит</em>, во прирачникот следуваат и примери за помали проекти кои може да се направат за време на часовите предвидени за проекти.</p>
-<p>За работење со уредот <em>Микро:бит</em> и реализација на проектите предвидени се вкупно четири училишни часови, па оттаму идејата дека проектите кои ги содржи прирачникот првенствено укажуваат на разните можности кои ги нуди уредот <em>Микро:бит</em> и на неговата примена за решавање проблеми од секојдневниот живот.</p>
-<p>Покрај проектите, без детално упатство, дадени се и предлози за можни проширувања и надградувања, со цел да им се овозможи на заинтересираните ученици самостојно да обмислат и реализираат делови од проектите. Овие предлози се дадени и со цел да ги поттикнат учениците на креативно размислување и истражувачка работа, за да можат заедно со своите наставници да смислат нови креативни решенија.</p>
-<p>За учениците кои покажуваат особен интерес за програмирање, во додатокот се опишани некои можности за интерактивна работа со уредот <em>Микро:бит</em> поврзан со компјутер, кои можат да бидат навистина корисни при реализација на комплексни проекти.</p>
-</div>
-<div class="section" id="id2">
-<h2>Содржина<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Voved.html">Вовед</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Voved.html#id2">Уредот <em>Микро:бит</em> – да се потсетиме</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Voved.html#u">Инсталирање на околината за развој <em>Мu</em></a></li>
-<li class="toctree-l2"><a class="reference internal" href="Voved.html#id3">Околината <em>Мu</em></a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Osnovni_funkcii.html">Основни функции</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Osnovni_funkcii.html#id2">Вклучување на библиотеката</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Osnovni_funkcii.html#id3">Управување со екран</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Osnovni_funkcii.html#id4">Копчиња</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Osnovni_funkcii.html#id5">Звук</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Osnovni_funkcii.html#id7">Генерирање случајни броеви</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Osnovni_funkcii.html#bluetooth"><em>Bluetooth</em></a></li>
-<li class="toctree-l2"><a class="reference internal" href="Osnovni_funkcii.html#id8">Радио</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Osnovni_funkcii.html#id9">Движење</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Osnovni_funkcii.html#id10">Компас</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Osnovni_funkcii.html#id11">Управување со пиновите</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Osnovni_funkcii.html#id14">Температура</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Osnovni_funkcii.html#id15">Интерактивна работа</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Osnovni_funkcii.html#id16">Прикажување податоци во реално време</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Povrzuvanje_dopolnitelni_komponenti.html">Поврзување дополнителни компоненти</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Povrzuvanje_dopolnitelni_komponenti.html#id2">Светлечки диоди</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Povrzuvanje_dopolnitelni_komponenti.html#id3">Потенциометар</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Povrzuvanje_dopolnitelni_komponenti.html#id4">Фотоотпорник</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Povrzuvanje_dopolnitelni_komponenti.html#id5">Еднонасочни мотори</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Povrzuvanje_dopolnitelni_komponenti.html#id6">Сервомотор</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Povrzuvanje_dopolnitelni_komponenti.html#id7">Звучници и слушалки</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Povrzuvanje_dopolnitelni_komponenti.html#id8">Реле</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Povrzuvanje_dopolnitelni_komponenti.html#id9">Сензор за чад</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Povrzuvanje_dopolnitelni_komponenti.html#id10">Сензор за движење</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Povrzuvanje_dopolnitelni_komponenti.html#id11">Ултразвучен сензор</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Povrzuvanje_dopolnitelni_komponenti.html#id12">Сензор за детекција на вода/капки дожд</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Razni_zadaci.html">Разни задачи</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Proekti/toctree.html">Идеи за проекти</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Proekti/Brojac_na_cekori.html">Бројач на чекори</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Proekti/Velosiped_so_signalizacija.html">Велосипед со сигнализација</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Proekti/Garaza.html">Гаража</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Proekti/Kocki_za_jamb.html">Коцки за јамб</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Proekti/Klavijatura_Mikrobit.html">Клавијатура <em>Микро:бит</em></a></li>
-<li class="toctree-l2"><a class="reference internal" href="Proekti/Semafor.html">Семафор</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Proekti/Avtomatsko_polevanje_rastenija.html">Автоматско полевање растенија</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Proekti/Ultrazvucen_merac_na_rastojanie.html">Ултразвучен мерач на растојание</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Proekti/Bezbednosen_sistem.html">Безбедносен систем</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Zavrsni_zborovi.html">Завршни зборови</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Dodatok – Prozorec REPL vo programite.html">Додаток – Прозорец REPL во програмите</a></li>
-</ul>
-</div>
+<p><strong>Ви посакуваме успешна, забавна и поучна работа со уредот Микро:бит!</strong></p>
+<div class="line-block">
+<div class="line"><br /></div>
 </div>
 </div>
 
@@ -311,13 +238,17 @@ src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br/>
   
       <div class="col-md-12">
 <ul class="pager">
-        <li id="relations-next" title='Next chapter - Вовед' data-toggle="tooltip"><a href="Voved.html">Следно поглавје</a></li>
+        <li id="relations-prev" title='Previous chapter - Безбедносен систем' data-toggle="tooltip"><a href="Proekti/Bezbednosen_sistem.html">Претходно поглавје</a></li>
+    
+        <li id="relations-next" title='Next chapter - Додаток – Прозорец REPL во програмите' data-toggle="tooltip"><a href="Dodatok – Prozorec REPL vo programite.html">Следно поглавје</a></li>
 </ul>
 
 <!-- <ul class="pager"> -->
     <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Безбедносен систем' data-toggle="tooltip"><a href="Proekti/Bezbednosen_sistem.html">Претходно поглавље</a></li> -->
+    <!--  -->
     <!-- -->
-        <!-- <li id="relations-next" title='Следеће поглавље - Вовед' data-toggle="tooltip"><a href="Voved.html">Следеће поглавље</a></li> -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Додаток – Прозорец REPL во програмите' data-toggle="tooltip"><a href="Dodatok – Prozorec REPL vo programite.html">Следеће поглавље</a></li> -->
     <!-- -->
 <!-- </ul> -->
 
